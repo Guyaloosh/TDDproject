@@ -16,7 +16,7 @@ namespace WindowsFormsTdd
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new FirstNameTxtBox());
+            Application.Run(new MainForm());
         }
     }
 }
