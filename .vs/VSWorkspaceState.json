@@ -1,7 +1,8 @@
 {
   "ExpandedNodes": [
-    ""
+    "",
+    "\\WindowsFormsTdd"
   ],
-  "SelectedNode": "\\WindowsFormsTdd.sln",
+  "SelectedNode": "\\WindowsFormsTdd\\Form1.cs",
   "PreviewInSolutionExplorer": false
 }

@@ -1,7 +1,7 @@
 ﻿
 namespace WindowsFormsTdd
 {
-    partial class Form1
+    partial class FirstNameTxtBox
     {
         /// <summary>
         /// Required designer variable.
@@ -29,34 +29,268 @@ namespace WindowsFormsTdd
         /// </summary>
         private void InitializeComponent()
         {
-            this.button1 = new System.Windows.Forms.Button();
+            this.AddStudentBtn = new System.Windows.Forms.Button();
+            this.StudentName = new System.Windows.Forms.Label();
+            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.LastNameTxtBox = new System.Windows.Forms.TextBox();
+            this.label1 = new System.Windows.Forms.Label();
+            this.IdTextBox = new System.Windows.Forms.TextBox();
+            this.IdLabel = new System.Windows.Forms.Label();
+            this.EmailTextBox = new System.Windows.Forms.TextBox();
+            this.EmailTextLabel = new System.Windows.Forms.Label();
+            this.PhoneNumTextBox = new System.Windows.Forms.TextBox();
+            this.PhoneLabel = new System.Windows.Forms.Label();
+            this.GradesLabels = new System.Windows.Forms.Label();
+            this.MathTextBox = new System.Windows.Forms.TextBox();
+            this.label2 = new System.Windows.Forms.Label();
+            this.EnglishTextBox = new System.Windows.Forms.TextBox();
+            this.label3 = new System.Windows.Forms.Label();
+            this.HebrewTextBox = new System.Windows.Forms.TextBox();
+            this.label4 = new System.Windows.Forms.Label();
+            this.PhysicsTextBox = new System.Windows.Forms.TextBox();
+            this.label5 = new System.Windows.Forms.Label();
+            this.SoftwereTextBox = new System.Windows.Forms.TextBox();
+            this.label6 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
-            // button1
+            // AddStudentBtn
             // 
-            this.button1.Location = new System.Drawing.Point(111, 380);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
-            this.button1.TabIndex = 0;
-            this.button1.Text = "button1";
-            this.button1.UseVisualStyleBackColor = true;
+            this.AddStudentBtn.Location = new System.Drawing.Point(82, 404);
+            this.AddStudentBtn.Name = "AddStudentBtn";
+            this.AddStudentBtn.Size = new System.Drawing.Size(168, 44);
+            this.AddStudentBtn.TabIndex = 0;
+            this.AddStudentBtn.Text = "הוספת סטודנט";
+            this.AddStudentBtn.UseVisualStyleBackColor = true;
             // 
-            // Form1
+            // StudentName
+            // 
+            this.StudentName.AutoSize = true;
+            this.StudentName.Location = new System.Drawing.Point(640, 68);
+            this.StudentName.Name = "StudentName";
+            this.StudentName.Size = new System.Drawing.Size(51, 13);
+            this.StudentName.TabIndex = 1;
+            this.StudentName.Text = "שם פרטי";
+            // 
+            // textBox1
+            // 
+            this.textBox1.Location = new System.Drawing.Point(462, 61);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(172, 20);
+            this.textBox1.TabIndex = 2;
+            // 
+            // LastNameTxtBox
+            // 
+            this.LastNameTxtBox.Location = new System.Drawing.Point(462, 101);
+            this.LastNameTxtBox.Name = "LastNameTxtBox";
+            this.LastNameTxtBox.Size = new System.Drawing.Size(172, 20);
+            this.LastNameTxtBox.TabIndex = 3;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(634, 108);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(63, 13);
+            this.label1.TabIndex = 4;
+            this.label1.Text = "שם משפחה";
+            // 
+            // IdTextBox
+            // 
+            this.IdTextBox.Location = new System.Drawing.Point(462, 138);
+            this.IdTextBox.Name = "IdTextBox";
+            this.IdTextBox.Size = new System.Drawing.Size(172, 20);
+            this.IdTextBox.TabIndex = 5;
+            // 
+            // IdLabel
+            // 
+            this.IdLabel.AutoSize = true;
+            this.IdLabel.Location = new System.Drawing.Point(640, 141);
+            this.IdLabel.Name = "IdLabel";
+            this.IdLabel.Size = new System.Drawing.Size(67, 13);
+            this.IdLabel.TabIndex = 6;
+            this.IdLabel.Text = "תעודת זהות";
+            // 
+            // EmailTextBox
+            // 
+            this.EmailTextBox.Location = new System.Drawing.Point(463, 179);
+            this.EmailTextBox.Name = "EmailTextBox";
+            this.EmailTextBox.Size = new System.Drawing.Size(174, 20);
+            this.EmailTextBox.TabIndex = 7;
+            // 
+            // EmailTextLabel
+            // 
+            this.EmailTextLabel.AutoSize = true;
+            this.EmailTextLabel.Location = new System.Drawing.Point(645, 182);
+            this.EmailTextLabel.Name = "EmailTextLabel";
+            this.EmailTextLabel.Size = new System.Drawing.Size(67, 13);
+            this.EmailTextLabel.TabIndex = 8;
+            this.EmailTextLabel.Text = "כתובת מייל";
+            // 
+            // PhoneNumTextBox
+            // 
+            this.PhoneNumTextBox.Location = new System.Drawing.Point(463, 220);
+            this.PhoneNumTextBox.Name = "PhoneNumTextBox";
+            this.PhoneNumTextBox.Size = new System.Drawing.Size(170, 20);
+            this.PhoneNumTextBox.TabIndex = 9;
+            // 
+            // PhoneLabel
+            // 
+            this.PhoneLabel.AutoSize = true;
+            this.PhoneLabel.Location = new System.Drawing.Point(643, 224);
+            this.PhoneLabel.Name = "PhoneLabel";
+            this.PhoneLabel.Size = new System.Drawing.Size(76, 13);
+            this.PhoneLabel.TabIndex = 10;
+            this.PhoneLabel.Text = "מספר פלאפון";
+            // 
+            // GradesLabels
+            // 
+            this.GradesLabels.AutoSize = true;
+            this.GradesLabels.Location = new System.Drawing.Point(630, 272);
+            this.GradesLabels.Name = "GradesLabels";
+            this.GradesLabels.Size = new System.Drawing.Size(82, 13);
+            this.GradesLabels.TabIndex = 11;
+            this.GradesLabels.Text = "ציוני הסטודנט";
+            this.GradesLabels.Click += new System.EventHandler(this.GradesLabels_Click);
+            // 
+            // MathTextBox
+            // 
+            this.MathTextBox.Location = new System.Drawing.Point(460, 293);
+            this.MathTextBox.Name = "MathTextBox";
+            this.MathTextBox.Size = new System.Drawing.Size(50, 20);
+            this.MathTextBox.TabIndex = 12;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(538, 296);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(54, 13);
+            this.label2.TabIndex = 13;
+            this.label2.Text = "מתמטיקה";
+            // 
+            // EnglishTextBox
+            // 
+            this.EnglishTextBox.Location = new System.Drawing.Point(460, 330);
+            this.EnglishTextBox.Name = "EnglishTextBox";
+            this.EnglishTextBox.Size = new System.Drawing.Size(49, 20);
+            this.EnglishTextBox.TabIndex = 14;
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(546, 336);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(45, 13);
+            this.label3.TabIndex = 15;
+            this.label3.Text = "אנגלית";
+            // 
+            // HebrewTextBox
+            // 
+            this.HebrewTextBox.Location = new System.Drawing.Point(460, 368);
+            this.HebrewTextBox.Name = "HebrewTextBox";
+            this.HebrewTextBox.Size = new System.Drawing.Size(50, 20);
+            this.HebrewTextBox.TabIndex = 16;
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(554, 375);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(33, 13);
+            this.label4.TabIndex = 17;
+            this.label4.Text = "לשון";
+            // 
+            // PhysicsTextBox
+            // 
+            this.PhysicsTextBox.Location = new System.Drawing.Point(458, 404);
+            this.PhysicsTextBox.Name = "PhysicsTextBox";
+            this.PhysicsTextBox.Size = new System.Drawing.Size(51, 20);
+            this.PhysicsTextBox.TabIndex = 18;
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(547, 410);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(43, 13);
+            this.label5.TabIndex = 19;
+            this.label5.Text = "פיזיקה";
+            // 
+            // SoftwereTextBox
+            // 
+            this.SoftwereTextBox.Location = new System.Drawing.Point(458, 443);
+            this.SoftwereTextBox.Name = "SoftwereTextBox";
+            this.SoftwereTextBox.Size = new System.Drawing.Size(51, 20);
+            this.SoftwereTextBox.TabIndex = 20;
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Location = new System.Drawing.Point(548, 446);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(38, 13);
+            this.label6.TabIndex = 21;
+            this.label6.Text = "תכנות";
+            // 
+            // FirstNameTxtBox
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.button1);
-            this.Name = "Form1";
+            this.ClientSize = new System.Drawing.Size(812, 497);
+            this.Controls.Add(this.label6);
+            this.Controls.Add(this.SoftwereTextBox);
+            this.Controls.Add(this.label5);
+            this.Controls.Add(this.PhysicsTextBox);
+            this.Controls.Add(this.label4);
+            this.Controls.Add(this.HebrewTextBox);
+            this.Controls.Add(this.label3);
+            this.Controls.Add(this.EnglishTextBox);
+            this.Controls.Add(this.label2);
+            this.Controls.Add(this.MathTextBox);
+            this.Controls.Add(this.GradesLabels);
+            this.Controls.Add(this.PhoneLabel);
+            this.Controls.Add(this.PhoneNumTextBox);
+            this.Controls.Add(this.EmailTextLabel);
+            this.Controls.Add(this.EmailTextBox);
+            this.Controls.Add(this.IdLabel);
+            this.Controls.Add(this.IdTextBox);
+            this.Controls.Add(this.label1);
+            this.Controls.Add(this.LastNameTxtBox);
+            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.StudentName);
+            this.Controls.Add(this.AddStudentBtn);
+            this.Name = "FirstNameTxtBox";
             this.Text = "Form1";
             this.Load += new System.EventHandler(this.Form1_Load);
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
         #endregion
 
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button AddStudentBtn;
+        private System.Windows.Forms.Label StudentName;
+        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox LastNameTxtBox;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.TextBox IdTextBox;
+        private System.Windows.Forms.Label IdLabel;
+        private System.Windows.Forms.TextBox EmailTextBox;
+        private System.Windows.Forms.Label EmailTextLabel;
+        private System.Windows.Forms.TextBox PhoneNumTextBox;
+        private System.Windows.Forms.Label PhoneLabel;
+        private System.Windows.Forms.Label GradesLabels;
+        private System.Windows.Forms.TextBox MathTextBox;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.TextBox EnglishTextBox;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.TextBox HebrewTextBox;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.TextBox PhysicsTextBox;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.TextBox SoftwereTextBox;
+        private System.Windows.Forms.Label label6;
     }
 }
 

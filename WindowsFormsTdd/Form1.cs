@@ -10,14 +10,19 @@ using System.Windows.Forms;
 
 namespace WindowsFormsTdd
 {
-    public partial class Form1 : Form
+    public partial class FirstNameTxtBox : Form
     {
-        public Form1()
+        public FirstNameTxtBox()
         {
             InitializeComponent();
         }
 
         private void Form1_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void GradesLabels_Click(object sender, EventArgs e)
         {
 
         }
