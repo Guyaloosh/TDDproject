@@ -21,8 +21,10 @@ namespace WindowsFormsTdd
         }
 
 
+
         private void clearMainForm()
         {
+            //clearing all main Form
             FirstNameTextBox.Clear();
             LastNameTxtBox.Clear();
             EmailTextBox.Clear();
@@ -33,7 +35,6 @@ namespace WindowsFormsTdd
             HebrewTextBox.Clear();
             MathTextBox.Clear();
             SoftwereTextBox.Clear();
-
         }
 
 
@@ -59,17 +60,43 @@ namespace WindowsFormsTdd
 
         }
 
-        public void addRandomBtn_Click(object sender, EventArgs e)
-        {
-            clearMainForm();
-            string[] arrFirstName = { "אורטל", "רותם","יונתן","גבי" , "גדעון","גד" , "גדליהו" , "גולן","גומא","גורן" ,
+        public string ConvertToEnglish(string Name) {
+
+            //Hebrew to english dictionery
+            Dictionary<char, string> hebrewToEnglish = new Dictionary<char, string>{
+            { 'א', "a" }, { 'ב', "b" }, { 'ג', "g" }, { 'ד', "d" }, { 'ה', "h" }, { 'ו', "v" },
+            { 'ז', "z" }, { 'ח', "ch" }, { 'ט', "t" }, { 'י', "y" }, { 'כ', "k" }, { 'ל', "l" },
+            { 'מ', "m" }, { 'נ', "n" }, { 'ס', "s" }, { 'ע', "o" }, { 'פ', "p" }, { 'צ', "ts" },
+            { 'ק', "q" }, { 'ר', "r" }, { 'ש', "sh" }, { 'ת', "th" }, { 'ם', "m" }, { 'ן', "n" },
+            { 'ף', "p" }, { 'ץ', "ts" }};
+
+            string ToEnglish = "";
+
+            foreach (char letter in Name)
+            {
+                if (hebrewToEnglish.ContainsKey(letter))
+                    ToEnglish += hebrewToEnglish[letter];
+                else
+                    ToEnglish += letter;
+            }
+            
+            return char.ToUpper(ToEnglish[0]) + ToEnglish.Substring(1);
+        }
+
+
+
+
+        //generate random student function
+        public string[] GenerateRandom(Random rnd) {
+
+
+            string[] arrFirstName = { "אוראל", "גיא","יונתן","גבי" , "גדעון","גד" , "גדליהו" , "גולן","גומא","גורן" ,
                 "גיורא","גילי","גלבוע" , "גמליאל","גל","גפן" , "גלעד","אמרי","אנדי" , "אסף","אפרים","אסי" , "אראל","אריה","ארתור",
                 "ארנון" , "אפרים","אסיף","תמר","דב", "דביר", "דגן", "דוד", "דודו", "דודי", "דולב", "דור"," דוראל", "דורון", "דורי",
-                "דותן", "דן", "דני"," דקל", "דראל", "דרור","הדר", "הללי", "הלליה", "הראל","זאב", "זבולון", "זוהר", "זיו ", "חגי",
-                "חזי", "חיים", "חן", "חני", "חניאל", "חננאל", "חנניה", "חפר", "טהר", "טוביה", "טל", "טניה","גיא","תום","נחמיה",
+                "דותן", "דן", "דני"," דקל", "דראל", "דרור","הדר", "הללי", "הלליה", "הראל" ,"זאב", "זבולון", "זוהר", "זיו ", "חגי",
+                "חזי", "חיים", "חן", "חני", "חניאל", "חננאל", "חנניה", "חפר", "טהר", "טוביה", "טל", "טניה","רותם","תום","נחמיה",
                 "ישראל","איתי","ים" , "רוני","ירין", "תהל","נטע","בר","שיר" , "מיתר","זינה","רונה" , "מירן","שני","יאיר", "יגאל", "יגיל",
                 "ידידיה", "ידין", "יהב", "יהודה", "יהונתן", "יהושע", "יואב", "יובל","יוחאי", "יונתן" };
-
 
 
             string[] arrLastName = {"כהן","לוי","מזרחי", "פרץ", "ביטון", "פרידמן","אברהם", "דהן", "כץ",
@@ -82,33 +109,30 @@ namespace WindowsFormsTdd
                "טויטו","בראון","כחלון","פרי","ארביב","ברמן","שגב","שדה","בוסקילה","אלימלך","פינטו"};
 
 
+            string[] email = { "@gmail.com", "@hotmail.com", "@ac.sce.il", "@ynet.com", "@walla.co.il", "@Isr.il", "@gov.ie.il" };
 
-            string[] email = { "hen@gmail.com", "orel@gmail.com", "guyaloosh@gmail.com", "orelhen@gmail.com", "guyhalliva@gmail.com", "alush@gmail.com", "haliva@gmail.com" };
-            string[] address = { "Beer Sheva", "Omer", "Meitar", "Eilat", "Rishon Letzion", "Tel Aviv", "Gedera", "Lehavim" };
-            string[] phone_number = { "0501234569", "0501234561", "0501234523", "0501234559", "0501234554", "0501234589", "0501234505", "0501234532" };
+
+            int rndID = rnd.Next(111111111, 999999999);
+            int rndphoneNum = 50000000 + rnd.Next(0000000, 9999999);
+            int rndAvrage = rnd.Next(000, 100);
+            string rndName = arrFirstName[rnd.Next(0, arrFirstName.Length - 1)];
+            string rndLastName = arrLastName[rnd.Next(0, arrLastName.Length - 1)];
+            string rndEmail = ConvertToEnglish(rndName) + rnd.Next(000, 100).ToString() + email[rnd.Next(0, email.Length - 1)];
+            
+            //generate a listview Data string-  avrage / phonenumber / email / ID / full name
+            string[] RandomData = { rndAvrage.ToString(), "0" + rndphoneNum.ToString(), rndEmail, rndID.ToString(), rndName + " " + rndLastName };
+            return RandomData;
+        }
+
+
+        //generate 1000 random student btn
+        public void addRandomBtn_Click(object sender, EventArgs e)
+        {
+            clearMainForm();
             Random rnd = new Random();
-
             for (int i = 0; i < 10000; i++)
             {
-                int rndID = rnd.Next(111111111, 999999999);
-                int rndAvrage = rnd.Next(000, 100);
-                int nameIndex = rnd.Next(0, arrFirstName.Length - 1);
-                int lastNameIndex = rnd.Next(0, arrLastName.Length - 1);
-                int emailIndex = rnd.Next(0, email.Length - 1);
-                int addressIndex = rnd.Next(0, address.Length - 1);
-                int phone_numberIndex = rnd.Next(0, phone_number.Length - 1);
-
-                string rndName = arrFirstName[nameIndex];
-                string rndLastName = arrLastName[lastNameIndex];
-                string rndEmail = email[emailIndex];
-                string rndaddress = address[addressIndex];
-                string rndphone_number = phone_number[phone_numberIndex];
-
-
-                //add random data to list view  --  avaragge,phone number, email ,id and fullname
-                string[] ListviewData = {rndAvrage.ToString() ,rndphone_number , rndEmail, rndID.ToString(),rndName + " " + rndLastName};
-                //string[] data2 = { rndEmail, rndaddress, rndphone_number };
-
+                string[] ListviewData = GenerateRandom(rnd);
                 ListViewItem student = new ListViewItem(ListviewData);
                 StudentView1.Items.Add(student);
                
