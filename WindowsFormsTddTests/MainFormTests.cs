@@ -23,7 +23,7 @@ namespace WindowsFormsTdd.Tests
                 count++;
             }
 
-            Assert.Equals(expected, count);
+            Assert.AreEqual(expected, count);
 
             //Assert.Fail();
         }
@@ -47,18 +47,18 @@ namespace WindowsFormsTdd.Tests
 
             // Act
             mainForm.clearMainForm(); // Call the function to clear the form
-
+           
             // Assert
-            Assert.Equals(mainForm.FirstNameTextBox.Text, "");
-            Assert.Equals(mainForm.LastNameTxtBox.Text, "");
-            Assert.Equals(mainForm.EmailTextBox.Text, "");
-            Assert.Equals(mainForm.PhoneNumTextBox.Text, "");
-            Assert.Equals(mainForm.IdTextBox.Text, "");
-            Assert.Equals(mainForm.PhysicsTextBox.Text, "");
-            Assert.Equals(mainForm.EnglishTextBox.Text, "");
-            Assert.Equals(mainForm.HebrewTextBox.Text, "");
-            Assert.Equals(mainForm.MathTextBox.Text, "");
-            Assert.Equals(mainForm.SoftwereTextBox.Text, "");
+            Assert.AreEqual(mainForm.FirstNameTextBox.Text, "");
+            Assert.AreEqual(mainForm.LastNameTxtBox.Text, "");
+            Assert.AreEqual(mainForm.EmailTextBox.Text, "");
+            Assert.AreEqual(mainForm.PhoneNumTextBox.Text, "");
+            Assert.AreEqual(mainForm.IdTextBox.Text, "");
+            Assert.AreEqual(mainForm.PhysicsTextBox.Text, "");
+            Assert.AreEqual(mainForm.EnglishTextBox.Text, "");
+            Assert.AreEqual(mainForm.HebrewTextBox.Text, "");
+            Assert.AreEqual(mainForm.MathTextBox.Text, "");
+            Assert.AreEqual(mainForm.SoftwereTextBox.Text, "");
         }
 
         [TestMethod()]
@@ -91,11 +91,11 @@ namespace WindowsFormsTdd.Tests
           Assert.IsTrue(rndID <= 999999999);
           Assert.IsTrue(rndID >= 111111111);
           //Phonenumber testing
-          Assert.IsTrue(rndID <= 59999999);
-          Assert.IsTrue(rndID >= 50000000);
+          Assert.IsTrue(rndphoneNum <= 59999999);
+          Assert.IsTrue(rndphoneNum >= 50000000);
           //Email testing
-          Assert.IsTrue(rndName == "ConvertedName@gmail.com" || rndName == "ConvertedName@hotmail.com");
-          Assert.IsFalse(rndName == "");
+          Assert.IsTrue(rndEmail == "ConvertedName@gmail.com" || rndEmail == "ConvertedName@hotmail.com");
+          Assert.IsFalse(rndEmail == "");
 
 
         }
@@ -103,12 +103,45 @@ namespace WindowsFormsTdd.Tests
         [TestMethod()]
         public void ConvertToEnglishTest()
         {
+            //generate 2 names to convert
+            string Name1 = "דרור";
+            string Name2 = "רוני";
+
+            //generate dictionery hebrew-english
+            Dictionary<char, string> hebrewToEnglish = new Dictionary<char, string>{
+            { 'א', "a" }, { 'ב', "b" }, { 'ג', "g" }, { 'ד', "d" }, { 'ה', "h" }, { 'ו', "o" },
+            { 'ז', "z" }, { 'ח', "ch" }, { 'ט', "t" }, { 'י', "y" }, { 'כ', "k" }, { 'ל', "l" },
+            { 'מ', "m" }, { 'נ', "n" }, { 'ס', "s" }, { 'ע', "o" }, { 'פ', "p" }, { 'צ', "ts" },
+            { 'ק', "q" }, { 'ר', "r" }, { 'ש', "sh" }, { 'ת', "th" }, { 'ם', "m" }, { 'ן', "n" },
+            { 'ף', "f" }, { 'ץ', "ts" }};
+
+            string Name1English = "";
+            string Name2English = "";
 
 
+            //name1 test
+            foreach (char letter in Name1)
+            {
+                if (hebrewToEnglish.ContainsKey(letter))
+                    Name1English += hebrewToEnglish[letter];
+                else
+                    Name1English += letter;
+            }
+            Assert.IsTrue(Name1English == "dror");
+            Assert.IsFalse(Name1English == "דרור");
 
+            //name2 test
+            foreach (char letter in Name2)
+            {
+                if (hebrewToEnglish.ContainsKey(letter))
+                    Name2English += hebrewToEnglish[letter];
+                else
+                    Name2English += letter;
+            }
+            Assert.IsTrue(Name2English == "rony");
+            Assert.IsFalse(Name2English == "רוני");
 
-
-            Assert.Fail();
+            //Assert.Fail();
         }
     }
 }
