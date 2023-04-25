@@ -54,10 +54,141 @@ namespace WindowsFormsTdd
 
         }
 
-        private void AddStudentBtn_Click(object sender, EventArgs e)
+        bool CheckName(string FN,string LN) {
+
+            foreach (char letter in FN)
+            {
+                if (char.IsNumber(letter)|| char.IsSeparator(letter) || char.IsControl(letter)) 
+                {
+                    NameErrorLable.Visible = true;
+                    return false; }
+                else NameErrorLable.Visible = false;
+            }
+           
+            foreach (char letter in LN)
+            {
+                if (char.IsNumber(letter)|| char.IsSeparator(letter)|| char.IsControl(letter)) {
+
+                    LastNameErrorLable.Visible = true;
+                    return false; }
+                else LastNameErrorLable.Visible = false;
+
+            }
+            return true;
+        }
+        bool CheckID(string ID) {
+
+            foreach (char letter in ID)
+            {
+                if (char.IsLetter(letter) || char.IsSeparator(letter) || char.IsControl(letter) || ID.Length != 9)
+                {
+                    IDErrorLable.Visible = true;
+                    return false;
+                }
+                else IDErrorLable.Visible = false;
+            }
+            return true;
+        }
+        bool Checkmail(string email) {
+            //check for errors - test
+            if (string.IsNullOrWhiteSpace(email))
+            {
+                EmailErrorLable.Visible = true;
+                return false;
+            }
+
+            int atSymbolIndex = email.IndexOf('@');
+            if (atSymbolIndex == -1)
+            {
+                EmailErrorLable.Visible = true;
+                return false;
+            }
+
+            int dotIndex = email.LastIndexOf('.');
+            if (dotIndex == -1 || dotIndex < atSymbolIndex)
+            {
+                EmailErrorLable.Visible = true;
+                return false;
+            }
+
+            string domain = email.Substring(atSymbolIndex + 1);
+            if (string.IsNullOrWhiteSpace(domain))
+            {
+                EmailErrorLable.Visible = true;
+                return false; 
+            }
+
+            string tld = email.Substring(dotIndex + 1);
+            if (string.IsNullOrWhiteSpace(tld) || tld.Length < 2 || tld.Length > 3)
+            {
+                EmailErrorLable.Visible = true;
+                return false;
+            }
+
+            EmailErrorLable.Visible = false;
+            return true;
+        }
+        bool CheckPhone(string ph)
         {
 
+            foreach (char letter in ph)
+            {
+                if (char.IsLetter(letter) || char.IsSeparator(letter) || char.IsControl(letter) || ph.Length != 10)
+                {
+                    PhoneErrorLable.Visible = true;
+                    return false;
+                }
+                else PhoneErrorLable.Visible = false;
+            }
+            return true;
         }
+        private void AddStudentBtn_Click(object sender, EventArgs e)
+        {
+           
+            string Name = FirstNameTextBox.Text;
+            string LastName = LastNameTxtBox.Text;
+            bool nameok = CheckName(Name, LastName);
+          
+            string ID = IdTextBox.Text;
+            bool idok = CheckID(ID);
+
+            string Email = EmailTextBox.Text;
+            bool Emailok = Checkmail(Email);
+
+
+            string phoneNum = PhoneNumTextBox.Text;
+            bool phoneok = CheckPhone(phoneNum);
+
+
+            int numofcourses = 5;
+            /*
+            if (int.Parse(PhysicsTextBox.Text) == 777) { numofcourses--;}
+            if (int.Parse(MathTextBox.Text) == 777) { numofcourses--; }
+            if (int.Parse(SoftwereTextBox.Text) == 777) { numofcourses--; }
+            if (int.Parse(EnglishTextBox.Text) == 777) { numofcourses--; }
+            if (int.Parse(HebrewTextBox.Text) == 777) { numofcourses--; }
+            */
+            int Avrage = 0 +
+                (int.Parse(PhysicsTextBox.Text)+
+                int.Parse(MathTextBox.Text) +
+                int.Parse(SoftwereTextBox.Text) +
+                int.Parse(EnglishTextBox.Text) +
+                int.Parse(HebrewTextBox.Text))/ numofcourses
+                ;
+
+            if (nameok && idok && Emailok && phoneok)
+            {
+                string[] newuser = { Avrage.ToString(), phoneNum.ToString(), Email, ID.ToString(), Name + " " + LastName };
+                ListViewItem student = new ListViewItem(newuser);
+                StudentView1.Items.Add(student);
+                errorlable.Visible = false;
+                clearMainForm();
+            }
+            else {
+                errorlable.Visible = true; }
+        }
+
+       
 
         public string ConvertToEnglish(string Name) {
 
@@ -145,6 +276,16 @@ namespace WindowsFormsTdd
         private void FirstNameTextBox_TextChanged(object sender, EventArgs e)
         {
 
+        }
+
+        private void label7_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void cleanbtn_Click(object sender, EventArgs e)
+        {
+            clearMainForm();
         }
     }
 }

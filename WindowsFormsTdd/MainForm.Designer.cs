@@ -58,6 +58,13 @@ namespace WindowsFormsTdd
             this.columnHeader4 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader5 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.addRandomBtn = new System.Windows.Forms.Button();
+            this.errorlable = new System.Windows.Forms.Label();
+            this.cleanbtn = new System.Windows.Forms.Button();
+            this.NameErrorLable = new System.Windows.Forms.Label();
+            this.LastNameErrorLable = new System.Windows.Forms.Label();
+            this.IDErrorLable = new System.Windows.Forms.Label();
+            this.EmailErrorLable = new System.Windows.Forms.Label();
+            this.PhoneErrorLable = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // AddStudentBtn
@@ -167,6 +174,7 @@ namespace WindowsFormsTdd
             this.MathTextBox.Name = "MathTextBox";
             this.MathTextBox.Size = new System.Drawing.Size(50, 20);
             this.MathTextBox.TabIndex = 12;
+            this.MathTextBox.Text = "0";
             // 
             // label2
             // 
@@ -183,6 +191,7 @@ namespace WindowsFormsTdd
             this.EnglishTextBox.Name = "EnglishTextBox";
             this.EnglishTextBox.Size = new System.Drawing.Size(50, 20);
             this.EnglishTextBox.TabIndex = 14;
+            this.EnglishTextBox.Text = "0";
             // 
             // label3
             // 
@@ -199,6 +208,7 @@ namespace WindowsFormsTdd
             this.HebrewTextBox.Name = "HebrewTextBox";
             this.HebrewTextBox.Size = new System.Drawing.Size(50, 20);
             this.HebrewTextBox.TabIndex = 16;
+            this.HebrewTextBox.Text = "0";
             // 
             // label4
             // 
@@ -215,6 +225,7 @@ namespace WindowsFormsTdd
             this.PhysicsTextBox.Name = "PhysicsTextBox";
             this.PhysicsTextBox.Size = new System.Drawing.Size(50, 20);
             this.PhysicsTextBox.TabIndex = 18;
+            this.PhysicsTextBox.Text = "0";
             // 
             // label5
             // 
@@ -231,6 +242,7 @@ namespace WindowsFormsTdd
             this.SoftwereTextBox.Name = "SoftwereTextBox";
             this.SoftwereTextBox.Size = new System.Drawing.Size(50, 20);
             this.SoftwereTextBox.TabIndex = 20;
+            this.SoftwereTextBox.Text = "0";
             // 
             // label6
             // 
@@ -293,11 +305,95 @@ namespace WindowsFormsTdd
             this.addRandomBtn.UseVisualStyleBackColor = true;
             this.addRandomBtn.Click += new System.EventHandler(this.addRandomBtn_Click);
             // 
+            // errorlable
+            // 
+            this.errorlable.AutoSize = true;
+            this.errorlable.ForeColor = System.Drawing.Color.Red;
+            this.errorlable.Location = new System.Drawing.Point(81, 524);
+            this.errorlable.Name = "errorlable";
+            this.errorlable.Size = new System.Drawing.Size(133, 13);
+            this.errorlable.TabIndex = 24;
+            this.errorlable.Text = "אנא הכנס נתונים תקינים";
+            this.errorlable.Visible = false;
+            this.errorlable.Click += new System.EventHandler(this.label7_Click);
+            // 
+            // cleanbtn
+            // 
+            this.cleanbtn.Location = new System.Drawing.Point(1012, 572);
+            this.cleanbtn.Name = "cleanbtn";
+            this.cleanbtn.Size = new System.Drawing.Size(92, 28);
+            this.cleanbtn.TabIndex = 25;
+            this.cleanbtn.Text = "נקה דף";
+            this.cleanbtn.UseVisualStyleBackColor = true;
+            this.cleanbtn.Click += new System.EventHandler(this.cleanbtn_Click);
+            // 
+            // NameErrorLable
+            // 
+            this.NameErrorLable.AutoSize = true;
+            this.NameErrorLable.ForeColor = System.Drawing.Color.Red;
+            this.NameErrorLable.Location = new System.Drawing.Point(733, 111);
+            this.NameErrorLable.Name = "NameErrorLable";
+            this.NameErrorLable.Size = new System.Drawing.Size(103, 13);
+            this.NameErrorLable.TabIndex = 26;
+            this.NameErrorLable.Text = "אנא הכנס שם תקין";
+            this.NameErrorLable.Visible = false;
+            // 
+            // LastNameErrorLable
+            // 
+            this.LastNameErrorLable.AutoSize = true;
+            this.LastNameErrorLable.ForeColor = System.Drawing.Color.Red;
+            this.LastNameErrorLable.Location = new System.Drawing.Point(693, 151);
+            this.LastNameErrorLable.Name = "LastNameErrorLable";
+            this.LastNameErrorLable.Size = new System.Drawing.Size(143, 13);
+            this.LastNameErrorLable.TabIndex = 27;
+            this.LastNameErrorLable.Text = "אנא הכנס שם משפחה תקין";
+            this.LastNameErrorLable.Visible = false;
+            // 
+            // IDErrorLable
+            // 
+            this.IDErrorLable.AutoSize = true;
+            this.IDErrorLable.ForeColor = System.Drawing.Color.Red;
+            this.IDErrorLable.Location = new System.Drawing.Point(707, 191);
+            this.IDErrorLable.Name = "IDErrorLable";
+            this.IDErrorLable.Size = new System.Drawing.Size(129, 13);
+            this.IDErrorLable.TabIndex = 28;
+            this.IDErrorLable.Text = "תעודת זהות אינה תקינה";
+            this.IDErrorLable.Visible = false;
+            // 
+            // EmailErrorLable
+            // 
+            this.EmailErrorLable.AutoSize = true;
+            this.EmailErrorLable.ForeColor = System.Drawing.Color.Red;
+            this.EmailErrorLable.Location = new System.Drawing.Point(707, 231);
+            this.EmailErrorLable.Name = "EmailErrorLable";
+            this.EmailErrorLable.Size = new System.Drawing.Size(129, 13);
+            this.EmailErrorLable.TabIndex = 29;
+            this.EmailErrorLable.Text = "כתובת מייל אינה תקינה";
+            this.EmailErrorLable.Visible = false;
+            // 
+            // PhoneErrorLable
+            // 
+            this.PhoneErrorLable.AutoSize = true;
+            this.PhoneErrorLable.ForeColor = System.Drawing.Color.Red;
+            this.PhoneErrorLable.Location = new System.Drawing.Point(724, 272);
+            this.PhoneErrorLable.Name = "PhoneErrorLable";
+            this.PhoneErrorLable.Size = new System.Drawing.Size(112, 13);
+            this.PhoneErrorLable.TabIndex = 30;
+            this.PhoneErrorLable.Text = "מספר נייד אינו תקין";
+            this.PhoneErrorLable.Visible = false;
+            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1137, 631);
+            this.Controls.Add(this.PhoneErrorLable);
+            this.Controls.Add(this.EmailErrorLable);
+            this.Controls.Add(this.IDErrorLable);
+            this.Controls.Add(this.LastNameErrorLable);
+            this.Controls.Add(this.NameErrorLable);
+            this.Controls.Add(this.cleanbtn);
+            this.Controls.Add(this.errorlable);
             this.Controls.Add(this.addRandomBtn);
             this.Controls.Add(this.StudentView1);
             this.Controls.Add(this.label6);
@@ -362,6 +458,13 @@ namespace WindowsFormsTdd
         public System.Windows.Forms.TextBox HebrewTextBox;
         public System.Windows.Forms.TextBox PhysicsTextBox;
         public System.Windows.Forms.TextBox SoftwereTextBox;
+        private System.Windows.Forms.Label errorlable;
+        private System.Windows.Forms.Button cleanbtn;
+        private System.Windows.Forms.Label NameErrorLable;
+        private System.Windows.Forms.Label LastNameErrorLable;
+        private System.Windows.Forms.Label IDErrorLable;
+        private System.Windows.Forms.Label EmailErrorLable;
+        private System.Windows.Forms.Label PhoneErrorLable;
     }
 }
 
