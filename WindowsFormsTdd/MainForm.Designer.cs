@@ -85,6 +85,7 @@ namespace WindowsFormsTdd
             this.FirstNameTextBox.Name = "FirstNameTextBox";
             this.FirstNameTextBox.Size = new System.Drawing.Size(160, 20);
             this.FirstNameTextBox.TabIndex = 2;
+            this.FirstNameTextBox.TextChanged += new System.EventHandler(this.FirstNameTextBox_TextChanged);
             // 
             // LastNameTxtBox
             // 
@@ -284,11 +285,11 @@ namespace WindowsFormsTdd
             // 
             // addRandomBtn
             // 
-            this.addRandomBtn.Location = new System.Drawing.Point(284, 540);
+            this.addRandomBtn.Location = new System.Drawing.Point(278, 540);
             this.addRandomBtn.Name = "addRandomBtn";
             this.addRandomBtn.Size = new System.Drawing.Size(166, 60);
             this.addRandomBtn.TabIndex = 23;
-            this.addRandomBtn.Text = "הוסף 1000 סטודנטים";
+            this.addRandomBtn.Text = "הוסף 10000 סטודנטים";
             this.addRandomBtn.UseVisualStyleBackColor = true;
             this.addRandomBtn.Click += new System.EventHandler(this.addRandomBtn_Click);
             // 
@@ -334,25 +335,15 @@ namespace WindowsFormsTdd
 
         private System.Windows.Forms.Button AddStudentBtn;
         private System.Windows.Forms.Label StudentName;
-        private System.Windows.Forms.TextBox FirstNameTextBox;
-        private System.Windows.Forms.TextBox LastNameTxtBox;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox IdTextBox;
         private System.Windows.Forms.Label IdLabel;
-        private System.Windows.Forms.TextBox EmailTextBox;
         private System.Windows.Forms.Label EmailTextLabel;
-        private System.Windows.Forms.TextBox PhoneNumTextBox;
         private System.Windows.Forms.Label PhoneLabel;
         private System.Windows.Forms.Label GradesLabels;
-        private System.Windows.Forms.TextBox MathTextBox;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.TextBox EnglishTextBox;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.TextBox HebrewTextBox;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.TextBox PhysicsTextBox;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.TextBox SoftwereTextBox;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.ListView StudentView1;
         private System.Windows.Forms.ColumnHeader columnHeader1;
@@ -361,6 +352,16 @@ namespace WindowsFormsTdd
         private System.Windows.Forms.ColumnHeader columnHeader4;
         private System.Windows.Forms.ColumnHeader columnHeader5;
         private System.Windows.Forms.Button addRandomBtn;
+        public System.Windows.Forms.TextBox FirstNameTextBox;
+        public System.Windows.Forms.TextBox LastNameTxtBox;
+        public System.Windows.Forms.TextBox IdTextBox;
+        public System.Windows.Forms.TextBox EmailTextBox;
+        public System.Windows.Forms.TextBox PhoneNumTextBox;
+        public System.Windows.Forms.TextBox MathTextBox;
+        public System.Windows.Forms.TextBox EnglishTextBox;
+        public System.Windows.Forms.TextBox HebrewTextBox;
+        public System.Windows.Forms.TextBox PhysicsTextBox;
+        public System.Windows.Forms.TextBox SoftwereTextBox;
     }
 }
 

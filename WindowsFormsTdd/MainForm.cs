@@ -21,8 +21,7 @@ namespace WindowsFormsTdd
         }
 
 
-
-        private void clearMainForm()
+        public void clearMainForm()
         {
             //clearing all main Form
             FirstNameTextBox.Clear();
@@ -64,11 +63,11 @@ namespace WindowsFormsTdd
 
             //Hebrew to english dictionery
             Dictionary<char, string> hebrewToEnglish = new Dictionary<char, string>{
-            { 'א', "a" }, { 'ב', "b" }, { 'ג', "g" }, { 'ד', "d" }, { 'ה', "h" }, { 'ו', "v" },
+            { 'א', "a" }, { 'ב', "b" }, { 'ג', "g" }, { 'ד', "d" }, { 'ה', "h" }, { 'ו', "o" },
             { 'ז', "z" }, { 'ח', "ch" }, { 'ט', "t" }, { 'י', "y" }, { 'כ', "k" }, { 'ל', "l" },
             { 'מ', "m" }, { 'נ', "n" }, { 'ס', "s" }, { 'ע', "o" }, { 'פ', "p" }, { 'צ', "ts" },
             { 'ק', "q" }, { 'ר', "r" }, { 'ש', "sh" }, { 'ת', "th" }, { 'ם', "m" }, { 'ן', "n" },
-            { 'ף', "p" }, { 'ץ', "ts" }};
+            { 'f', "p" }, { 'ץ', "ts" }};
 
             string ToEnglish = "";
 
@@ -87,9 +86,9 @@ namespace WindowsFormsTdd
 
 
         //generate random student function
-        public string[] GenerateRandom(Random rnd) {
+        public string[] GenerateRandomStudent(Random rnd) {
 
-
+            //Firstnames list
             string[] arrFirstName = { "אוראל", "גיא","יונתן","גבי" , "גדעון","גד" , "גדליהו" , "גולן","גומא","גורן" ,
                 "גיורא","גילי","גלבוע" , "גמליאל","גל","גפן" , "גלעד","אמרי","אנדי" , "אסף","אפרים","אסי" , "אראל","אריה","ארתור",
                 "ארנון" , "אפרים","אסיף","תמר","דב", "דביר", "דגן", "דוד", "דודו", "דודי", "דולב", "דור"," דוראל", "דורון", "דורי",
@@ -99,6 +98,7 @@ namespace WindowsFormsTdd
                 "ידידיה", "ידין", "יהב", "יהודה", "יהונתן", "יהושע", "יואב", "יובל","יוחאי", "יונתן" };
 
 
+            //Lastnames list
             string[] arrLastName = {"כהן","לוי","מזרחי", "פרץ", "ביטון", "פרידמן","אברהם", "דהן", "כץ",
                "אזולאי", "מלכה", "דוד", "חדד", "עמר", "אוחיון", "גבאי", "יוסף", "קליין", "לוין", "שפירא",
                "מועלם", "פריד", "גוטליב", "הירש", "ברכה", "מרדכי", "וולף", "אוזן", "שאול", "דגן" , "הורוביץ", "דויטש", "אביטבול",
@@ -108,19 +108,23 @@ namespace WindowsFormsTdd
                "עטיה","קוגן","הופמן","אילוז","קרן","בוזגלו","שקד","זינגר","צברי","יונה","גרוסמן","רובינשטיין","תורג'מן","בן סימון","אשר","שיטרית","חמו",
                "טויטו","בראון","כחלון","פרי","ארביב","ברמן","שגב","שדה","בוסקילה","אלימלך","פינטו"};
 
-
+            //emails list
             string[] email = { "@gmail.com", "@hotmail.com", "@ac.sce.il", "@ynet.com", "@walla.co.il", "@Isr.il", "@gov.ie.il" };
 
 
-            int rndID = rnd.Next(111111111, 999999999);
-            int rndphoneNum = 50000000 + rnd.Next(0000000, 9999999);
-            int rndAvrage = rnd.Next(000, 100);
+
             string rndName = arrFirstName[rnd.Next(0, arrFirstName.Length - 1)];
             string rndLastName = arrLastName[rnd.Next(0, arrLastName.Length - 1)];
             string rndEmail = ConvertToEnglish(rndName) + rnd.Next(000, 100).ToString() + email[rnd.Next(0, email.Length - 1)];
+            int rndID = rnd.Next(111111111, 999999999);
+            int rndphoneNum = 50000000 + rnd.Next(0000000, 9999999);
+            int rndAvrage = rnd.Next(50, 500)/5;
+           
             
             //generate a listview Data string-  avrage / phonenumber / email / ID / full name
+
             string[] RandomData = { rndAvrage.ToString(), "0" + rndphoneNum.ToString(), rndEmail, rndID.ToString(), rndName + " " + rndLastName };
+            
             return RandomData;
         }
 
@@ -132,11 +136,15 @@ namespace WindowsFormsTdd
             Random rnd = new Random();
             for (int i = 0; i < 10000; i++)
             {
-                string[] ListviewData = GenerateRandom(rnd);
+                string[] ListviewData = GenerateRandomStudent(rnd);
                 ListViewItem student = new ListViewItem(ListviewData);
                 StudentView1.Items.Add(student);
-               
             }
+        }
+
+        private void FirstNameTextBox_TextChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }
