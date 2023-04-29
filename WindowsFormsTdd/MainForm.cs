@@ -34,6 +34,11 @@ namespace WindowsFormsTdd
             HebrewTextBox.Clear();
             MathTextBox.Clear();
             SoftwereTextBox.Clear();
+            errorlable.Visible = false;
+            PhoneErrorLable.Visible = false;
+            EmailErrorLable.Visible = false;
+            NameErrorLable.Visible = false;
+            IDErrorLable.Visible = false;
         }
 
 
@@ -182,6 +187,7 @@ namespace WindowsFormsTdd
                 ListViewItem student = new ListViewItem(newuser);
                 StudentView1.Items.Add(student);
                 errorlable.Visible = false;
+                SortBtn.Visible = true;
                 clearMainForm();
             }
             else {
@@ -267,6 +273,7 @@ namespace WindowsFormsTdd
             Random rnd = new Random();
             for (int i = 0; i < 10000; i++)
             {
+                SortBtn.Visible = true;
                 string[] ListviewData = GenerateRandomStudent(rnd);
                 ListViewItem student = new ListViewItem(ListviewData);
                 StudentView1.Items.Add(student);
@@ -286,6 +293,11 @@ namespace WindowsFormsTdd
         private void cleanbtn_Click(object sender, EventArgs e)
         {
             clearMainForm();
+        }
+
+        private void SortBtn_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

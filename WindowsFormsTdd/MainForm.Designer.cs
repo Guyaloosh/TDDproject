@@ -65,13 +65,14 @@ namespace WindowsFormsTdd
             this.IDErrorLable = new System.Windows.Forms.Label();
             this.EmailErrorLable = new System.Windows.Forms.Label();
             this.PhoneErrorLable = new System.Windows.Forms.Label();
+            this.SortBtn = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // AddStudentBtn
             // 
-            this.AddStudentBtn.Location = new System.Drawing.Point(44, 540);
+            this.AddStudentBtn.Location = new System.Drawing.Point(401, 540);
             this.AddStudentBtn.Name = "AddStudentBtn";
-            this.AddStudentBtn.Size = new System.Drawing.Size(200, 60);
+            this.AddStudentBtn.Size = new System.Drawing.Size(150, 65);
             this.AddStudentBtn.TabIndex = 0;
             this.AddStudentBtn.Text = "הוספת סטודנט";
             this.AddStudentBtn.UseVisualStyleBackColor = true;
@@ -92,6 +93,7 @@ namespace WindowsFormsTdd
             this.FirstNameTextBox.Name = "FirstNameTextBox";
             this.FirstNameTextBox.Size = new System.Drawing.Size(160, 20);
             this.FirstNameTextBox.TabIndex = 2;
+            this.FirstNameTextBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             this.FirstNameTextBox.TextChanged += new System.EventHandler(this.FirstNameTextBox_TextChanged);
             // 
             // LastNameTxtBox
@@ -100,6 +102,7 @@ namespace WindowsFormsTdd
             this.LastNameTxtBox.Name = "LastNameTxtBox";
             this.LastNameTxtBox.Size = new System.Drawing.Size(160, 20);
             this.LastNameTxtBox.TabIndex = 3;
+            this.LastNameTxtBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
             // label1
             // 
@@ -116,6 +119,7 @@ namespace WindowsFormsTdd
             this.IdTextBox.Name = "IdTextBox";
             this.IdTextBox.Size = new System.Drawing.Size(160, 20);
             this.IdTextBox.TabIndex = 5;
+            this.IdTextBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
             // IdLabel
             // 
@@ -148,6 +152,7 @@ namespace WindowsFormsTdd
             this.PhoneNumTextBox.Name = "PhoneNumTextBox";
             this.PhoneNumTextBox.Size = new System.Drawing.Size(160, 20);
             this.PhoneNumTextBox.TabIndex = 9;
+            this.PhoneNumTextBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
             // PhoneLabel
             // 
@@ -161,7 +166,7 @@ namespace WindowsFormsTdd
             // GradesLabels
             // 
             this.GradesLabels.AutoSize = true;
-            this.GradesLabels.Location = new System.Drawing.Point(1009, 366);
+            this.GradesLabels.Location = new System.Drawing.Point(974, 352);
             this.GradesLabels.Name = "GradesLabels";
             this.GradesLabels.Size = new System.Drawing.Size(82, 13);
             this.GradesLabels.TabIndex = 11;
@@ -175,6 +180,7 @@ namespace WindowsFormsTdd
             this.MathTextBox.Size = new System.Drawing.Size(50, 20);
             this.MathTextBox.TabIndex = 12;
             this.MathTextBox.Text = "0";
+            this.MathTextBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
             // label2
             // 
@@ -192,6 +198,7 @@ namespace WindowsFormsTdd
             this.EnglishTextBox.Size = new System.Drawing.Size(50, 20);
             this.EnglishTextBox.TabIndex = 14;
             this.EnglishTextBox.Text = "0";
+            this.EnglishTextBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
             // label3
             // 
@@ -209,6 +216,7 @@ namespace WindowsFormsTdd
             this.HebrewTextBox.Size = new System.Drawing.Size(50, 20);
             this.HebrewTextBox.TabIndex = 16;
             this.HebrewTextBox.Text = "0";
+            this.HebrewTextBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
             // label4
             // 
@@ -226,6 +234,7 @@ namespace WindowsFormsTdd
             this.PhysicsTextBox.Size = new System.Drawing.Size(50, 20);
             this.PhysicsTextBox.TabIndex = 18;
             this.PhysicsTextBox.Text = "0";
+            this.PhysicsTextBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
             // label5
             // 
@@ -243,6 +252,7 @@ namespace WindowsFormsTdd
             this.SoftwereTextBox.Size = new System.Drawing.Size(50, 20);
             this.SoftwereTextBox.TabIndex = 20;
             this.SoftwereTextBox.Text = "0";
+            this.SoftwereTextBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
             // label6
             // 
@@ -278,16 +288,19 @@ namespace WindowsFormsTdd
             // 
             this.columnHeader2.Text = "טלפון";
             this.columnHeader2.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.columnHeader2.Width = 86;
             // 
             // columnHeader3
             // 
             this.columnHeader3.Text = "אימייל";
             this.columnHeader3.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.columnHeader3.Width = 88;
             // 
             // columnHeader4
             // 
             this.columnHeader4.Text = "תעודת זהות";
             this.columnHeader4.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.columnHeader4.Width = 118;
             // 
             // columnHeader5
             // 
@@ -297,9 +310,9 @@ namespace WindowsFormsTdd
             // 
             // addRandomBtn
             // 
-            this.addRandomBtn.Location = new System.Drawing.Point(278, 540);
+            this.addRandomBtn.Location = new System.Drawing.Point(245, 540);
             this.addRandomBtn.Name = "addRandomBtn";
-            this.addRandomBtn.Size = new System.Drawing.Size(166, 60);
+            this.addRandomBtn.Size = new System.Drawing.Size(150, 65);
             this.addRandomBtn.TabIndex = 23;
             this.addRandomBtn.Text = "הוסף 10000 סטודנטים";
             this.addRandomBtn.UseVisualStyleBackColor = true;
@@ -309,7 +322,7 @@ namespace WindowsFormsTdd
             // 
             this.errorlable.AutoSize = true;
             this.errorlable.ForeColor = System.Drawing.Color.Red;
-            this.errorlable.Location = new System.Drawing.Point(81, 524);
+            this.errorlable.Location = new System.Drawing.Point(407, 524);
             this.errorlable.Name = "errorlable";
             this.errorlable.Size = new System.Drawing.Size(133, 13);
             this.errorlable.TabIndex = 24;
@@ -382,11 +395,23 @@ namespace WindowsFormsTdd
             this.PhoneErrorLable.Text = "מספר נייד אינו תקין";
             this.PhoneErrorLable.Visible = false;
             // 
+            // SortBtn
+            // 
+            this.SortBtn.Location = new System.Drawing.Point(89, 540);
+            this.SortBtn.Name = "SortBtn";
+            this.SortBtn.Size = new System.Drawing.Size(150, 65);
+            this.SortBtn.TabIndex = 31;
+            this.SortBtn.Text = "מיין לפי ממוצע";
+            this.SortBtn.UseVisualStyleBackColor = true;
+            this.SortBtn.Visible = false;
+            this.SortBtn.Click += new System.EventHandler(this.SortBtn_Click);
+            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1137, 631);
+            this.Controls.Add(this.SortBtn);
             this.Controls.Add(this.PhoneErrorLable);
             this.Controls.Add(this.EmailErrorLable);
             this.Controls.Add(this.IDErrorLable);
@@ -465,6 +490,7 @@ namespace WindowsFormsTdd
         private System.Windows.Forms.Label IDErrorLable;
         private System.Windows.Forms.Label EmailErrorLable;
         private System.Windows.Forms.Label PhoneErrorLable;
+        private System.Windows.Forms.Button SortBtn;
     }
 }
 
