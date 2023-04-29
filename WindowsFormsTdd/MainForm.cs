@@ -38,7 +38,9 @@ namespace WindowsFormsTdd
             PhoneErrorLable.Visible = false;
             EmailErrorLable.Visible = false;
             NameErrorLable.Visible = false;
+            LastNameErrorLable.Visible = false;
             IDErrorLable.Visible = false;
+            GradesErrorLabel.Visible = false;
         }
 
 
@@ -58,42 +60,50 @@ namespace WindowsFormsTdd
         {
 
         }
-
-        bool CheckName(string FN,string LN) {
+        //checking First and LastName inputs
+        bool CheckName(string FN, string LN) {
 
             foreach (char letter in FN)
             {
-                if (char.IsNumber(letter)|| char.IsSeparator(letter) || char.IsControl(letter)) 
+                if (char.IsNumber(letter) || char.IsSeparator(letter) || char.IsControl(letter))
                 {
                     NameErrorLable.Visible = true;
                     return false; }
-                else NameErrorLable.Visible = false;
             }
-           
+
             foreach (char letter in LN)
             {
-                if (char.IsNumber(letter)|| char.IsSeparator(letter)|| char.IsControl(letter)) {
+                if (char.IsNumber(letter) || char.IsSeparator(letter) || char.IsControl(letter)) {
 
                     LastNameErrorLable.Visible = true;
                     return false; }
-                else LastNameErrorLable.Visible = false;
+
 
             }
+            if (FN == "" || LN == "") { NameErrorLable.Visible = true; LastNameErrorLable.Visible = true; return false; }
+
+
+            NameErrorLable.Visible = false;
+            LastNameErrorLable.Visible = false;
             return true;
         }
+
+        //checking ID input
         bool CheckID(string ID) {
-
-            foreach (char letter in ID)
+ 
+            if (confirmOnlyInt(ID))
             {
-                if (char.IsLetter(letter) || char.IsSeparator(letter) || char.IsControl(letter) || ID.Length != 9)
-                {
-                    IDErrorLable.Visible = true;
-                    return false;
-                }
-                else IDErrorLable.Visible = false;
+                IDErrorLable.Visible = true;
+                return false;
             }
+
+            if (ID.Length != 9) { IDErrorLable.Visible = true; return false; }
+
+            IDErrorLable.Visible = false;
             return true;
         }
+
+        //checking Email adress input
         bool Checkmail(string email) {
             //check for errors - test
             if (string.IsNullOrWhiteSpace(email))
@@ -120,7 +130,7 @@ namespace WindowsFormsTdd
             if (string.IsNullOrWhiteSpace(domain))
             {
                 EmailErrorLable.Visible = true;
-                return false; 
+                return false;
             }
 
             string tld = email.Substring(dotIndex + 1);
@@ -133,20 +143,80 @@ namespace WindowsFormsTdd
             EmailErrorLable.Visible = false;
             return true;
         }
+
+
+        //checking Phonenumber inputs 
         bool CheckPhone(string ph)
         {
-
-            foreach (char letter in ph)
+            if (confirmOnlyInt(ph))
             {
-                if (char.IsLetter(letter) || char.IsSeparator(letter) || char.IsControl(letter) || ph.Length != 10)
-                {
-                    PhoneErrorLable.Visible = true;
-                    return false;
-                }
-                else PhoneErrorLable.Visible = false;
+                PhoneErrorLable.Visible = true;
+                return false;
             }
+
+            if (ph.Length != 10)
+            {
+                PhoneErrorLable.Visible = true;
+                return false;
+            }
+            PhoneErrorLable.Visible = false;
             return true;
         }
+
+        //Checking if INput is not only an intiger.
+        bool confirmOnlyInt(String C) {
+
+            foreach (char letter in C)
+            {
+                if (char.IsLetter(letter) || char.IsSeparator(letter) || char.IsControl(letter) || char.IsSymbol(letter))
+                {
+                    return true;
+                }
+            }
+
+            if (C == "") { return true; }
+
+            return false;
+        }
+        //Confirming that Course Grade input Value is ok.
+        bool incorrectCval(int c) {
+            if (c < 0 || c > 100 && c != 777)
+                return true;
+            else
+            return false;
+        }
+    
+        bool CheckCourses(String C1, String C2, String C3, String C4, String C5) {
+
+          
+            if (confirmOnlyInt(C1) || confirmOnlyInt(C2) || confirmOnlyInt(C3) || confirmOnlyInt(C4) || confirmOnlyInt(C5)) { GradesErrorLabel.Visible = true; return false; }
+
+            //Converting courses to int
+            int c1 = int.Parse(C1);
+            int c2 = int.Parse(C2);
+            int c3 = int.Parse(C3);
+            int c4 = int.Parse(C4);
+            int c5 = int.Parse(C5);
+
+            //check courses int value
+            if (incorrectCval(c1) || incorrectCval(c2) || incorrectCval(c3) || incorrectCval(c4) || incorrectCval(c5)) { GradesErrorLabel.Visible = true; return false; }
+           
+            GradesErrorLabel.Visible = false;
+            return true;
+        }
+
+        //function that calcs avrage from course inputs.
+        int CalcAvg(int c1, int c2, int c3, int c4, int c5) {
+
+            int numofcourses = 5;
+            if (c1 == 777) { numofcourses--; c1 = 0; }
+            if (c2 == 777) { numofcourses--; c2 = 0; }
+            if (c3 == 777) { numofcourses--; c3 = 0; }
+            if (c4 == 777) { numofcourses--; c4 = 0; }
+            if (c5 == 777) { numofcourses--; c5 = 0; }
+            return (c1 + c2 + c3 + c4 + c5) / numofcourses; ;
+        }
+
         private void AddStudentBtn_Click(object sender, EventArgs e)
         {
            
@@ -164,26 +234,13 @@ namespace WindowsFormsTdd
             string phoneNum = PhoneNumTextBox.Text;
             bool phoneok = CheckPhone(phoneNum);
 
+            bool courseok = CheckCourses(PhysicsTextBox.Text, MathTextBox.Text, SoftwereTextBox.Text, EnglishTextBox.Text, HebrewTextBox.Text);
+          
 
-            int numofcourses = 5;
-            /*
-            if (int.Parse(PhysicsTextBox.Text) == 777) { numofcourses--;}
-            if (int.Parse(MathTextBox.Text) == 777) { numofcourses--; }
-            if (int.Parse(SoftwereTextBox.Text) == 777) { numofcourses--; }
-            if (int.Parse(EnglishTextBox.Text) == 777) { numofcourses--; }
-            if (int.Parse(HebrewTextBox.Text) == 777) { numofcourses--; }
-            */
-            int Avrage = 0 +
-                (int.Parse(PhysicsTextBox.Text)+
-                int.Parse(MathTextBox.Text) +
-                int.Parse(SoftwereTextBox.Text) +
-                int.Parse(EnglishTextBox.Text) +
-                int.Parse(HebrewTextBox.Text))/ numofcourses
-                ;
-
-            if (nameok && idok && Emailok && phoneok)
+            if (nameok && idok && Emailok && phoneok&& courseok)
             {
-                string[] newuser = { Avrage.ToString(), phoneNum.ToString(), Email, ID.ToString(), Name + " " + LastName };
+                String Avrage = CalcAvg(int.Parse(PhysicsTextBox.Text), int.Parse(MathTextBox.Text), int.Parse(SoftwereTextBox.Text), int.Parse(EnglishTextBox.Text), int.Parse(HebrewTextBox.Text)).ToString();
+                string[] newuser = { Avrage, SoftwereTextBox.Text, PhysicsTextBox.Text, HebrewTextBox.Text, EnglishTextBox.Text, MathTextBox.Text, phoneNum.ToString(), Email, ID.ToString(), Name + " " + LastName };
                 ListViewItem student = new ListViewItem(newuser);
                 StudentView1.Items.Add(student);
                 errorlable.Visible = false;
@@ -195,7 +252,6 @@ namespace WindowsFormsTdd
         }
 
        
-
         public string ConvertToEnglish(string Name) {
 
             //Hebrew to english dictionery
@@ -218,8 +274,6 @@ namespace WindowsFormsTdd
             
             return char.ToUpper(ToEnglish[0]) + ToEnglish.Substring(1);
         }
-
-
 
 
         //generate random student function
@@ -255,12 +309,19 @@ namespace WindowsFormsTdd
             string rndEmail = ConvertToEnglish(rndName) + rnd.Next(000, 100).ToString() + email[rnd.Next(0, email.Length - 1)];
             int rndID = rnd.Next(111111111, 999999999);
             int rndphoneNum = 50000000 + rnd.Next(0000000, 9999999);
-            int rndAvrage = rnd.Next(50, 500)/5;
-           
-            
+
+            int rndc1 = rnd.Next(0, 110); if (rndc1 > 100) rndc1 = 777;
+            int rndc2 = rnd.Next(0, 110); if (rndc2 > 100) rndc2 = 777;
+            int rndc3 = rnd.Next(0, 110); if (rndc3 > 100) rndc3 = 777;
+            int rndc4 = rnd.Next(0, 110); if (rndc4 > 100) rndc4 = 777;
+            int rndc5 = rnd.Next(0, 110); if (rndc5 > 100) rndc5 = 777;
+
+            String Avrage = CalcAvg(rndc1, rndc2, rndc3, rndc4, rndc5).ToString();
+
+
             //generate a listview Data string-  avrage / phonenumber / email / ID / full name
 
-            string[] RandomData = { rndAvrage.ToString(), "0" + rndphoneNum.ToString(), rndEmail, rndID.ToString(), rndName + " " + rndLastName };
+            string[] RandomData = { Avrage, rndc5.ToString(), rndc4.ToString(), rndc3.ToString(), rndc2.ToString(), rndc1.ToString(), "0" + rndphoneNum.ToString(), rndEmail, rndID.ToString(), rndName + " " + rndLastName };
             
             return RandomData;
         }
@@ -273,11 +334,11 @@ namespace WindowsFormsTdd
             Random rnd = new Random();
             for (int i = 0; i < 10000; i++)
             {
-                SortBtn.Visible = true;
                 string[] ListviewData = GenerateRandomStudent(rnd);
                 ListViewItem student = new ListViewItem(ListviewData);
                 StudentView1.Items.Add(student);
             }
+            SortBtn.Visible = true;
         }
 
         private void FirstNameTextBox_TextChanged(object sender, EventArgs e)
