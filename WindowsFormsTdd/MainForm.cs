@@ -167,7 +167,7 @@ namespace WindowsFormsTdd
         bool confirmOnlyInt(String C) {
 
             foreach (char letter in C)
-            {
+            {                                               //ERROR   NOT RECOGNISING    @,!,#  ERROR********
                 if (char.IsLetter(letter) || char.IsSeparator(letter) || char.IsControl(letter) || char.IsSymbol(letter))
                 {
                     return true;
