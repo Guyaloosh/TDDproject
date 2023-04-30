@@ -18,3 +18,13 @@ C:\Users\guyal\OneDrive\Desktop\TDD\TDDproject\WindowsFormsTdd\obj\Debug\Windows
 C:\Users\guyal\OneDrive\Desktop\TDD\TDDproject\WindowsFormsTdd\obj\Debug\WindowsFormsTdd.exe
 C:\Users\guyal\OneDrive\Desktop\TDD\TDDproject\WindowsFormsTdd\obj\Debug\WindowsFormsTdd.pdb
 C:\Users\Orel\Source\Repos\TDDproject3\WindowsFormsTdd\obj\Debug\WindowsFormsTdd.MainForm.resources
+C:\Users\guyal\Source\Repos\TDDproject3\WindowsFormsTdd\bin\Debug\WindowsFormsTdd.exe.config
+C:\Users\guyal\Source\Repos\TDDproject3\WindowsFormsTdd\bin\Debug\WindowsFormsTdd.exe
+C:\Users\guyal\Source\Repos\TDDproject3\WindowsFormsTdd\bin\Debug\WindowsFormsTdd.pdb
+C:\Users\guyal\Source\Repos\TDDproject3\WindowsFormsTdd\obj\Debug\WindowsFormsTdd.csproj.AssemblyReference.cache
+C:\Users\guyal\Source\Repos\TDDproject3\WindowsFormsTdd\obj\Debug\WindowsFormsTdd.MainForm.resources
+C:\Users\guyal\Source\Repos\TDDproject3\WindowsFormsTdd\obj\Debug\WindowsFormsTdd.Properties.Resources.resources
+C:\Users\guyal\Source\Repos\TDDproject3\WindowsFormsTdd\obj\Debug\WindowsFormsTdd.csproj.GenerateResource.cache
+C:\Users\guyal\Source\Repos\TDDproject3\WindowsFormsTdd\obj\Debug\WindowsFormsTdd.csproj.CoreCompileInputs.cache
+C:\Users\guyal\Source\Repos\TDDproject3\WindowsFormsTdd\obj\Debug\WindowsFormsTdd.exe
+C:\Users\guyal\Source\Repos\TDDproject3\WindowsFormsTdd\obj\Debug\WindowsFormsTdd.pdb
