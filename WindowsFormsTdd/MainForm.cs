@@ -167,7 +167,7 @@ namespace WindowsFormsTdd
         bool confirmOnlyInt(String C) {
 
             foreach (char letter in C)
-            {                                               //ERROR   NOT RECOGNISING    @,!,#  ERROR********
+            {           
                 if (char.IsLetter(letter) || char.IsSeparator(letter) || char.IsControl(letter) || char.IsSymbol(letter))
                 {
                     return true;
@@ -175,6 +175,16 @@ namespace WindowsFormsTdd
             }
 
             if (C == "") { return true; }
+
+            //confirm only digits
+            foreach (char letter in C)
+            {                                               
+                if (!char.IsDigit(letter))
+                {
+                    return true;
+                }
+            }
+
 
             return false;
         }
@@ -188,7 +198,7 @@ namespace WindowsFormsTdd
     
         bool CheckCourses(String C1, String C2, String C3, String C4, String C5) {
 
-          
+            //ERROR @
             if (confirmOnlyInt(C1) || confirmOnlyInt(C2) || confirmOnlyInt(C3) || confirmOnlyInt(C4) || confirmOnlyInt(C5)) { GradesErrorLabel.Visible = true; return false; }
 
             //Converting courses to int
