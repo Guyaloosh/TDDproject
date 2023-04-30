@@ -360,5 +360,10 @@ namespace WindowsFormsTdd
         {
 
         }
+
+        private void PhoneErrorLable_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
