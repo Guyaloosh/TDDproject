@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -353,6 +354,7 @@ namespace WindowsFormsTdd
 
         private void FirstNameTextBox_TextChanged(object sender, EventArgs e)
         {
+          
 
         }
 
@@ -369,6 +371,53 @@ namespace WindowsFormsTdd
         private void SortBtn_Click(object sender, EventArgs e)
         {
 
+            //FILL THIS
+            
+            StudentView1.Sorting = SortOrder.None;
+
+            // Set the ListViewItemSorter property to null to disable any custom sorting.
+            StudentView1.ListViewItemSorter = new IntegerListViewItemComparer(0);
+
+
+            // Call the Sort method to apply the sorting.
+            StudentView1.Sort();
         }
+
+        public class IntegerListViewItemComparer : IComparer
+        {
+            private int column;
+
+            public IntegerListViewItemComparer(int column)
+            {
+                this.column = column;
+            }
+
+            public int Compare(object x, object y)
+            {
+                int xValue = int.Parse(((ListViewItem)x).SubItems[column].Text);
+                int yValue = int.Parse(((ListViewItem)y).SubItems[column].Text);
+                return yValue.CompareTo(xValue); // Compare in reverse order for descending sort
+            }
+        }
+
+        //BubbleSort main function. #1
+        public static void BubbleSort(int[] arr)
+        {
+            int n = arr.Length;
+            for (int i = 0; i < n - 1; i++)
+            {
+                for (int j = 0; j < n - i - 1; j++)
+                {
+                    if (arr[j] > arr[j + 1])
+                    {
+                        // swap
+                        int temp = arr[j];
+                        arr[j] = arr[j + 1];
+                        arr[j + 1] = temp;
+                    }
+                }
+            }
+        }
+
     }
 }
