@@ -25,14 +25,14 @@ namespace WindowsFormsTdd
         {
             InitializeComponent();
          
-            Image AddSbtnImage = new Bitmap(Image.FromFile(@"C:\Users\Orel\Downloads\AddSBTN.png"), new Size(280, 120)); // scale the image to a new size of 280x120
+            Image AddSbtnImage = new Bitmap(Image.FromFile(@"C:\Users\guyal\Downloads\AddSBTN.png"), new Size(280, 120)); // scale the image to a new size of 280x120
             AddStudentBtn.Image = AddSbtnImage;
-            Image SortbtnImage = new Bitmap(Image.FromFile(@"C:\Users\Orel\Downloads\SortBTN.png"), new Size(280, 120)); // scale the image to a new size of 280x120
+            Image SortbtnImage = new Bitmap(Image.FromFile(@"C:\Users\guyal\Downloads\SortBTN.png"), new Size(280, 120)); // scale the image to a new size of 280x120
             SortBtn.Image = SortbtnImage;
-            Image rndbtnImage = new Bitmap(Image.FromFile(@"C:\Users\Orel\Downloads\GenerateRndBTN.png"), new Size(280, 120)); // scale the image to a new size of 280x120
+            Image rndbtnImage = new Bitmap(Image.FromFile(@"C:\Users\guyal\Downloads\GenerateRndBTN.png"), new Size(280, 120)); // scale the image to a new size of 280x120
             addRandomBtn.Image = rndbtnImage;
             
-
+            
         }
 
 
