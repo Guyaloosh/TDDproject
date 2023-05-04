@@ -77,9 +77,10 @@ namespace WindowsFormsTdd
             // 
             // AddStudentBtn
             // 
-            this.AddStudentBtn.Location = new System.Drawing.Point(652, 617);
+            this.AddStudentBtn.Location = new System.Drawing.Point(712, 613);
+            this.AddStudentBtn.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.AddStudentBtn.Name = "AddStudentBtn";
-            this.AddStudentBtn.Size = new System.Drawing.Size(280, 120);
+            this.AddStudentBtn.Size = new System.Drawing.Size(237, 124);
             this.AddStudentBtn.TabIndex = 0;
             this.AddStudentBtn.UseVisualStyleBackColor = true;
             this.AddStudentBtn.Click += new System.EventHandler(this.AddStudentBtn_Click);
@@ -87,7 +88,8 @@ namespace WindowsFormsTdd
             // StudentName
             // 
             this.StudentName.AutoSize = true;
-            this.StudentName.Location = new System.Drawing.Point(1302, 383);
+            this.StudentName.Location = new System.Drawing.Point(1421, 194);
+            this.StudentName.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.StudentName.Name = "StudentName";
             this.StudentName.Size = new System.Drawing.Size(51, 13);
             this.StudentName.TabIndex = 1;
@@ -95,7 +97,8 @@ namespace WindowsFormsTdd
             // 
             // FirstNameTextBox
             // 
-            this.FirstNameTextBox.Location = new System.Drawing.Point(1118, 380);
+            this.FirstNameTextBox.Location = new System.Drawing.Point(1201, 187);
+            this.FirstNameTextBox.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.FirstNameTextBox.Name = "FirstNameTextBox";
             this.FirstNameTextBox.Size = new System.Drawing.Size(160, 20);
             this.FirstNameTextBox.TabIndex = 2;
@@ -104,7 +107,8 @@ namespace WindowsFormsTdd
             // 
             // LastNameTxtBox
             // 
-            this.LastNameTxtBox.Location = new System.Drawing.Point(1118, 420);
+            this.LastNameTxtBox.Location = new System.Drawing.Point(1201, 208);
+            this.LastNameTxtBox.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.LastNameTxtBox.Name = "LastNameTxtBox";
             this.LastNameTxtBox.Size = new System.Drawing.Size(160, 20);
             this.LastNameTxtBox.TabIndex = 3;
@@ -113,7 +117,8 @@ namespace WindowsFormsTdd
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(1302, 424);
+            this.label1.Location = new System.Drawing.Point(1409, 215);
+            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(63, 13);
             this.label1.TabIndex = 4;
@@ -121,7 +126,8 @@ namespace WindowsFormsTdd
             // 
             // IdTextBox
             // 
-            this.IdTextBox.Location = new System.Drawing.Point(1118, 460);
+            this.IdTextBox.Location = new System.Drawing.Point(1201, 229);
+            this.IdTextBox.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.IdTextBox.Name = "IdTextBox";
             this.IdTextBox.Size = new System.Drawing.Size(160, 20);
             this.IdTextBox.TabIndex = 5;
@@ -130,7 +136,8 @@ namespace WindowsFormsTdd
             // IdLabel
             // 
             this.IdLabel.AutoSize = true;
-            this.IdLabel.Location = new System.Drawing.Point(1298, 463);
+            this.IdLabel.Location = new System.Drawing.Point(1405, 236);
+            this.IdLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.IdLabel.Name = "IdLabel";
             this.IdLabel.Size = new System.Drawing.Size(67, 13);
             this.IdLabel.TabIndex = 6;
@@ -138,7 +145,8 @@ namespace WindowsFormsTdd
             // 
             // EmailTextBox
             // 
-            this.EmailTextBox.Location = new System.Drawing.Point(1118, 500);
+            this.EmailTextBox.Location = new System.Drawing.Point(1201, 250);
+            this.EmailTextBox.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.EmailTextBox.Name = "EmailTextBox";
             this.EmailTextBox.Size = new System.Drawing.Size(160, 20);
             this.EmailTextBox.TabIndex = 7;
@@ -146,7 +154,8 @@ namespace WindowsFormsTdd
             // EmailTextLabel
             // 
             this.EmailTextLabel.AutoSize = true;
-            this.EmailTextLabel.Location = new System.Drawing.Point(1302, 503);
+            this.EmailTextLabel.Location = new System.Drawing.Point(1405, 257);
+            this.EmailTextLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.EmailTextLabel.Name = "EmailTextLabel";
             this.EmailTextLabel.Size = new System.Drawing.Size(67, 13);
             this.EmailTextLabel.TabIndex = 8;
@@ -154,7 +163,8 @@ namespace WindowsFormsTdd
             // 
             // PhoneNumTextBox
             // 
-            this.PhoneNumTextBox.Location = new System.Drawing.Point(1118, 541);
+            this.PhoneNumTextBox.Location = new System.Drawing.Point(1201, 271);
+            this.PhoneNumTextBox.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.PhoneNumTextBox.Name = "PhoneNumTextBox";
             this.PhoneNumTextBox.Size = new System.Drawing.Size(160, 20);
             this.PhoneNumTextBox.TabIndex = 9;
@@ -163,7 +173,8 @@ namespace WindowsFormsTdd
             // PhoneLabel
             // 
             this.PhoneLabel.AutoSize = true;
-            this.PhoneLabel.Location = new System.Drawing.Point(1298, 543);
+            this.PhoneLabel.Location = new System.Drawing.Point(1396, 278);
+            this.PhoneLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.PhoneLabel.Name = "PhoneLabel";
             this.PhoneLabel.Size = new System.Drawing.Size(76, 13);
             this.PhoneLabel.TabIndex = 10;
@@ -172,7 +183,8 @@ namespace WindowsFormsTdd
             // GradesLabels
             // 
             this.GradesLabels.AutoSize = true;
-            this.GradesLabels.Location = new System.Drawing.Point(997, 396);
+            this.GradesLabels.Location = new System.Drawing.Point(1418, 362);
+            this.GradesLabels.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.GradesLabels.Name = "GradesLabels";
             this.GradesLabels.Size = new System.Drawing.Size(82, 13);
             this.GradesLabels.TabIndex = 11;
@@ -181,7 +193,8 @@ namespace WindowsFormsTdd
             // 
             // MathTextBox
             // 
-            this.MathTextBox.Location = new System.Drawing.Point(982, 437);
+            this.MathTextBox.Location = new System.Drawing.Point(1311, 388);
+            this.MathTextBox.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.MathTextBox.Name = "MathTextBox";
             this.MathTextBox.Size = new System.Drawing.Size(50, 20);
             this.MathTextBox.TabIndex = 12;
@@ -190,7 +203,8 @@ namespace WindowsFormsTdd
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(1055, 440);
+            this.label2.Location = new System.Drawing.Point(1418, 391);
+            this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(54, 13);
             this.label2.TabIndex = 13;
@@ -198,7 +212,8 @@ namespace WindowsFormsTdd
             // 
             // EnglishTextBox
             // 
-            this.EnglishTextBox.Location = new System.Drawing.Point(982, 463);
+            this.EnglishTextBox.Location = new System.Drawing.Point(1311, 412);
+            this.EnglishTextBox.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.EnglishTextBox.Name = "EnglishTextBox";
             this.EnglishTextBox.Size = new System.Drawing.Size(50, 20);
             this.EnglishTextBox.TabIndex = 14;
@@ -207,7 +222,8 @@ namespace WindowsFormsTdd
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(1053, 466);
+            this.label3.Location = new System.Drawing.Point(1425, 415);
+            this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(45, 13);
             this.label3.TabIndex = 15;
@@ -215,7 +231,8 @@ namespace WindowsFormsTdd
             // 
             // HebrewTextBox
             // 
-            this.HebrewTextBox.Location = new System.Drawing.Point(982, 489);
+            this.HebrewTextBox.Location = new System.Drawing.Point(1311, 436);
+            this.HebrewTextBox.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.HebrewTextBox.Name = "HebrewTextBox";
             this.HebrewTextBox.Size = new System.Drawing.Size(50, 20);
             this.HebrewTextBox.TabIndex = 16;
@@ -224,7 +241,8 @@ namespace WindowsFormsTdd
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(1058, 492);
+            this.label4.Location = new System.Drawing.Point(1435, 439);
+            this.label4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(33, 13);
             this.label4.TabIndex = 17;
@@ -232,7 +250,8 @@ namespace WindowsFormsTdd
             // 
             // PhysicsTextBox
             // 
-            this.PhysicsTextBox.Location = new System.Drawing.Point(982, 515);
+            this.PhysicsTextBox.Location = new System.Drawing.Point(1311, 460);
+            this.PhysicsTextBox.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.PhysicsTextBox.Name = "PhysicsTextBox";
             this.PhysicsTextBox.Size = new System.Drawing.Size(50, 20);
             this.PhysicsTextBox.TabIndex = 18;
@@ -241,7 +260,8 @@ namespace WindowsFormsTdd
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(1055, 517);
+            this.label5.Location = new System.Drawing.Point(1425, 467);
+            this.label5.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(43, 13);
             this.label5.TabIndex = 19;
@@ -249,7 +269,8 @@ namespace WindowsFormsTdd
             // 
             // SoftwereTextBox
             // 
-            this.SoftwereTextBox.Location = new System.Drawing.Point(982, 541);
+            this.SoftwereTextBox.Location = new System.Drawing.Point(1311, 484);
+            this.SoftwereTextBox.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.SoftwereTextBox.Name = "SoftwereTextBox";
             this.SoftwereTextBox.Size = new System.Drawing.Size(50, 20);
             this.SoftwereTextBox.TabIndex = 20;
@@ -258,7 +279,8 @@ namespace WindowsFormsTdd
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(1055, 544);
+            this.label6.Location = new System.Drawing.Point(1430, 491);
+            this.label6.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(38, 13);
             this.label6.TabIndex = 21;
@@ -278,9 +300,10 @@ namespace WindowsFormsTdd
             this.תעודתזהות,
             this.שםמלא});
             this.StudentView1.HideSelection = false;
-            this.StudentView1.Location = new System.Drawing.Point(12, 170);
+            this.StudentView1.Location = new System.Drawing.Point(131, 172);
+            this.StudentView1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.StudentView1.Name = "StudentView1";
-            this.StudentView1.Size = new System.Drawing.Size(958, 407);
+            this.StudentView1.Size = new System.Drawing.Size(919, 399);
             this.StudentView1.TabIndex = 22;
             this.StudentView1.UseCompatibleStateImageBehavior = false;
             this.StudentView1.View = System.Windows.Forms.View.Details;
@@ -340,11 +363,11 @@ namespace WindowsFormsTdd
             // 
             // addRandomBtn
             // 
-            this.addRandomBtn.Location = new System.Drawing.Point(332, 617);
+            this.addRandomBtn.Location = new System.Drawing.Point(452, 613);
+            this.addRandomBtn.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.addRandomBtn.Name = "addRandomBtn";
-            this.addRandomBtn.Size = new System.Drawing.Size(280, 120);
+            this.addRandomBtn.Size = new System.Drawing.Size(246, 124);
             this.addRandomBtn.TabIndex = 23;
-            this.addRandomBtn.Text = "הוסף 10000 סטודנטים";
             this.addRandomBtn.UseVisualStyleBackColor = true;
             this.addRandomBtn.Click += new System.EventHandler(this.addRandomBtn_Click);
             // 
@@ -352,7 +375,8 @@ namespace WindowsFormsTdd
             // 
             this.errorlable.AutoSize = true;
             this.errorlable.ForeColor = System.Drawing.Color.Red;
-            this.errorlable.Location = new System.Drawing.Point(724, 628);
+            this.errorlable.Location = new System.Drawing.Point(761, 678);
+            this.errorlable.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.errorlable.Name = "errorlable";
             this.errorlable.Size = new System.Drawing.Size(133, 13);
             this.errorlable.TabIndex = 24;
@@ -362,9 +386,10 @@ namespace WindowsFormsTdd
             // 
             // cleanbtn
             // 
-            this.cleanbtn.Location = new System.Drawing.Point(1186, 180);
+            this.cleanbtn.Location = new System.Drawing.Point(593, 94);
+            this.cleanbtn.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.cleanbtn.Name = "cleanbtn";
-            this.cleanbtn.Size = new System.Drawing.Size(92, 28);
+            this.cleanbtn.Size = new System.Drawing.Size(46, 15);
             this.cleanbtn.TabIndex = 25;
             this.cleanbtn.Text = "נקה דף";
             this.cleanbtn.UseVisualStyleBackColor = true;
@@ -374,7 +399,8 @@ namespace WindowsFormsTdd
             // 
             this.NameErrorLable.AutoSize = true;
             this.NameErrorLable.ForeColor = System.Drawing.Color.Red;
-            this.NameErrorLable.Location = new System.Drawing.Point(1156, 404);
+            this.NameErrorLable.Location = new System.Drawing.Point(1094, 190);
+            this.NameErrorLable.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.NameErrorLable.Name = "NameErrorLable";
             this.NameErrorLable.Size = new System.Drawing.Size(103, 13);
             this.NameErrorLable.TabIndex = 26;
@@ -385,7 +411,8 @@ namespace WindowsFormsTdd
             // 
             this.LastNameErrorLable.AutoSize = true;
             this.LastNameErrorLable.ForeColor = System.Drawing.Color.Red;
-            this.LastNameErrorLable.Location = new System.Drawing.Point(1125, 444);
+            this.LastNameErrorLable.Location = new System.Drawing.Point(1054, 211);
+            this.LastNameErrorLable.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.LastNameErrorLable.Name = "LastNameErrorLable";
             this.LastNameErrorLable.Size = new System.Drawing.Size(143, 13);
             this.LastNameErrorLable.TabIndex = 27;
@@ -396,7 +423,8 @@ namespace WindowsFormsTdd
             // 
             this.IDErrorLable.AutoSize = true;
             this.IDErrorLable.ForeColor = System.Drawing.Color.Red;
-            this.IDErrorLable.Location = new System.Drawing.Point(1139, 484);
+            this.IDErrorLable.Location = new System.Drawing.Point(1068, 232);
+            this.IDErrorLable.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.IDErrorLable.Name = "IDErrorLable";
             this.IDErrorLable.Size = new System.Drawing.Size(129, 13);
             this.IDErrorLable.TabIndex = 28;
@@ -407,7 +435,8 @@ namespace WindowsFormsTdd
             // 
             this.EmailErrorLable.AutoSize = true;
             this.EmailErrorLable.ForeColor = System.Drawing.Color.Red;
-            this.EmailErrorLable.Location = new System.Drawing.Point(1139, 525);
+            this.EmailErrorLable.Location = new System.Drawing.Point(1068, 253);
+            this.EmailErrorLable.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.EmailErrorLable.Name = "EmailErrorLable";
             this.EmailErrorLable.Size = new System.Drawing.Size(129, 13);
             this.EmailErrorLable.TabIndex = 29;
@@ -418,7 +447,8 @@ namespace WindowsFormsTdd
             // 
             this.PhoneErrorLable.AutoSize = true;
             this.PhoneErrorLable.ForeColor = System.Drawing.Color.Red;
-            this.PhoneErrorLable.Location = new System.Drawing.Point(1147, 564);
+            this.PhoneErrorLable.Location = new System.Drawing.Point(1085, 274);
+            this.PhoneErrorLable.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.PhoneErrorLable.Name = "PhoneErrorLable";
             this.PhoneErrorLable.Size = new System.Drawing.Size(112, 13);
             this.PhoneErrorLable.TabIndex = 30;
@@ -427,11 +457,11 @@ namespace WindowsFormsTdd
             // 
             // SortBtn
             // 
-            this.SortBtn.Location = new System.Drawing.Point(18, 617);
+            this.SortBtn.Location = new System.Drawing.Point(201, 613);
+            this.SortBtn.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.SortBtn.Name = "SortBtn";
-            this.SortBtn.Size = new System.Drawing.Size(280, 120);
+            this.SortBtn.Size = new System.Drawing.Size(232, 124);
             this.SortBtn.TabIndex = 31;
-            this.SortBtn.Text = "מיין לפי ממוצע";
             this.SortBtn.UseVisualStyleBackColor = true;
             this.SortBtn.Visible = false;
             this.SortBtn.Click += new System.EventHandler(this.SortBtn_Click);
@@ -440,7 +470,8 @@ namespace WindowsFormsTdd
             // 
             this.GradesErrorLabel.AutoSize = true;
             this.GradesErrorLabel.ForeColor = System.Drawing.Color.Red;
-            this.GradesErrorLabel.Location = new System.Drawing.Point(983, 421);
+            this.GradesErrorLabel.Location = new System.Drawing.Point(1253, 506);
+            this.GradesErrorLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.GradesErrorLabel.Name = "GradesErrorLabel";
             this.GradesErrorLabel.Size = new System.Drawing.Size(108, 13);
             this.GradesErrorLabel.TabIndex = 32;
@@ -453,7 +484,7 @@ namespace WindowsFormsTdd
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(1470, 920);
+            this.ClientSize = new System.Drawing.Size(1556, 915);
             this.Controls.Add(this.GradesErrorLabel);
             this.Controls.Add(this.SortBtn);
             this.Controls.Add(this.PhoneErrorLable);
