@@ -30,7 +30,6 @@ C:\Users\guyal\OneDrive\Desktop\TDD\WindowsFormsTdd\obj\Debug\WindowsFormsTdd.cs
 C:\Users\guyal\OneDrive\Desktop\TDD\WindowsFormsTdd\obj\Debug\WindowsFormsTdd.exe
 C:\Users\guyal\OneDrive\Desktop\TDD\WindowsFormsTdd\obj\Debug\WindowsFormsTdd.pdb
 =======
-<<<<<<< HEAD
 C:\Users\orelh\Source\Repos\TDDproject\WindowsFormsTdd\bin\Debug\WindowsFormsTdd.exe.config
 C:\Users\orelh\Source\Repos\TDDproject\WindowsFormsTdd\bin\Debug\WindowsFormsTdd.exe
 C:\Users\orelh\Source\Repos\TDDproject\WindowsFormsTdd\bin\Debug\WindowsFormsTdd.pdb
@@ -41,7 +40,6 @@ C:\Users\orelh\Source\Repos\TDDproject\WindowsFormsTdd\obj\Debug\WindowsFormsTdd
 C:\Users\orelh\Source\Repos\TDDproject\WindowsFormsTdd\obj\Debug\WindowsFormsTdd.csproj.CoreCompileInputs.cache
 C:\Users\orelh\Source\Repos\TDDproject\WindowsFormsTdd\obj\Debug\WindowsFormsTdd.exe
 C:\Users\orelh\Source\Repos\TDDproject\WindowsFormsTdd\obj\Debug\WindowsFormsTdd.pdb
-=======
 C:\Users\guyal\Source\Repos\TDDproject3\WindowsFormsTdd\bin\Debug\WindowsFormsTdd.exe.config
 C:\Users\guyal\Source\Repos\TDDproject3\WindowsFormsTdd\bin\Debug\WindowsFormsTdd.exe
 C:\Users\guyal\Source\Repos\TDDproject3\WindowsFormsTdd\bin\Debug\WindowsFormsTdd.pdb

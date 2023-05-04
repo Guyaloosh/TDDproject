@@ -383,12 +383,12 @@ namespace WindowsFormsTdd
             StudentView1.Sort();
         }
 
-<<<<<<< HEAD
+
         private void PhoneErrorLable_Click(object sender, EventArgs e)
         {
 
         }
-=======
+
         public class IntegerListViewItemComparer : IComparer
         {
             private int column;
@@ -425,6 +425,5 @@ namespace WindowsFormsTdd
             }
         }
 
->>>>>>> 45af286a812f00f8bcff7c022038c2b737d721dc
     }
 }
