@@ -88,6 +88,7 @@ namespace WindowsFormsTdd
             // StudentName
             // 
             this.StudentName.AutoSize = true;
+            this.StudentName.BackColor = System.Drawing.Color.Transparent;
             this.StudentName.Location = new System.Drawing.Point(1421, 194);
             this.StudentName.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.StudentName.Name = "StudentName";
@@ -117,6 +118,7 @@ namespace WindowsFormsTdd
             // label1
             // 
             this.label1.AutoSize = true;
+            this.label1.BackColor = System.Drawing.Color.Transparent;
             this.label1.Location = new System.Drawing.Point(1409, 215);
             this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
@@ -136,6 +138,7 @@ namespace WindowsFormsTdd
             // IdLabel
             // 
             this.IdLabel.AutoSize = true;
+            this.IdLabel.BackColor = System.Drawing.Color.Transparent;
             this.IdLabel.Location = new System.Drawing.Point(1405, 236);
             this.IdLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.IdLabel.Name = "IdLabel";
@@ -154,6 +157,7 @@ namespace WindowsFormsTdd
             // EmailTextLabel
             // 
             this.EmailTextLabel.AutoSize = true;
+            this.EmailTextLabel.BackColor = System.Drawing.Color.Transparent;
             this.EmailTextLabel.Location = new System.Drawing.Point(1405, 257);
             this.EmailTextLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.EmailTextLabel.Name = "EmailTextLabel";
@@ -173,6 +177,7 @@ namespace WindowsFormsTdd
             // PhoneLabel
             // 
             this.PhoneLabel.AutoSize = true;
+            this.PhoneLabel.BackColor = System.Drawing.Color.Transparent;
             this.PhoneLabel.Location = new System.Drawing.Point(1396, 278);
             this.PhoneLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.PhoneLabel.Name = "PhoneLabel";
@@ -183,6 +188,7 @@ namespace WindowsFormsTdd
             // GradesLabels
             // 
             this.GradesLabels.AutoSize = true;
+            this.GradesLabels.BackColor = System.Drawing.Color.Transparent;
             this.GradesLabels.Location = new System.Drawing.Point(1418, 362);
             this.GradesLabels.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.GradesLabels.Name = "GradesLabels";
@@ -203,6 +209,7 @@ namespace WindowsFormsTdd
             // label2
             // 
             this.label2.AutoSize = true;
+            this.label2.BackColor = System.Drawing.Color.Transparent;
             this.label2.Location = new System.Drawing.Point(1418, 391);
             this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label2.Name = "label2";
@@ -222,6 +229,7 @@ namespace WindowsFormsTdd
             // label3
             // 
             this.label3.AutoSize = true;
+            this.label3.BackColor = System.Drawing.Color.Transparent;
             this.label3.Location = new System.Drawing.Point(1425, 415);
             this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label3.Name = "label3";
@@ -241,6 +249,7 @@ namespace WindowsFormsTdd
             // label4
             // 
             this.label4.AutoSize = true;
+            this.label4.BackColor = System.Drawing.Color.Transparent;
             this.label4.Location = new System.Drawing.Point(1435, 439);
             this.label4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label4.Name = "label4";
@@ -260,6 +269,7 @@ namespace WindowsFormsTdd
             // label5
             // 
             this.label5.AutoSize = true;
+            this.label5.BackColor = System.Drawing.Color.Transparent;
             this.label5.Location = new System.Drawing.Point(1425, 467);
             this.label5.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label5.Name = "label5";
@@ -279,6 +289,7 @@ namespace WindowsFormsTdd
             // label6
             // 
             this.label6.AutoSize = true;
+            this.label6.BackColor = System.Drawing.Color.Transparent;
             this.label6.Location = new System.Drawing.Point(1430, 491);
             this.label6.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label6.Name = "label6";
