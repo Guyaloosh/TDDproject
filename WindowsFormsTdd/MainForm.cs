@@ -49,6 +49,7 @@ namespace WindowsFormsTdd
             HebrewTextBox.Clear();
             MathTextBox.Clear();
             SoftwereTextBox.Clear();
+            
             errorlable.Visible = false;
             PhoneErrorLable.Visible = false;
             EmailErrorLable.Visible = false;

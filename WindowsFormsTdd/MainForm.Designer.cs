@@ -89,10 +89,11 @@ namespace WindowsFormsTdd
             // 
             this.StudentName.AutoSize = true;
             this.StudentName.BackColor = System.Drawing.Color.Transparent;
-            this.StudentName.Location = new System.Drawing.Point(1421, 194);
+            this.StudentName.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
+            this.StudentName.Location = new System.Drawing.Point(1409, 191);
             this.StudentName.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.StudentName.Name = "StudentName";
-            this.StudentName.Size = new System.Drawing.Size(51, 13);
+            this.StudentName.Size = new System.Drawing.Size(55, 16);
             this.StudentName.TabIndex = 1;
             this.StudentName.Text = "שם פרטי";
             // 
@@ -119,10 +120,11 @@ namespace WindowsFormsTdd
             // 
             this.label1.AutoSize = true;
             this.label1.BackColor = System.Drawing.Color.Transparent;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
             this.label1.Location = new System.Drawing.Point(1409, 215);
             this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(63, 13);
+            this.label1.Size = new System.Drawing.Size(68, 16);
             this.label1.TabIndex = 4;
             this.label1.Text = "שם משפחה";
             // 
@@ -139,10 +141,11 @@ namespace WindowsFormsTdd
             // 
             this.IdLabel.AutoSize = true;
             this.IdLabel.BackColor = System.Drawing.Color.Transparent;
+            this.IdLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
             this.IdLabel.Location = new System.Drawing.Point(1405, 236);
             this.IdLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.IdLabel.Name = "IdLabel";
-            this.IdLabel.Size = new System.Drawing.Size(67, 13);
+            this.IdLabel.Size = new System.Drawing.Size(77, 16);
             this.IdLabel.TabIndex = 6;
             this.IdLabel.Text = "תעודת זהות";
             // 
@@ -158,10 +161,11 @@ namespace WindowsFormsTdd
             // 
             this.EmailTextLabel.AutoSize = true;
             this.EmailTextLabel.BackColor = System.Drawing.Color.Transparent;
+            this.EmailTextLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
             this.EmailTextLabel.Location = new System.Drawing.Point(1405, 257);
             this.EmailTextLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.EmailTextLabel.Name = "EmailTextLabel";
-            this.EmailTextLabel.Size = new System.Drawing.Size(67, 13);
+            this.EmailTextLabel.Size = new System.Drawing.Size(75, 16);
             this.EmailTextLabel.TabIndex = 8;
             this.EmailTextLabel.Text = "כתובת מייל";
             // 
@@ -178,10 +182,11 @@ namespace WindowsFormsTdd
             // 
             this.PhoneLabel.AutoSize = true;
             this.PhoneLabel.BackColor = System.Drawing.Color.Transparent;
-            this.PhoneLabel.Location = new System.Drawing.Point(1396, 278);
+            this.PhoneLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
+            this.PhoneLabel.Location = new System.Drawing.Point(1409, 275);
             this.PhoneLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.PhoneLabel.Name = "PhoneLabel";
-            this.PhoneLabel.Size = new System.Drawing.Size(76, 13);
+            this.PhoneLabel.Size = new System.Drawing.Size(81, 16);
             this.PhoneLabel.TabIndex = 10;
             this.PhoneLabel.Text = "מספר פלאפון";
             // 
@@ -189,10 +194,11 @@ namespace WindowsFormsTdd
             // 
             this.GradesLabels.AutoSize = true;
             this.GradesLabels.BackColor = System.Drawing.Color.Transparent;
-            this.GradesLabels.Location = new System.Drawing.Point(1418, 362);
+            this.GradesLabels.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
+            this.GradesLabels.Location = new System.Drawing.Point(1404, 348);
             this.GradesLabels.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.GradesLabels.Name = "GradesLabels";
-            this.GradesLabels.Size = new System.Drawing.Size(82, 13);
+            this.GradesLabels.Size = new System.Drawing.Size(119, 24);
             this.GradesLabels.TabIndex = 11;
             this.GradesLabels.Text = "ציוני הסטודנט";
             this.GradesLabels.Click += new System.EventHandler(this.GradesLabels_Click);
@@ -210,10 +216,11 @@ namespace WindowsFormsTdd
             // 
             this.label2.AutoSize = true;
             this.label2.BackColor = System.Drawing.Color.Transparent;
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
             this.label2.Location = new System.Drawing.Point(1418, 391);
             this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(54, 13);
+            this.label2.Size = new System.Drawing.Size(61, 16);
             this.label2.TabIndex = 13;
             this.label2.Text = "מתמטיקה";
             // 
@@ -230,10 +237,11 @@ namespace WindowsFormsTdd
             // 
             this.label3.AutoSize = true;
             this.label3.BackColor = System.Drawing.Color.Transparent;
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
             this.label3.Location = new System.Drawing.Point(1425, 415);
             this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(45, 13);
+            this.label3.Size = new System.Drawing.Size(49, 16);
             this.label3.TabIndex = 15;
             this.label3.Text = "אנגלית";
             // 
@@ -250,10 +258,11 @@ namespace WindowsFormsTdd
             // 
             this.label4.AutoSize = true;
             this.label4.BackColor = System.Drawing.Color.Transparent;
+            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
             this.label4.Location = new System.Drawing.Point(1435, 439);
             this.label4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(33, 13);
+            this.label4.Size = new System.Drawing.Size(35, 16);
             this.label4.TabIndex = 17;
             this.label4.Text = "לשון";
             // 
@@ -270,10 +279,11 @@ namespace WindowsFormsTdd
             // 
             this.label5.AutoSize = true;
             this.label5.BackColor = System.Drawing.Color.Transparent;
+            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
             this.label5.Location = new System.Drawing.Point(1425, 467);
             this.label5.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(43, 13);
+            this.label5.Size = new System.Drawing.Size(45, 16);
             this.label5.TabIndex = 19;
             this.label5.Text = "פיזיקה";
             // 
@@ -290,10 +300,11 @@ namespace WindowsFormsTdd
             // 
             this.label6.AutoSize = true;
             this.label6.BackColor = System.Drawing.Color.Transparent;
+            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
             this.label6.Location = new System.Drawing.Point(1430, 491);
             this.label6.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(38, 13);
+            this.label6.Size = new System.Drawing.Size(43, 16);
             this.label6.TabIndex = 21;
             this.label6.Text = "תכנות";
             // 
@@ -311,7 +322,7 @@ namespace WindowsFormsTdd
             this.תעודתזהות,
             this.שםמלא});
             this.StudentView1.HideSelection = false;
-            this.StudentView1.Location = new System.Drawing.Point(131, 172);
+            this.StudentView1.Location = new System.Drawing.Point(131, 166);
             this.StudentView1.Margin = new System.Windows.Forms.Padding(2);
             this.StudentView1.Name = "StudentView1";
             this.StudentView1.Size = new System.Drawing.Size(919, 399);
@@ -386,11 +397,12 @@ namespace WindowsFormsTdd
             // 
             this.errorlable.AutoSize = true;
             this.errorlable.BackColor = System.Drawing.Color.Transparent;
+            this.errorlable.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
             this.errorlable.ForeColor = System.Drawing.Color.Red;
             this.errorlable.Location = new System.Drawing.Point(760, 739);
             this.errorlable.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.errorlable.Name = "errorlable";
-            this.errorlable.Size = new System.Drawing.Size(133, 13);
+            this.errorlable.Size = new System.Drawing.Size(142, 16);
             this.errorlable.TabIndex = 24;
             this.errorlable.Text = "אנא הכנס נתונים תקינים";
             this.errorlable.Visible = false;
@@ -398,10 +410,10 @@ namespace WindowsFormsTdd
             // 
             // cleanbtn
             // 
-            this.cleanbtn.Location = new System.Drawing.Point(593, 94);
+            this.cleanbtn.Location = new System.Drawing.Point(1097, 523);
             this.cleanbtn.Margin = new System.Windows.Forms.Padding(2);
             this.cleanbtn.Name = "cleanbtn";
-            this.cleanbtn.Size = new System.Drawing.Size(46, 15);
+            this.cleanbtn.Size = new System.Drawing.Size(70, 28);
             this.cleanbtn.TabIndex = 25;
             this.cleanbtn.Text = "נקה דף";
             this.cleanbtn.UseVisualStyleBackColor = true;
@@ -411,11 +423,12 @@ namespace WindowsFormsTdd
             // 
             this.NameErrorLable.AutoSize = true;
             this.NameErrorLable.BackColor = System.Drawing.Color.Transparent;
+            this.NameErrorLable.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
             this.NameErrorLable.ForeColor = System.Drawing.Color.Red;
-            this.NameErrorLable.Location = new System.Drawing.Point(1094, 190);
+            this.NameErrorLable.Location = new System.Drawing.Point(1088, 188);
             this.NameErrorLable.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.NameErrorLable.Name = "NameErrorLable";
-            this.NameErrorLable.Size = new System.Drawing.Size(103, 13);
+            this.NameErrorLable.Size = new System.Drawing.Size(109, 16);
             this.NameErrorLable.TabIndex = 26;
             this.NameErrorLable.Text = "אנא הכנס שם תקין";
             this.NameErrorLable.Visible = false;
@@ -424,11 +437,12 @@ namespace WindowsFormsTdd
             // 
             this.LastNameErrorLable.AutoSize = true;
             this.LastNameErrorLable.BackColor = System.Drawing.Color.Transparent;
+            this.LastNameErrorLable.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
             this.LastNameErrorLable.ForeColor = System.Drawing.Color.Red;
-            this.LastNameErrorLable.Location = new System.Drawing.Point(1054, 211);
+            this.LastNameErrorLable.Location = new System.Drawing.Point(1047, 209);
             this.LastNameErrorLable.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.LastNameErrorLable.Name = "LastNameErrorLable";
-            this.LastNameErrorLable.Size = new System.Drawing.Size(143, 13);
+            this.LastNameErrorLable.Size = new System.Drawing.Size(152, 16);
             this.LastNameErrorLable.TabIndex = 27;
             this.LastNameErrorLable.Text = "אנא הכנס שם משפחה תקין";
             this.LastNameErrorLable.Visible = false;
@@ -437,11 +451,12 @@ namespace WindowsFormsTdd
             // 
             this.IDErrorLable.AutoSize = true;
             this.IDErrorLable.BackColor = System.Drawing.Color.Transparent;
+            this.IDErrorLable.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
             this.IDErrorLable.ForeColor = System.Drawing.Color.Red;
-            this.IDErrorLable.Location = new System.Drawing.Point(1068, 232);
+            this.IDErrorLable.Location = new System.Drawing.Point(1056, 230);
             this.IDErrorLable.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.IDErrorLable.Name = "IDErrorLable";
-            this.IDErrorLable.Size = new System.Drawing.Size(129, 13);
+            this.IDErrorLable.Size = new System.Drawing.Size(143, 16);
             this.IDErrorLable.TabIndex = 28;
             this.IDErrorLable.Text = "תעודת זהות אינה תקינה";
             this.IDErrorLable.Visible = false;
@@ -450,11 +465,12 @@ namespace WindowsFormsTdd
             // 
             this.EmailErrorLable.AutoSize = true;
             this.EmailErrorLable.BackColor = System.Drawing.Color.Transparent;
+            this.EmailErrorLable.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
             this.EmailErrorLable.ForeColor = System.Drawing.Color.Red;
-            this.EmailErrorLable.Location = new System.Drawing.Point(1068, 253);
+            this.EmailErrorLable.Location = new System.Drawing.Point(1058, 251);
             this.EmailErrorLable.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.EmailErrorLable.Name = "EmailErrorLable";
-            this.EmailErrorLable.Size = new System.Drawing.Size(129, 13);
+            this.EmailErrorLable.Size = new System.Drawing.Size(141, 16);
             this.EmailErrorLable.TabIndex = 29;
             this.EmailErrorLable.Text = "כתובת מייל אינה תקינה";
             this.EmailErrorLable.Visible = false;
@@ -463,11 +479,12 @@ namespace WindowsFormsTdd
             // 
             this.PhoneErrorLable.AutoSize = true;
             this.PhoneErrorLable.BackColor = System.Drawing.Color.Transparent;
+            this.PhoneErrorLable.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
             this.PhoneErrorLable.ForeColor = System.Drawing.Color.Red;
-            this.PhoneErrorLable.Location = new System.Drawing.Point(1085, 274);
+            this.PhoneErrorLable.Location = new System.Drawing.Point(1078, 271);
             this.PhoneErrorLable.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.PhoneErrorLable.Name = "PhoneErrorLable";
-            this.PhoneErrorLable.Size = new System.Drawing.Size(112, 13);
+            this.PhoneErrorLable.Size = new System.Drawing.Size(119, 16);
             this.PhoneErrorLable.TabIndex = 30;
             this.PhoneErrorLable.Text = "מספר נייד אינו תקין";
             this.PhoneErrorLable.Visible = false;
@@ -487,11 +504,12 @@ namespace WindowsFormsTdd
             // 
             this.GradesErrorLabel.AutoSize = true;
             this.GradesErrorLabel.BackColor = System.Drawing.Color.Transparent;
+            this.GradesErrorLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
             this.GradesErrorLabel.ForeColor = System.Drawing.Color.Red;
             this.GradesErrorLabel.Location = new System.Drawing.Point(1253, 506);
             this.GradesErrorLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.GradesErrorLabel.Name = "GradesErrorLabel";
-            this.GradesErrorLabel.Size = new System.Drawing.Size(108, 13);
+            this.GradesErrorLabel.Size = new System.Drawing.Size(114, 16);
             this.GradesErrorLabel.TabIndex = 32;
             this.GradesErrorLabel.Text = "ציונים אינם תקינים";
             this.GradesErrorLabel.Visible = false;
