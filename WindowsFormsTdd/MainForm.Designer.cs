@@ -76,6 +76,7 @@ namespace WindowsFormsTdd
             this.addRandomBtn1 = new System.Windows.Forms.PictureBox();
             this.SortBtn1 = new System.Windows.Forms.PictureBox();
             this.label7 = new System.Windows.Forms.Label();
+            this.label8 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.AddStudentBtn1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.addRandomBtn1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.SortBtn1)).BeginInit();
@@ -538,6 +539,19 @@ namespace WindowsFormsTdd
             this.label7.TabIndex = 36;
             this.label7.Text = "TDD Project  - Student Genrator : ";
             // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.BackColor = System.Drawing.Color.Transparent;
+            this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
+            this.label8.ForeColor = System.Drawing.Color.RoyalBlue;
+            this.label8.Location = new System.Drawing.Point(1249, 149);
+            this.label8.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(174, 37);
+            this.label8.TabIndex = 37;
+            this.label8.Text = "פרטי הסטודנט";
+            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -545,6 +559,7 @@ namespace WindowsFormsTdd
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(1556, 915);
+            this.Controls.Add(this.label8);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.SortBtn1);
             this.Controls.Add(this.addRandomBtn1);
@@ -641,6 +656,7 @@ namespace WindowsFormsTdd
         private System.Windows.Forms.PictureBox addRandomBtn1;
         private System.Windows.Forms.PictureBox SortBtn1;
         private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.Label label8;
     }
 }
 
