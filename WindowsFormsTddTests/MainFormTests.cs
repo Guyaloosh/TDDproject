@@ -5,6 +5,8 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Forms;
+using static WindowsFormsTdd.MainForm;
 
 
 
@@ -47,7 +49,7 @@ namespace WindowsFormsTdd.Tests
 
             // Act
             mainForm.clearMainForm(); // Call the function to clear the form
-           
+
             // Assert
             Assert.AreEqual(mainForm.FirstNameTextBox.Text, "");
             Assert.AreEqual(mainForm.LastNameTxtBox.Text, "");
@@ -65,37 +67,37 @@ namespace WindowsFormsTdd.Tests
         public void GenerateRandomStudentTest()
         {
 
-          // Arrange
-          // creating a random inviorment for testing 
-          Random rnd = new Random();
-          string[] arrFirstName = { "אוראל", "גיא", "חליווה" };
-          string[] arrLastName = { "חן", "חליווה", "אלוש" };
-          string[] email = { "@gmail.com", "@hotmail.com" };
-          string rndName = arrFirstName[rnd.Next(0, arrFirstName.Length - 1)];
-          string rndLastName = arrLastName[rnd.Next(0, arrLastName.Length - 1)];
-          string rndEmail = "ConvertedName" + email[rnd.Next(0, email.Length - 1)];
-          int rndID = rnd.Next(111111111, 999999999);
-          int rndphoneNum = 50000000 + rnd.Next(0000000, 9999999);
-          int rndAvrage = rnd.Next(0, 500)/5;
+            // Arrange
+            // creating a random inviorment for testing 
+            Random rnd = new Random();
+            string[] arrFirstName = { "אוראל", "גיא", "חליווה" };
+            string[] arrLastName = { "חן", "חליווה", "אלוש" };
+            string[] email = { "@gmail.com", "@hotmail.com" };
+            string rndName = arrFirstName[rnd.Next(0, arrFirstName.Length - 1)];
+            string rndLastName = arrLastName[rnd.Next(0, arrLastName.Length - 1)];
+            string rndEmail = "ConvertedName" + email[rnd.Next(0, email.Length - 1)];
+            int rndID = rnd.Next(111111111, 999999999);
+            int rndphoneNum = 50000000 + rnd.Next(0000000, 9999999);
+            int rndAvrage = rnd.Next(0, 500) / 5;
 
-          //avrage testsing
-          Assert.IsTrue(rndAvrage<=100);
-          Assert.IsTrue(rndAvrage>= 0);
-          //FirstName testsing
-          Assert.IsTrue(rndName == "אוראל" || rndName == "גיא" || rndName == "חליווה");
-          Assert.IsFalse(rndName == "");
-          //Lastname testsing
-          Assert.IsTrue(rndLastName == "חן" || rndLastName == "חליווה" || rndLastName == "אלוש");
-          Assert.IsFalse(rndLastName == "");
-          //ID testing
-          Assert.IsTrue(rndID <= 999999999);
-          Assert.IsTrue(rndID >= 111111111);
-          //Phonenumber testing
-          Assert.IsTrue(rndphoneNum <= 59999999);
-          Assert.IsTrue(rndphoneNum >= 50000000);
-          //Email testing
-          Assert.IsTrue(rndEmail == "ConvertedName@gmail.com" || rndEmail == "ConvertedName@hotmail.com");
-          Assert.IsFalse(rndEmail == "");
+            //avrage testsing
+            Assert.IsTrue(rndAvrage <= 100);
+            Assert.IsTrue(rndAvrage >= 0);
+            //FirstName testsing
+            Assert.IsTrue(rndName == "אוראל" || rndName == "גיא" || rndName == "חליווה");
+            Assert.IsFalse(rndName == "");
+            //Lastname testsing
+            Assert.IsTrue(rndLastName == "חן" || rndLastName == "חליווה" || rndLastName == "אלוש");
+            Assert.IsFalse(rndLastName == "");
+            //ID testing
+            Assert.IsTrue(rndID <= 999999999);
+            Assert.IsTrue(rndID >= 111111111);
+            //Phonenumber testing
+            Assert.IsTrue(rndphoneNum <= 59999999);
+            Assert.IsTrue(rndphoneNum >= 50000000);
+            //Email testing
+            Assert.IsTrue(rndEmail == "ConvertedName@gmail.com" || rndEmail == "ConvertedName@hotmail.com");
+            Assert.IsFalse(rndEmail == "");
 
 
         }
@@ -143,5 +145,13 @@ namespace WindowsFormsTdd.Tests
 
             //Assert.Fail();
         }
+
+        [TestMethod()]
+        public void MergeSortTest()
+        {
+            Assert.Fail();
+        }
+
     }
+
 }

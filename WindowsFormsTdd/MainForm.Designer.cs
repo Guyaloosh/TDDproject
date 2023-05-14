@@ -1,4 +1,6 @@
 ﻿
+using System;
+
 namespace WindowsFormsTdd
 {
     partial class MainForm
@@ -188,6 +190,7 @@ namespace WindowsFormsTdd
             this.GradesLabels.AutoSize = true;
             this.GradesLabels.BackColor = System.Drawing.Color.Transparent;
             this.GradesLabels.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
+            this.GradesLabels.ForeColor = System.Drawing.Color.RoyalBlue;
             this.GradesLabels.Location = new System.Drawing.Point(1404, 348);
             this.GradesLabels.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.GradesLabels.Name = "GradesLabels";
@@ -322,7 +325,7 @@ namespace WindowsFormsTdd
             this.StudentView1.TabIndex = 22;
             this.StudentView1.UseCompatibleStateImageBehavior = false;
             this.StudentView1.View = System.Windows.Forms.View.Details;
-            this.StudentView1.SelectedIndexChanged += new System.EventHandler(this.listView1_SelectedIndexChanged);
+            this.StudentView1.SelectedIndexChanged += new System.EventHandler(this.StudentView1_SelectedIndexChanged);
             // 
             // ממוצע
             // 
@@ -393,13 +396,15 @@ namespace WindowsFormsTdd
             // 
             // cleanbtn
             // 
+            this.cleanbtn.BackColor = System.Drawing.Color.Transparent;
+            this.cleanbtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
             this.cleanbtn.Location = new System.Drawing.Point(1097, 523);
             this.cleanbtn.Margin = new System.Windows.Forms.Padding(2);
             this.cleanbtn.Name = "cleanbtn";
-            this.cleanbtn.Size = new System.Drawing.Size(70, 28);
+            this.cleanbtn.Size = new System.Drawing.Size(100, 40);
             this.cleanbtn.TabIndex = 25;
             this.cleanbtn.Text = "נקה דף";
-            this.cleanbtn.UseVisualStyleBackColor = true;
+            this.cleanbtn.UseVisualStyleBackColor = false;
             this.cleanbtn.Click += new System.EventHandler(this.cleanbtn_Click);
             // 
             // NameErrorLable
@@ -570,6 +575,11 @@ namespace WindowsFormsTdd
             this.ResumeLayout(false);
             this.PerformLayout();
 
+        }
+
+        private void StudentView1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            
         }
 
         #endregion

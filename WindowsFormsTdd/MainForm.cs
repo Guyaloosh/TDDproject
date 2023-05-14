@@ -8,7 +8,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-    
+
 
 
 
@@ -18,14 +18,14 @@ using System.Windows.Forms;
 namespace WindowsFormsTdd
 {
 
-    
+
     public partial class MainForm : Form
     {
         public MainForm()
         {
             InitializeComponent();
-         
-            
+
+
         }
 
 
@@ -42,7 +42,7 @@ namespace WindowsFormsTdd
             HebrewTextBox.Clear();
             MathTextBox.Clear();
             SoftwereTextBox.Clear();
-            
+
             errorlable.Visible = false;
             PhoneErrorLable.Visible = false;
             EmailErrorLable.Visible = false;
@@ -70,22 +70,26 @@ namespace WindowsFormsTdd
 
         }
         //checking First and LastName inputs
-        bool CheckName(string FN, string LN) {
+        bool CheckName(string FN, string LN)
+        {
 
             foreach (char letter in FN)
             {
                 if (char.IsNumber(letter) || char.IsSeparator(letter) || char.IsControl(letter))
                 {
                     NameErrorLable.Visible = true;
-                    return false; }
+                    return false;
+                }
             }
 
             foreach (char letter in LN)
             {
-                if (char.IsNumber(letter) || char.IsSeparator(letter) || char.IsControl(letter)) {
+                if (char.IsNumber(letter) || char.IsSeparator(letter) || char.IsControl(letter))
+                {
 
                     LastNameErrorLable.Visible = true;
-                    return false; }
+                    return false;
+                }
 
 
             }
@@ -98,8 +102,9 @@ namespace WindowsFormsTdd
         }
 
         //checking ID input
-        bool CheckID(string ID) {
- 
+        bool CheckID(string ID)
+        {
+
             if (confirmOnlyInt(ID))
             {
                 IDErrorLable.Visible = true;
@@ -113,7 +118,8 @@ namespace WindowsFormsTdd
         }
 
         //checking Email adress input
-        bool Checkmail(string email) {
+        bool Checkmail(string email)
+        {
             //check for errors - test
             if (string.IsNullOrWhiteSpace(email))
             {
@@ -173,10 +179,11 @@ namespace WindowsFormsTdd
         }
 
         //Checking if INput is not only an intiger.
-        bool confirmOnlyInt(String C) {
+        bool confirmOnlyInt(String C)
+        {
 
             foreach (char letter in C)
-            {            
+            {
                 if (char.IsLetter(letter) || char.IsSeparator(letter) || char.IsControl(letter) || char.IsSymbol(letter))
                 {
                     return true;
@@ -187,7 +194,7 @@ namespace WindowsFormsTdd
 
             //confirm only digits
             foreach (char letter in C)
-            {                                               
+            {
                 if (!char.IsDigit(letter))
                 {
                     return true;
@@ -198,14 +205,16 @@ namespace WindowsFormsTdd
             return false;
         }
         //Confirming that Course Grade input Value is ok.
-        bool incorrectCval(int c) {
+        bool incorrectCval(int c)
+        {
             if (c < 0 || c > 100 && c != 777)
                 return true;
             else
-            return false;
+                return false;
         }
-    
-        bool CheckCourses(String C1, String C2, String C3, String C4, String C5) {
+
+        bool CheckCourses(String C1, String C2, String C3, String C4, String C5)
+        {
 
             //ERROR @
             if (confirmOnlyInt(C1) || confirmOnlyInt(C2) || confirmOnlyInt(C3) || confirmOnlyInt(C4) || confirmOnlyInt(C5)) { GradesErrorLabel.Visible = true; return false; }
@@ -219,27 +228,31 @@ namespace WindowsFormsTdd
 
             //check courses int value
             if (incorrectCval(c1) || incorrectCval(c2) || incorrectCval(c3) || incorrectCval(c4) || incorrectCval(c5)) { GradesErrorLabel.Visible = true; return false; }
-           
+
             GradesErrorLabel.Visible = false;
             return true;
         }
 
         //function that calcs avrage from course inputs.
-        int CalcAvg(int c1, int c2, int c3, int c4, int c5) {
-
+        int CalcAvg(int c1, int c2, int c3, int c4, int c5)
+        {
+            int avg = 0;
             int numofcourses = 5;
             if (c1 == 777) { numofcourses--; c1 = 0; }
             if (c2 == 777) { numofcourses--; c2 = 0; }
             if (c3 == 777) { numofcourses--; c3 = 0; }
             if (c4 == 777) { numofcourses--; c4 = 0; }
             if (c5 == 777) { numofcourses--; c5 = 0; }
-            return (c1 + c2 + c3 + c4 + c5) / numofcourses; ;
+            avg = (c1 + c2 + c3 + c4 + c5) / numofcourses;
+            
+            return avg;
         }
 
-       
 
-       
-        public string ConvertToEnglish(string Name) {
+
+
+        public string ConvertToEnglish(string Name)
+        {
 
             //Hebrew to english dictionery
             Dictionary<char, string> hebrewToEnglish = new Dictionary<char, string>{
@@ -258,13 +271,14 @@ namespace WindowsFormsTdd
                 else
                     ToEnglish += letter;
             }
-            
+
             return char.ToUpper(ToEnglish[0]) + ToEnglish.Substring(1);
         }
 
 
         //generate random student function
-        public string[] GenerateRandomStudent(Random rnd) {
+        public string[] GenerateRandomStudent(Random rnd)
+        {
 
             //Firstnames list
             string[] arrFirstName = { "אוראל", "גיא","יונתן","גבי" , "גדעון","גד" , "גדליהו" , "גולן","גומא","גורן" ,
@@ -309,16 +323,16 @@ namespace WindowsFormsTdd
             //generate a listview Data string-  avrage / phonenumber / email / ID / full name
 
             string[] RandomData = { Avrage, rndc5.ToString(), rndc4.ToString(), rndc3.ToString(), rndc2.ToString(), rndc1.ToString(), "0" + rndphoneNum.ToString(), rndEmail, rndID.ToString(), rndName + " " + rndLastName };
-            
+
             return RandomData;
         }
 
 
-        
-     
+
+
         private void FirstNameTextBox_TextChanged(object sender, EventArgs e)
         {
-          
+
 
         }
 
@@ -332,7 +346,7 @@ namespace WindowsFormsTdd
             clearMainForm();
         }
 
-      
+
 
 
         private void PhoneErrorLable_Click(object sender, EventArgs e)
@@ -340,43 +354,9 @@ namespace WindowsFormsTdd
 
         }
 
-        public class IntegerListViewItemComparer : IComparer
-        {
-            private int column;
 
-            public IntegerListViewItemComparer(int column)
-            {
-                this.column = column;
-            }
 
-            public int Compare(object x, object y)
-            {
-                int xValue = int.Parse(((ListViewItem)x).SubItems[column].Text);
-                int yValue = int.Parse(((ListViewItem)y).SubItems[column].Text);
-                return yValue.CompareTo(xValue); // Compare in reverse order for descending sort
-            }
-        }
 
-        //BubbleSort main function. #1
-        public static void BubbleSort(int[] arr)
-        {
-            int n = arr.Length;
-            for (int i = 0; i < n - 1; i++)
-            {
-                for (int j = 0; j < n - i - 1; j++)
-                {
-                    if (arr[j] > arr[j + 1])
-                    {
-                        // swap
-                        int temp = arr[j];
-                        arr[j] = arr[j + 1];
-                        arr[j + 1] = temp;
-                    }
-                }
-            }
-        }
-
-        
         private void AddStudentBtn1_Click(object sender, EventArgs e)
         {
 
@@ -427,21 +407,125 @@ namespace WindowsFormsTdd
             SortBtn1.Visible = true;
         }
 
+/*
+     public void BubbleSort(List<ListViewItem> items)
+    {
+         bool swapped;
+         int n = items.Count;
+         do
+         {
+             swapped = false;
+             for (int i = 1; i < n; i++)
+              {
+                 if (int.Parse(items[i - 1].SubItems[0].Text) > int.Parse(items[i].SubItems[0].Text))
+                 {
+                     ListViewItem temp = items[i - 1];
+                     items[i - 1] = items[i];
+                     items[i] = temp;
+                     swapped = true;
+                  }
+              }
+               n--;
+           } while (swapped);
+    }
+
+
+*/
+
+    //-------------------------------------------------------------------------------------------------//
+
+    // sort button using merge sort . 
+    public void SortBtn1_Click(object sender, EventArgs e)
+    {
+     // Create a list of the ListView items
+        List<ListViewItem> items = new List<ListViewItem>();
         
-
-        private void SortBtn1_Click(object sender, EventArgs e)
+        foreach (ListViewItem item in StudentView1.Items)
         {
-            //FILL THIS
+            items.Add(item);
+        }
 
-            StudentView1.Sorting = SortOrder.None;
+            // Sort the list of items by the first column using Merge Sort
 
-            // Set the ListViewItemSorter property to null to disable any custom sorting.
-            StudentView1.ListViewItemSorter = new IntegerListViewItemComparer(0);
+            int start = DateTime.Now.Millisecond;
+
+            //BubbleSort(items);
+
+            MergeSort(items, 0, items.Count - 1);
+            int end = DateTime.Now.Millisecond;
+  
+
+            // Clear the ListView items and add the sorted items back in
+
+            StudentView1.Items.Clear();
+            StudentView1.Items.AddRange(items.ToArray());
+            string message = string.Format("Sorting took {0} milliseconds.", end - start);
+            MessageBox.Show(message);
+    }
 
 
+        public void MergeSort(List<ListViewItem> items, int left, int right)
+        {
+            if (left < right)
+            {
+                int middle = (left + right) / 2;
+                MergeSort(items, left, middle);
+                MergeSort(items, middle + 1, right);
+                Merge(items, left, middle, right);
+            }
+        }
 
-            // Call the Sort method to apply the sorting.
-            StudentView1.Sort();
+        public void Merge(List<ListViewItem> items, int left, int middle, int right)
+        {
+            int leftIndex = left;
+            int rightIndex = middle + 1;
+            List <ListViewItem> merged = new List<ListViewItem>();
+            while (leftIndex <= middle && rightIndex <= right)
+            {
+                double leftValue, rightValue;
+                if (double.TryParse(items[leftIndex].SubItems[0].Text, out leftValue) &&
+                    double.TryParse(items[rightIndex].SubItems[0].Text, out rightValue))
+                {
+                    if (leftValue > rightValue)
+                    {
+                        merged.Add(items[leftIndex]);
+                        leftIndex++;
+                    }
+                    else
+                    {
+                        merged.Add(items[rightIndex]);
+                        rightIndex++;
+                    }
+                }
+                else
+                {
+                    // If the values can't be parsed as doubles, compare the string representations
+                    if (items[leftIndex].SubItems[0].Text.CompareTo(items[rightIndex].SubItems[0].Text) > 0)
+                    {
+                        merged.Add(items[leftIndex]);
+                        leftIndex++;
+                    }
+                    else
+                    {
+                        merged.Add(items[rightIndex]);
+                        rightIndex++;
+                    }
+                }
+            }
+            while (leftIndex <= middle)
+            {
+                merged.Add(items[leftIndex]);
+                leftIndex++;
+            }
+            while (rightIndex <= right)
+            {
+                merged.Add(items[rightIndex]);
+                rightIndex++;
+            }
+            for (int i = 0; i < merged.Count; i++)
+            {
+                items[left + i] = merged[i];
+            }
         }
     }
 }

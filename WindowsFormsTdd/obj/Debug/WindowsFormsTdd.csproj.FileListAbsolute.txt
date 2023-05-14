@@ -7,3 +7,4 @@ C:\Users\guyal\OneDrive\Desktop\TDD\WindowsFormsTdd\obj\Debug\WindowsFormsTdd.cs
 C:\Users\guyal\OneDrive\Desktop\TDD\WindowsFormsTdd\obj\Debug\WindowsFormsTdd.csproj.CoreCompileInputs.cache
 C:\Users\guyal\OneDrive\Desktop\TDD\WindowsFormsTdd\obj\Debug\WindowsFormsTdd.exe
 C:\Users\guyal\OneDrive\Desktop\TDD\WindowsFormsTdd\obj\Debug\WindowsFormsTdd.pdb
+C:\Users\guyal\OneDrive\Desktop\TDD\WindowsFormsTdd\obj\Debug\WindowsFormsTdd.csproj.AssemblyReference.cache
