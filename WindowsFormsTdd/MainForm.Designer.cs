@@ -75,6 +75,7 @@ namespace WindowsFormsTdd
             this.AddStudentBtn1 = new System.Windows.Forms.PictureBox();
             this.addRandomBtn1 = new System.Windows.Forms.PictureBox();
             this.SortBtn1 = new System.Windows.Forms.PictureBox();
+            this.label7 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.AddStudentBtn1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.addRandomBtn1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.SortBtn1)).BeginInit();
@@ -85,7 +86,7 @@ namespace WindowsFormsTdd
             this.StudentName.AutoSize = true;
             this.StudentName.BackColor = System.Drawing.Color.Transparent;
             this.StudentName.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
-            this.StudentName.Location = new System.Drawing.Point(1405, 191);
+            this.StudentName.Location = new System.Drawing.Point(1405, 104);
             this.StudentName.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.StudentName.Name = "StudentName";
             this.StudentName.Size = new System.Drawing.Size(55, 16);
@@ -94,7 +95,7 @@ namespace WindowsFormsTdd
             // 
             // FirstNameTextBox
             // 
-            this.FirstNameTextBox.Location = new System.Drawing.Point(1201, 187);
+            this.FirstNameTextBox.Location = new System.Drawing.Point(1222, 104);
             this.FirstNameTextBox.Margin = new System.Windows.Forms.Padding(2);
             this.FirstNameTextBox.Name = "FirstNameTextBox";
             this.FirstNameTextBox.Size = new System.Drawing.Size(160, 20);
@@ -104,7 +105,7 @@ namespace WindowsFormsTdd
             // 
             // LastNameTxtBox
             // 
-            this.LastNameTxtBox.Location = new System.Drawing.Point(1201, 208);
+            this.LastNameTxtBox.Location = new System.Drawing.Point(1222, 125);
             this.LastNameTxtBox.Margin = new System.Windows.Forms.Padding(2);
             this.LastNameTxtBox.Name = "LastNameTxtBox";
             this.LastNameTxtBox.Size = new System.Drawing.Size(160, 20);
@@ -116,7 +117,7 @@ namespace WindowsFormsTdd
             this.label1.AutoSize = true;
             this.label1.BackColor = System.Drawing.Color.Transparent;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
-            this.label1.Location = new System.Drawing.Point(1405, 212);
+            this.label1.Location = new System.Drawing.Point(1405, 125);
             this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(68, 16);
@@ -125,7 +126,7 @@ namespace WindowsFormsTdd
             // 
             // IdTextBox
             // 
-            this.IdTextBox.Location = new System.Drawing.Point(1201, 229);
+            this.IdTextBox.Location = new System.Drawing.Point(1222, 146);
             this.IdTextBox.Margin = new System.Windows.Forms.Padding(2);
             this.IdTextBox.Name = "IdTextBox";
             this.IdTextBox.Size = new System.Drawing.Size(160, 20);
@@ -137,7 +138,7 @@ namespace WindowsFormsTdd
             this.IdLabel.AutoSize = true;
             this.IdLabel.BackColor = System.Drawing.Color.Transparent;
             this.IdLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
-            this.IdLabel.Location = new System.Drawing.Point(1405, 236);
+            this.IdLabel.Location = new System.Drawing.Point(1405, 149);
             this.IdLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.IdLabel.Name = "IdLabel";
             this.IdLabel.Size = new System.Drawing.Size(77, 16);
@@ -146,7 +147,7 @@ namespace WindowsFormsTdd
             // 
             // EmailTextBox
             // 
-            this.EmailTextBox.Location = new System.Drawing.Point(1201, 250);
+            this.EmailTextBox.Location = new System.Drawing.Point(1222, 167);
             this.EmailTextBox.Margin = new System.Windows.Forms.Padding(2);
             this.EmailTextBox.Name = "EmailTextBox";
             this.EmailTextBox.Size = new System.Drawing.Size(160, 20);
@@ -157,7 +158,7 @@ namespace WindowsFormsTdd
             this.EmailTextLabel.AutoSize = true;
             this.EmailTextLabel.BackColor = System.Drawing.Color.Transparent;
             this.EmailTextLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
-            this.EmailTextLabel.Location = new System.Drawing.Point(1405, 257);
+            this.EmailTextLabel.Location = new System.Drawing.Point(1405, 170);
             this.EmailTextLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.EmailTextLabel.Name = "EmailTextLabel";
             this.EmailTextLabel.Size = new System.Drawing.Size(75, 16);
@@ -166,7 +167,7 @@ namespace WindowsFormsTdd
             // 
             // PhoneNumTextBox
             // 
-            this.PhoneNumTextBox.Location = new System.Drawing.Point(1201, 271);
+            this.PhoneNumTextBox.Location = new System.Drawing.Point(1222, 188);
             this.PhoneNumTextBox.Margin = new System.Windows.Forms.Padding(2);
             this.PhoneNumTextBox.Name = "PhoneNumTextBox";
             this.PhoneNumTextBox.Size = new System.Drawing.Size(160, 20);
@@ -178,7 +179,7 @@ namespace WindowsFormsTdd
             this.PhoneLabel.AutoSize = true;
             this.PhoneLabel.BackColor = System.Drawing.Color.Transparent;
             this.PhoneLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
-            this.PhoneLabel.Location = new System.Drawing.Point(1405, 275);
+            this.PhoneLabel.Location = new System.Drawing.Point(1405, 188);
             this.PhoneLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.PhoneLabel.Name = "PhoneLabel";
             this.PhoneLabel.Size = new System.Drawing.Size(81, 16);
@@ -189,19 +190,19 @@ namespace WindowsFormsTdd
             // 
             this.GradesLabels.AutoSize = true;
             this.GradesLabels.BackColor = System.Drawing.Color.Transparent;
-            this.GradesLabels.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
+            this.GradesLabels.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
             this.GradesLabels.ForeColor = System.Drawing.Color.RoyalBlue;
-            this.GradesLabels.Location = new System.Drawing.Point(1404, 348);
+            this.GradesLabels.Location = new System.Drawing.Point(1308, 252);
             this.GradesLabels.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.GradesLabels.Name = "GradesLabels";
-            this.GradesLabels.Size = new System.Drawing.Size(119, 24);
+            this.GradesLabels.Size = new System.Drawing.Size(172, 37);
             this.GradesLabels.TabIndex = 11;
             this.GradesLabels.Text = "ציוני הסטודנט";
             this.GradesLabels.Click += new System.EventHandler(this.GradesLabels_Click);
             // 
             // MathTextBox
             // 
-            this.MathTextBox.Location = new System.Drawing.Point(1311, 388);
+            this.MathTextBox.Location = new System.Drawing.Point(1230, 320);
             this.MathTextBox.Margin = new System.Windows.Forms.Padding(2);
             this.MathTextBox.Name = "MathTextBox";
             this.MathTextBox.Size = new System.Drawing.Size(50, 20);
@@ -213,7 +214,7 @@ namespace WindowsFormsTdd
             this.label2.AutoSize = true;
             this.label2.BackColor = System.Drawing.Color.Transparent;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
-            this.label2.Location = new System.Drawing.Point(1418, 391);
+            this.label2.Location = new System.Drawing.Point(1337, 323);
             this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(61, 16);
@@ -222,7 +223,7 @@ namespace WindowsFormsTdd
             // 
             // EnglishTextBox
             // 
-            this.EnglishTextBox.Location = new System.Drawing.Point(1311, 412);
+            this.EnglishTextBox.Location = new System.Drawing.Point(1230, 344);
             this.EnglishTextBox.Margin = new System.Windows.Forms.Padding(2);
             this.EnglishTextBox.Name = "EnglishTextBox";
             this.EnglishTextBox.Size = new System.Drawing.Size(50, 20);
@@ -234,7 +235,7 @@ namespace WindowsFormsTdd
             this.label3.AutoSize = true;
             this.label3.BackColor = System.Drawing.Color.Transparent;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
-            this.label3.Location = new System.Drawing.Point(1425, 415);
+            this.label3.Location = new System.Drawing.Point(1344, 347);
             this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(49, 16);
@@ -243,7 +244,7 @@ namespace WindowsFormsTdd
             // 
             // HebrewTextBox
             // 
-            this.HebrewTextBox.Location = new System.Drawing.Point(1311, 436);
+            this.HebrewTextBox.Location = new System.Drawing.Point(1230, 368);
             this.HebrewTextBox.Margin = new System.Windows.Forms.Padding(2);
             this.HebrewTextBox.Name = "HebrewTextBox";
             this.HebrewTextBox.Size = new System.Drawing.Size(50, 20);
@@ -255,7 +256,7 @@ namespace WindowsFormsTdd
             this.label4.AutoSize = true;
             this.label4.BackColor = System.Drawing.Color.Transparent;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
-            this.label4.Location = new System.Drawing.Point(1435, 439);
+            this.label4.Location = new System.Drawing.Point(1354, 371);
             this.label4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(35, 16);
@@ -264,7 +265,7 @@ namespace WindowsFormsTdd
             // 
             // PhysicsTextBox
             // 
-            this.PhysicsTextBox.Location = new System.Drawing.Point(1311, 460);
+            this.PhysicsTextBox.Location = new System.Drawing.Point(1230, 392);
             this.PhysicsTextBox.Margin = new System.Windows.Forms.Padding(2);
             this.PhysicsTextBox.Name = "PhysicsTextBox";
             this.PhysicsTextBox.Size = new System.Drawing.Size(50, 20);
@@ -276,7 +277,7 @@ namespace WindowsFormsTdd
             this.label5.AutoSize = true;
             this.label5.BackColor = System.Drawing.Color.Transparent;
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
-            this.label5.Location = new System.Drawing.Point(1425, 467);
+            this.label5.Location = new System.Drawing.Point(1344, 399);
             this.label5.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(45, 16);
@@ -285,7 +286,7 @@ namespace WindowsFormsTdd
             // 
             // SoftwereTextBox
             // 
-            this.SoftwereTextBox.Location = new System.Drawing.Point(1311, 484);
+            this.SoftwereTextBox.Location = new System.Drawing.Point(1230, 416);
             this.SoftwereTextBox.Margin = new System.Windows.Forms.Padding(2);
             this.SoftwereTextBox.Name = "SoftwereTextBox";
             this.SoftwereTextBox.Size = new System.Drawing.Size(50, 20);
@@ -297,7 +298,7 @@ namespace WindowsFormsTdd
             this.label6.AutoSize = true;
             this.label6.BackColor = System.Drawing.Color.Transparent;
             this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
-            this.label6.Location = new System.Drawing.Point(1430, 491);
+            this.label6.Location = new System.Drawing.Point(1349, 423);
             this.label6.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(43, 16);
@@ -318,7 +319,7 @@ namespace WindowsFormsTdd
             this.תעודתזהות,
             this.שםמלא});
             this.StudentView1.HideSelection = false;
-            this.StudentView1.Location = new System.Drawing.Point(131, 166);
+            this.StudentView1.Location = new System.Drawing.Point(124, 148);
             this.StudentView1.Margin = new System.Windows.Forms.Padding(2);
             this.StudentView1.Name = "StudentView1";
             this.StudentView1.Size = new System.Drawing.Size(919, 399);
@@ -385,7 +386,7 @@ namespace WindowsFormsTdd
             this.errorlable.BackColor = System.Drawing.Color.Transparent;
             this.errorlable.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
             this.errorlable.ForeColor = System.Drawing.Color.Red;
-            this.errorlable.Location = new System.Drawing.Point(738, 740);
+            this.errorlable.Location = new System.Drawing.Point(783, 737);
             this.errorlable.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.errorlable.Name = "errorlable";
             this.errorlable.Size = new System.Drawing.Size(142, 16);
@@ -413,7 +414,7 @@ namespace WindowsFormsTdd
             this.NameErrorLable.BackColor = System.Drawing.Color.Transparent;
             this.NameErrorLable.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
             this.NameErrorLable.ForeColor = System.Drawing.Color.Red;
-            this.NameErrorLable.Location = new System.Drawing.Point(1088, 188);
+            this.NameErrorLable.Location = new System.Drawing.Point(1109, 105);
             this.NameErrorLable.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.NameErrorLable.Name = "NameErrorLable";
             this.NameErrorLable.Size = new System.Drawing.Size(109, 16);
@@ -427,7 +428,7 @@ namespace WindowsFormsTdd
             this.LastNameErrorLable.BackColor = System.Drawing.Color.Transparent;
             this.LastNameErrorLable.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
             this.LastNameErrorLable.ForeColor = System.Drawing.Color.Red;
-            this.LastNameErrorLable.Location = new System.Drawing.Point(1047, 209);
+            this.LastNameErrorLable.Location = new System.Drawing.Point(1068, 126);
             this.LastNameErrorLable.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.LastNameErrorLable.Name = "LastNameErrorLable";
             this.LastNameErrorLable.Size = new System.Drawing.Size(152, 16);
@@ -441,7 +442,7 @@ namespace WindowsFormsTdd
             this.IDErrorLable.BackColor = System.Drawing.Color.Transparent;
             this.IDErrorLable.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
             this.IDErrorLable.ForeColor = System.Drawing.Color.Red;
-            this.IDErrorLable.Location = new System.Drawing.Point(1056, 230);
+            this.IDErrorLable.Location = new System.Drawing.Point(1077, 147);
             this.IDErrorLable.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.IDErrorLable.Name = "IDErrorLable";
             this.IDErrorLable.Size = new System.Drawing.Size(143, 16);
@@ -455,7 +456,7 @@ namespace WindowsFormsTdd
             this.EmailErrorLable.BackColor = System.Drawing.Color.Transparent;
             this.EmailErrorLable.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
             this.EmailErrorLable.ForeColor = System.Drawing.Color.Red;
-            this.EmailErrorLable.Location = new System.Drawing.Point(1058, 251);
+            this.EmailErrorLable.Location = new System.Drawing.Point(1079, 168);
             this.EmailErrorLable.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.EmailErrorLable.Name = "EmailErrorLable";
             this.EmailErrorLable.Size = new System.Drawing.Size(141, 16);
@@ -469,7 +470,7 @@ namespace WindowsFormsTdd
             this.PhoneErrorLable.BackColor = System.Drawing.Color.Transparent;
             this.PhoneErrorLable.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
             this.PhoneErrorLable.ForeColor = System.Drawing.Color.Red;
-            this.PhoneErrorLable.Location = new System.Drawing.Point(1078, 271);
+            this.PhoneErrorLable.Location = new System.Drawing.Point(1099, 188);
             this.PhoneErrorLable.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.PhoneErrorLable.Name = "PhoneErrorLable";
             this.PhoneErrorLable.Size = new System.Drawing.Size(119, 16);
@@ -483,7 +484,7 @@ namespace WindowsFormsTdd
             this.GradesErrorLabel.BackColor = System.Drawing.Color.Transparent;
             this.GradesErrorLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
             this.GradesErrorLabel.ForeColor = System.Drawing.Color.Red;
-            this.GradesErrorLabel.Location = new System.Drawing.Point(1253, 506);
+            this.GradesErrorLabel.Location = new System.Drawing.Point(1166, 452);
             this.GradesErrorLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.GradesErrorLabel.Name = "GradesErrorLabel";
             this.GradesErrorLabel.Size = new System.Drawing.Size(114, 16);
@@ -494,7 +495,7 @@ namespace WindowsFormsTdd
             // AddStudentBtn1
             // 
             this.AddStudentBtn1.Image = ((System.Drawing.Image)(resources.GetObject("AddStudentBtn1.Image")));
-            this.AddStudentBtn1.Location = new System.Drawing.Point(715, 613);
+            this.AddStudentBtn1.Location = new System.Drawing.Point(760, 610);
             this.AddStudentBtn1.Name = "AddStudentBtn1";
             this.AddStudentBtn1.Size = new System.Drawing.Size(196, 124);
             this.AddStudentBtn1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -505,7 +506,7 @@ namespace WindowsFormsTdd
             // addRandomBtn1
             // 
             this.addRandomBtn1.Image = ((System.Drawing.Image)(resources.GetObject("addRandomBtn1.Image")));
-            this.addRandomBtn1.Location = new System.Drawing.Point(478, 613);
+            this.addRandomBtn1.Location = new System.Drawing.Point(523, 610);
             this.addRandomBtn1.Name = "addRandomBtn1";
             this.addRandomBtn1.Size = new System.Drawing.Size(221, 124);
             this.addRandomBtn1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -516,7 +517,7 @@ namespace WindowsFormsTdd
             // SortBtn1
             // 
             this.SortBtn1.Image = ((System.Drawing.Image)(resources.GetObject("SortBtn1.Image")));
-            this.SortBtn1.Location = new System.Drawing.Point(237, 625);
+            this.SortBtn1.Location = new System.Drawing.Point(282, 622);
             this.SortBtn1.Name = "SortBtn1";
             this.SortBtn1.Size = new System.Drawing.Size(196, 112);
             this.SortBtn1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -525,6 +526,18 @@ namespace WindowsFormsTdd
             this.SortBtn1.Visible = false;
             this.SortBtn1.Click += new System.EventHandler(this.SortBtn1_Click);
             // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.BackColor = System.Drawing.Color.Transparent;
+            this.label7.Font = new System.Drawing.Font("MV Boli", 27.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.Location = new System.Drawing.Point(434, 51);
+            this.label7.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(672, 49);
+            this.label7.TabIndex = 36;
+            this.label7.Text = "TDD Project  - Student Genrator : ";
+            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -532,6 +545,7 @@ namespace WindowsFormsTdd
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(1556, 915);
+            this.Controls.Add(this.label7);
             this.Controls.Add(this.SortBtn1);
             this.Controls.Add(this.addRandomBtn1);
             this.Controls.Add(this.AddStudentBtn1);
@@ -626,6 +640,7 @@ namespace WindowsFormsTdd
         private System.Windows.Forms.PictureBox AddStudentBtn1;
         private System.Windows.Forms.PictureBox addRandomBtn1;
         private System.Windows.Forms.PictureBox SortBtn1;
+        private System.Windows.Forms.Label label7;
     }
 }
 
