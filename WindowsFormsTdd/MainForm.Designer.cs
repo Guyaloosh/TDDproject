@@ -85,17 +85,17 @@ namespace WindowsFormsTdd
             // 
             this.StudentName.AutoSize = true;
             this.StudentName.BackColor = System.Drawing.Color.Transparent;
-            this.StudentName.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
-            this.StudentName.Location = new System.Drawing.Point(1405, 104);
+            this.StudentName.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
+            this.StudentName.Location = new System.Drawing.Point(1409, 199);
             this.StudentName.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.StudentName.Name = "StudentName";
-            this.StudentName.Size = new System.Drawing.Size(55, 16);
+            this.StudentName.Size = new System.Drawing.Size(74, 24);
             this.StudentName.TabIndex = 1;
             this.StudentName.Text = "שם פרטי";
             // 
             // FirstNameTextBox
             // 
-            this.FirstNameTextBox.Location = new System.Drawing.Point(1222, 104);
+            this.FirstNameTextBox.Location = new System.Drawing.Point(1245, 204);
             this.FirstNameTextBox.Margin = new System.Windows.Forms.Padding(2);
             this.FirstNameTextBox.Name = "FirstNameTextBox";
             this.FirstNameTextBox.Size = new System.Drawing.Size(160, 20);
@@ -105,7 +105,7 @@ namespace WindowsFormsTdd
             // 
             // LastNameTxtBox
             // 
-            this.LastNameTxtBox.Location = new System.Drawing.Point(1222, 125);
+            this.LastNameTxtBox.Location = new System.Drawing.Point(1245, 244);
             this.LastNameTxtBox.Margin = new System.Windows.Forms.Padding(2);
             this.LastNameTxtBox.Name = "LastNameTxtBox";
             this.LastNameTxtBox.Size = new System.Drawing.Size(160, 20);
@@ -116,17 +116,17 @@ namespace WindowsFormsTdd
             // 
             this.label1.AutoSize = true;
             this.label1.BackColor = System.Drawing.Color.Transparent;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
-            this.label1.Location = new System.Drawing.Point(1405, 125);
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
+            this.label1.Location = new System.Drawing.Point(1414, 244);
             this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(68, 16);
+            this.label1.Size = new System.Drawing.Size(95, 24);
             this.label1.TabIndex = 4;
             this.label1.Text = "שם משפחה";
             // 
             // IdTextBox
             // 
-            this.IdTextBox.Location = new System.Drawing.Point(1222, 146);
+            this.IdTextBox.Location = new System.Drawing.Point(1245, 284);
             this.IdTextBox.Margin = new System.Windows.Forms.Padding(2);
             this.IdTextBox.Name = "IdTextBox";
             this.IdTextBox.Size = new System.Drawing.Size(160, 20);
@@ -137,17 +137,17 @@ namespace WindowsFormsTdd
             // 
             this.IdLabel.AutoSize = true;
             this.IdLabel.BackColor = System.Drawing.Color.Transparent;
-            this.IdLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
-            this.IdLabel.Location = new System.Drawing.Point(1405, 149);
+            this.IdLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
+            this.IdLabel.Location = new System.Drawing.Point(1414, 280);
             this.IdLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.IdLabel.Name = "IdLabel";
-            this.IdLabel.Size = new System.Drawing.Size(77, 16);
+            this.IdLabel.Size = new System.Drawing.Size(102, 24);
             this.IdLabel.TabIndex = 6;
             this.IdLabel.Text = "תעודת זהות";
             // 
             // EmailTextBox
             // 
-            this.EmailTextBox.Location = new System.Drawing.Point(1222, 167);
+            this.EmailTextBox.Location = new System.Drawing.Point(1245, 329);
             this.EmailTextBox.Margin = new System.Windows.Forms.Padding(2);
             this.EmailTextBox.Name = "EmailTextBox";
             this.EmailTextBox.Size = new System.Drawing.Size(160, 20);
@@ -157,17 +157,17 @@ namespace WindowsFormsTdd
             // 
             this.EmailTextLabel.AutoSize = true;
             this.EmailTextLabel.BackColor = System.Drawing.Color.Transparent;
-            this.EmailTextLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
-            this.EmailTextLabel.Location = new System.Drawing.Point(1405, 170);
+            this.EmailTextLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
+            this.EmailTextLabel.Location = new System.Drawing.Point(1415, 325);
             this.EmailTextLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.EmailTextLabel.Name = "EmailTextLabel";
-            this.EmailTextLabel.Size = new System.Drawing.Size(75, 16);
+            this.EmailTextLabel.Size = new System.Drawing.Size(94, 24);
             this.EmailTextLabel.TabIndex = 8;
             this.EmailTextLabel.Text = "כתובת מייל";
             // 
             // PhoneNumTextBox
             // 
-            this.PhoneNumTextBox.Location = new System.Drawing.Point(1222, 188);
+            this.PhoneNumTextBox.Location = new System.Drawing.Point(1245, 369);
             this.PhoneNumTextBox.Margin = new System.Windows.Forms.Padding(2);
             this.PhoneNumTextBox.Name = "PhoneNumTextBox";
             this.PhoneNumTextBox.Size = new System.Drawing.Size(160, 20);
@@ -178,11 +178,11 @@ namespace WindowsFormsTdd
             // 
             this.PhoneLabel.AutoSize = true;
             this.PhoneLabel.BackColor = System.Drawing.Color.Transparent;
-            this.PhoneLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
-            this.PhoneLabel.Location = new System.Drawing.Point(1405, 188);
+            this.PhoneLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
+            this.PhoneLabel.Location = new System.Drawing.Point(1415, 364);
             this.PhoneLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.PhoneLabel.Name = "PhoneLabel";
-            this.PhoneLabel.Size = new System.Drawing.Size(81, 16);
+            this.PhoneLabel.Size = new System.Drawing.Size(109, 24);
             this.PhoneLabel.TabIndex = 10;
             this.PhoneLabel.Text = "מספר פלאפון";
             // 
@@ -192,7 +192,7 @@ namespace WindowsFormsTdd
             this.GradesLabels.BackColor = System.Drawing.Color.Transparent;
             this.GradesLabels.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
             this.GradesLabels.ForeColor = System.Drawing.Color.RoyalBlue;
-            this.GradesLabels.Location = new System.Drawing.Point(1308, 252);
+            this.GradesLabels.Location = new System.Drawing.Point(1008, 149);
             this.GradesLabels.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.GradesLabels.Name = "GradesLabels";
             this.GradesLabels.Size = new System.Drawing.Size(172, 37);
@@ -202,7 +202,7 @@ namespace WindowsFormsTdd
             // 
             // MathTextBox
             // 
-            this.MathTextBox.Location = new System.Drawing.Point(1230, 320);
+            this.MathTextBox.Location = new System.Drawing.Point(1033, 204);
             this.MathTextBox.Margin = new System.Windows.Forms.Padding(2);
             this.MathTextBox.Name = "MathTextBox";
             this.MathTextBox.Size = new System.Drawing.Size(50, 20);
@@ -213,17 +213,17 @@ namespace WindowsFormsTdd
             // 
             this.label2.AutoSize = true;
             this.label2.BackColor = System.Drawing.Color.Transparent;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
-            this.label2.Location = new System.Drawing.Point(1337, 323);
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
+            this.label2.Location = new System.Drawing.Point(1109, 199);
             this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(61, 16);
+            this.label2.Size = new System.Drawing.Size(84, 24);
             this.label2.TabIndex = 13;
             this.label2.Text = "מתמטיקה";
             // 
             // EnglishTextBox
             // 
-            this.EnglishTextBox.Location = new System.Drawing.Point(1230, 344);
+            this.EnglishTextBox.Location = new System.Drawing.Point(1033, 244);
             this.EnglishTextBox.Margin = new System.Windows.Forms.Padding(2);
             this.EnglishTextBox.Name = "EnglishTextBox";
             this.EnglishTextBox.Size = new System.Drawing.Size(50, 20);
@@ -234,17 +234,17 @@ namespace WindowsFormsTdd
             // 
             this.label3.AutoSize = true;
             this.label3.BackColor = System.Drawing.Color.Transparent;
-            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
-            this.label3.Location = new System.Drawing.Point(1344, 347);
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
+            this.label3.Location = new System.Drawing.Point(1109, 244);
             this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(49, 16);
+            this.label3.Size = new System.Drawing.Size(61, 24);
             this.label3.TabIndex = 15;
             this.label3.Text = "אנגלית";
             // 
             // HebrewTextBox
             // 
-            this.HebrewTextBox.Location = new System.Drawing.Point(1230, 368);
+            this.HebrewTextBox.Location = new System.Drawing.Point(1033, 286);
             this.HebrewTextBox.Margin = new System.Windows.Forms.Padding(2);
             this.HebrewTextBox.Name = "HebrewTextBox";
             this.HebrewTextBox.Size = new System.Drawing.Size(50, 20);
@@ -255,17 +255,17 @@ namespace WindowsFormsTdd
             // 
             this.label4.AutoSize = true;
             this.label4.BackColor = System.Drawing.Color.Transparent;
-            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
-            this.label4.Location = new System.Drawing.Point(1354, 371);
+            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
+            this.label4.Location = new System.Drawing.Point(1109, 284);
             this.label4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(35, 16);
+            this.label4.Size = new System.Drawing.Size(44, 24);
             this.label4.TabIndex = 17;
             this.label4.Text = "לשון";
             // 
             // PhysicsTextBox
             // 
-            this.PhysicsTextBox.Location = new System.Drawing.Point(1230, 392);
+            this.PhysicsTextBox.Location = new System.Drawing.Point(1033, 328);
             this.PhysicsTextBox.Margin = new System.Windows.Forms.Padding(2);
             this.PhysicsTextBox.Name = "PhysicsTextBox";
             this.PhysicsTextBox.Size = new System.Drawing.Size(50, 20);
@@ -276,17 +276,17 @@ namespace WindowsFormsTdd
             // 
             this.label5.AutoSize = true;
             this.label5.BackColor = System.Drawing.Color.Transparent;
-            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
-            this.label5.Location = new System.Drawing.Point(1344, 399);
+            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
+            this.label5.Location = new System.Drawing.Point(1109, 324);
             this.label5.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(45, 16);
+            this.label5.Size = new System.Drawing.Size(64, 24);
             this.label5.TabIndex = 19;
             this.label5.Text = "פיזיקה";
             // 
             // SoftwereTextBox
             // 
-            this.SoftwereTextBox.Location = new System.Drawing.Point(1230, 416);
+            this.SoftwereTextBox.Location = new System.Drawing.Point(1033, 369);
             this.SoftwereTextBox.Margin = new System.Windows.Forms.Padding(2);
             this.SoftwereTextBox.Name = "SoftwereTextBox";
             this.SoftwereTextBox.Size = new System.Drawing.Size(50, 20);
@@ -297,11 +297,11 @@ namespace WindowsFormsTdd
             // 
             this.label6.AutoSize = true;
             this.label6.BackColor = System.Drawing.Color.Transparent;
-            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
-            this.label6.Location = new System.Drawing.Point(1349, 423);
+            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
+            this.label6.Location = new System.Drawing.Point(1109, 364);
             this.label6.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(43, 16);
+            this.label6.Size = new System.Drawing.Size(54, 24);
             this.label6.TabIndex = 21;
             this.label6.Text = "תכנות";
             // 
@@ -319,7 +319,7 @@ namespace WindowsFormsTdd
             this.תעודתזהות,
             this.שםמלא});
             this.StudentView1.HideSelection = false;
-            this.StudentView1.Location = new System.Drawing.Point(124, 148);
+            this.StudentView1.Location = new System.Drawing.Point(65, 144);
             this.StudentView1.Margin = new System.Windows.Forms.Padding(2);
             this.StudentView1.Name = "StudentView1";
             this.StudentView1.Size = new System.Drawing.Size(919, 399);
@@ -384,12 +384,12 @@ namespace WindowsFormsTdd
             // 
             this.errorlable.AutoSize = true;
             this.errorlable.BackColor = System.Drawing.Color.Transparent;
-            this.errorlable.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
+            this.errorlable.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
             this.errorlable.ForeColor = System.Drawing.Color.Red;
-            this.errorlable.Location = new System.Drawing.Point(783, 737);
+            this.errorlable.Location = new System.Drawing.Point(744, 737);
             this.errorlable.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.errorlable.Name = "errorlable";
-            this.errorlable.Size = new System.Drawing.Size(142, 16);
+            this.errorlable.Size = new System.Drawing.Size(186, 20);
             this.errorlable.TabIndex = 24;
             this.errorlable.Text = "אנא הכנס נתונים תקינים";
             this.errorlable.Visible = false;
@@ -399,7 +399,7 @@ namespace WindowsFormsTdd
             // 
             this.cleanbtn.BackColor = System.Drawing.Color.Transparent;
             this.cleanbtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
-            this.cleanbtn.Location = new System.Drawing.Point(1097, 523);
+            this.cleanbtn.Location = new System.Drawing.Point(1180, 470);
             this.cleanbtn.Margin = new System.Windows.Forms.Padding(2);
             this.cleanbtn.Name = "cleanbtn";
             this.cleanbtn.Size = new System.Drawing.Size(100, 40);
@@ -414,7 +414,7 @@ namespace WindowsFormsTdd
             this.NameErrorLable.BackColor = System.Drawing.Color.Transparent;
             this.NameErrorLable.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
             this.NameErrorLable.ForeColor = System.Drawing.Color.Red;
-            this.NameErrorLable.Location = new System.Drawing.Point(1109, 105);
+            this.NameErrorLable.Location = new System.Drawing.Point(1264, 226);
             this.NameErrorLable.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.NameErrorLable.Name = "NameErrorLable";
             this.NameErrorLable.Size = new System.Drawing.Size(109, 16);
@@ -428,7 +428,7 @@ namespace WindowsFormsTdd
             this.LastNameErrorLable.BackColor = System.Drawing.Color.Transparent;
             this.LastNameErrorLable.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
             this.LastNameErrorLable.ForeColor = System.Drawing.Color.Red;
-            this.LastNameErrorLable.Location = new System.Drawing.Point(1068, 126);
+            this.LastNameErrorLable.Location = new System.Drawing.Point(1253, 266);
             this.LastNameErrorLable.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.LastNameErrorLable.Name = "LastNameErrorLable";
             this.LastNameErrorLable.Size = new System.Drawing.Size(152, 16);
@@ -442,7 +442,7 @@ namespace WindowsFormsTdd
             this.IDErrorLable.BackColor = System.Drawing.Color.Transparent;
             this.IDErrorLable.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
             this.IDErrorLable.ForeColor = System.Drawing.Color.Red;
-            this.IDErrorLable.Location = new System.Drawing.Point(1077, 147);
+            this.IDErrorLable.Location = new System.Drawing.Point(1249, 308);
             this.IDErrorLable.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.IDErrorLable.Name = "IDErrorLable";
             this.IDErrorLable.Size = new System.Drawing.Size(143, 16);
@@ -454,12 +454,12 @@ namespace WindowsFormsTdd
             // 
             this.EmailErrorLable.AutoSize = true;
             this.EmailErrorLable.BackColor = System.Drawing.Color.Transparent;
-            this.EmailErrorLable.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
+            this.EmailErrorLable.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
             this.EmailErrorLable.ForeColor = System.Drawing.Color.Red;
-            this.EmailErrorLable.Location = new System.Drawing.Point(1079, 168);
+            this.EmailErrorLable.Location = new System.Drawing.Point(1242, 351);
             this.EmailErrorLable.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.EmailErrorLable.Name = "EmailErrorLable";
-            this.EmailErrorLable.Size = new System.Drawing.Size(141, 16);
+            this.EmailErrorLable.Size = new System.Drawing.Size(162, 16);
             this.EmailErrorLable.TabIndex = 29;
             this.EmailErrorLable.Text = "כתובת מייל אינה תקינה";
             this.EmailErrorLable.Visible = false;
@@ -470,7 +470,7 @@ namespace WindowsFormsTdd
             this.PhoneErrorLable.BackColor = System.Drawing.Color.Transparent;
             this.PhoneErrorLable.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
             this.PhoneErrorLable.ForeColor = System.Drawing.Color.Red;
-            this.PhoneErrorLable.Location = new System.Drawing.Point(1099, 188);
+            this.PhoneErrorLable.Location = new System.Drawing.Point(1264, 391);
             this.PhoneErrorLable.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.PhoneErrorLable.Name = "PhoneErrorLable";
             this.PhoneErrorLable.Size = new System.Drawing.Size(119, 16);
@@ -484,7 +484,7 @@ namespace WindowsFormsTdd
             this.GradesErrorLabel.BackColor = System.Drawing.Color.Transparent;
             this.GradesErrorLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
             this.GradesErrorLabel.ForeColor = System.Drawing.Color.Red;
-            this.GradesErrorLabel.Location = new System.Drawing.Point(1166, 452);
+            this.GradesErrorLabel.Location = new System.Drawing.Point(1039, 402);
             this.GradesErrorLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.GradesErrorLabel.Name = "GradesErrorLabel";
             this.GradesErrorLabel.Size = new System.Drawing.Size(114, 16);
@@ -495,9 +495,9 @@ namespace WindowsFormsTdd
             // AddStudentBtn1
             // 
             this.AddStudentBtn1.Image = ((System.Drawing.Image)(resources.GetObject("AddStudentBtn1.Image")));
-            this.AddStudentBtn1.Location = new System.Drawing.Point(760, 610);
+            this.AddStudentBtn1.Location = new System.Drawing.Point(731, 610);
             this.AddStudentBtn1.Name = "AddStudentBtn1";
-            this.AddStudentBtn1.Size = new System.Drawing.Size(196, 124);
+            this.AddStudentBtn1.Size = new System.Drawing.Size(199, 124);
             this.AddStudentBtn1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.AddStudentBtn1.TabIndex = 33;
             this.AddStudentBtn1.TabStop = false;
@@ -506,7 +506,7 @@ namespace WindowsFormsTdd
             // addRandomBtn1
             // 
             this.addRandomBtn1.Image = ((System.Drawing.Image)(resources.GetObject("addRandomBtn1.Image")));
-            this.addRandomBtn1.Location = new System.Drawing.Point(523, 610);
+            this.addRandomBtn1.Location = new System.Drawing.Point(484, 610);
             this.addRandomBtn1.Name = "addRandomBtn1";
             this.addRandomBtn1.Size = new System.Drawing.Size(221, 124);
             this.addRandomBtn1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -517,7 +517,7 @@ namespace WindowsFormsTdd
             // SortBtn1
             // 
             this.SortBtn1.Image = ((System.Drawing.Image)(resources.GetObject("SortBtn1.Image")));
-            this.SortBtn1.Location = new System.Drawing.Point(282, 622);
+            this.SortBtn1.Location = new System.Drawing.Point(85, 610);
             this.SortBtn1.Name = "SortBtn1";
             this.SortBtn1.Size = new System.Drawing.Size(196, 112);
             this.SortBtn1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -581,7 +581,7 @@ namespace WindowsFormsTdd
             this.Controls.Add(this.StudentName);
             this.ImeMode = System.Windows.Forms.ImeMode.Off;
             this.Name = "MainForm";
-            this.Text = "Form1";
+            this.Text = "TDD Project ";
             this.Load += new System.EventHandler(this.Form1_Load);
             ((System.ComponentModel.ISupportInitialize)(this.AddStudentBtn1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.addRandomBtn1)).EndInit();
