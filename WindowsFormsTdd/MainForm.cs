@@ -25,13 +25,6 @@ namespace WindowsFormsTdd
         {
             InitializeComponent();
          
-            Image AddSbtnImage = new Bitmap(Image.FromFile(@"C:\Users\guyal\Downloads\AddSBTN.png"), new Size(280, 120)); // scale the image to a new size of 280x120
-            AddStudentBtn.Image = AddSbtnImage;
-            Image SortbtnImage = new Bitmap(Image.FromFile(@"C:\Users\guyal\Downloads\SortBTN.png"), new Size(280, 120)); // scale the image to a new size of 280x120
-            SortBtn.Image = SortbtnImage;
-            Image rndbtnImage = new Bitmap(Image.FromFile(@"C:\Users\guyal\Downloads\GenerateRndBTN.png"), new Size(280, 120)); // scale the image to a new size of 280x120
-            addRandomBtn.Image = rndbtnImage;
-            
             
         }
 
@@ -243,39 +236,7 @@ namespace WindowsFormsTdd
             return (c1 + c2 + c3 + c4 + c5) / numofcourses; ;
         }
 
-        private void AddStudentBtn_Click(object sender, EventArgs e)
-        {
-           
-            string Name = FirstNameTextBox.Text;
-            string LastName = LastNameTxtBox.Text;
-            bool nameok = CheckName(Name, LastName);
-          
-            string ID = IdTextBox.Text;
-            bool idok = CheckID(ID);
-
-            string Email = EmailTextBox.Text;
-            bool Emailok = Checkmail(Email);
-
-
-            string phoneNum = PhoneNumTextBox.Text;
-            bool phoneok = CheckPhone(phoneNum);
-
-            bool courseok = CheckCourses(PhysicsTextBox.Text, MathTextBox.Text, SoftwereTextBox.Text, EnglishTextBox.Text, HebrewTextBox.Text);
-          
-
-            if (nameok && idok && Emailok && phoneok&& courseok)
-            {
-                String Avrage = CalcAvg(int.Parse(PhysicsTextBox.Text), int.Parse(MathTextBox.Text), int.Parse(SoftwereTextBox.Text), int.Parse(EnglishTextBox.Text), int.Parse(HebrewTextBox.Text)).ToString();
-                string[] newuser = { Avrage, SoftwereTextBox.Text, PhysicsTextBox.Text, HebrewTextBox.Text, EnglishTextBox.Text, MathTextBox.Text, phoneNum.ToString(), Email, ID.ToString(), Name + " " + LastName };
-                ListViewItem student = new ListViewItem(newuser);
-                StudentView1.Items.Add(student);
-                errorlable.Visible = false;
-                SortBtn.Visible = true;
-                clearMainForm();
-            }
-            else {
-                errorlable.Visible = true; }
-        }
+       
 
        
         public string ConvertToEnglish(string Name) {
@@ -353,20 +314,8 @@ namespace WindowsFormsTdd
         }
 
 
-        //generate 1000 random student btn
-        public void addRandomBtn_Click(object sender, EventArgs e)
-        {
-            clearMainForm();
-            Random rnd = new Random();
-            for (int i = 0; i < 10000; i++)
-            {
-                string[] ListviewData = GenerateRandomStudent(rnd);
-                ListViewItem student = new ListViewItem(ListviewData);
-                StudentView1.Items.Add(student);
-            }
-            SortBtn.Visible = true;
-        }
-
+        
+     
         private void FirstNameTextBox_TextChanged(object sender, EventArgs e)
         {
           
@@ -383,20 +332,7 @@ namespace WindowsFormsTdd
             clearMainForm();
         }
 
-        private void SortBtn_Click(object sender, EventArgs e)
-        {
-
-            //FILL THIS
-            
-            StudentView1.Sorting = SortOrder.None;
-
-            // Set the ListViewItemSorter property to null to disable any custom sorting.
-            StudentView1.ListViewItemSorter = new IntegerListViewItemComparer(0);
-
-
-            // Call the Sort method to apply the sorting.
-            StudentView1.Sort();
-        }
+      
 
 
         private void PhoneErrorLable_Click(object sender, EventArgs e)
@@ -440,5 +376,72 @@ namespace WindowsFormsTdd
             }
         }
 
+        
+        private void AddStudentBtn1_Click(object sender, EventArgs e)
+        {
+
+            string Name = FirstNameTextBox.Text;
+            string LastName = LastNameTxtBox.Text;
+            bool nameok = CheckName(Name, LastName);
+
+            string ID = IdTextBox.Text;
+            bool idok = CheckID(ID);
+
+            string Email = EmailTextBox.Text;
+            bool Emailok = Checkmail(Email);
+
+
+            string phoneNum = PhoneNumTextBox.Text;
+            bool phoneok = CheckPhone(phoneNum);
+
+            bool courseok = CheckCourses(PhysicsTextBox.Text, MathTextBox.Text, SoftwereTextBox.Text, EnglishTextBox.Text, HebrewTextBox.Text);
+
+
+            if (nameok && idok && Emailok && phoneok && courseok)
+            {
+                String Avrage = CalcAvg(int.Parse(PhysicsTextBox.Text), int.Parse(MathTextBox.Text), int.Parse(SoftwereTextBox.Text), int.Parse(EnglishTextBox.Text), int.Parse(HebrewTextBox.Text)).ToString();
+                string[] newuser = { Avrage, SoftwereTextBox.Text, PhysicsTextBox.Text, HebrewTextBox.Text, EnglishTextBox.Text, MathTextBox.Text, phoneNum.ToString(), Email, ID.ToString(), Name + " " + LastName };
+                ListViewItem student = new ListViewItem(newuser);
+                StudentView1.Items.Add(student);
+                errorlable.Visible = false;
+                SortBtn1.Visible = true;
+                clearMainForm();
+            }
+            else
+            {
+                errorlable.Visible = true;
+            }
+        }
+
+        //generate 1000 random student btn
+        private void addRandomBtn1_Click(object sender, EventArgs e)
+        {
+            clearMainForm();
+            Random rnd = new Random();
+            for (int i = 0; i < 10000; i++)
+            {
+                string[] ListviewData = GenerateRandomStudent(rnd);
+                ListViewItem student = new ListViewItem(ListviewData);
+                StudentView1.Items.Add(student);
+            }
+            SortBtn1.Visible = true;
+        }
+
+        
+
+        private void SortBtn1_Click(object sender, EventArgs e)
+        {
+            //FILL THIS
+
+            StudentView1.Sorting = SortOrder.None;
+
+            // Set the ListViewItemSorter property to null to disable any custom sorting.
+            StudentView1.ListViewItemSorter = new IntegerListViewItemComparer(0);
+
+
+
+            // Call the Sort method to apply the sorting.
+            StudentView1.Sort();
+        }
     }
 }

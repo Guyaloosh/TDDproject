@@ -30,7 +30,6 @@ namespace WindowsFormsTdd
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainForm));
-            this.AddStudentBtn = new System.Windows.Forms.Button();
             this.StudentName = new System.Windows.Forms.Label();
             this.FirstNameTextBox = new System.Windows.Forms.TextBox();
             this.LastNameTxtBox = new System.Windows.Forms.TextBox();
@@ -63,7 +62,6 @@ namespace WindowsFormsTdd
             this.אימייל = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.תעודתזהות = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.שםמלא = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.addRandomBtn = new System.Windows.Forms.Button();
             this.errorlable = new System.Windows.Forms.Label();
             this.cleanbtn = new System.Windows.Forms.Button();
             this.NameErrorLable = new System.Windows.Forms.Label();
@@ -71,26 +69,21 @@ namespace WindowsFormsTdd
             this.IDErrorLable = new System.Windows.Forms.Label();
             this.EmailErrorLable = new System.Windows.Forms.Label();
             this.PhoneErrorLable = new System.Windows.Forms.Label();
-            this.SortBtn = new System.Windows.Forms.Button();
             this.GradesErrorLabel = new System.Windows.Forms.Label();
+            this.AddStudentBtn1 = new System.Windows.Forms.PictureBox();
+            this.addRandomBtn1 = new System.Windows.Forms.PictureBox();
+            this.SortBtn1 = new System.Windows.Forms.PictureBox();
+            ((System.ComponentModel.ISupportInitialize)(this.AddStudentBtn1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.addRandomBtn1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.SortBtn1)).BeginInit();
             this.SuspendLayout();
-            // 
-            // AddStudentBtn
-            // 
-            this.AddStudentBtn.Location = new System.Drawing.Point(712, 613);
-            this.AddStudentBtn.Margin = new System.Windows.Forms.Padding(2);
-            this.AddStudentBtn.Name = "AddStudentBtn";
-            this.AddStudentBtn.Size = new System.Drawing.Size(237, 124);
-            this.AddStudentBtn.TabIndex = 0;
-            this.AddStudentBtn.UseVisualStyleBackColor = true;
-            this.AddStudentBtn.Click += new System.EventHandler(this.AddStudentBtn_Click);
             // 
             // StudentName
             // 
             this.StudentName.AutoSize = true;
             this.StudentName.BackColor = System.Drawing.Color.Transparent;
             this.StudentName.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
-            this.StudentName.Location = new System.Drawing.Point(1409, 191);
+            this.StudentName.Location = new System.Drawing.Point(1405, 191);
             this.StudentName.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.StudentName.Name = "StudentName";
             this.StudentName.Size = new System.Drawing.Size(55, 16);
@@ -121,7 +114,7 @@ namespace WindowsFormsTdd
             this.label1.AutoSize = true;
             this.label1.BackColor = System.Drawing.Color.Transparent;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
-            this.label1.Location = new System.Drawing.Point(1409, 215);
+            this.label1.Location = new System.Drawing.Point(1405, 212);
             this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(68, 16);
@@ -183,7 +176,7 @@ namespace WindowsFormsTdd
             this.PhoneLabel.AutoSize = true;
             this.PhoneLabel.BackColor = System.Drawing.Color.Transparent;
             this.PhoneLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
-            this.PhoneLabel.Location = new System.Drawing.Point(1409, 275);
+            this.PhoneLabel.Location = new System.Drawing.Point(1405, 275);
             this.PhoneLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.PhoneLabel.Name = "PhoneLabel";
             this.PhoneLabel.Size = new System.Drawing.Size(81, 16);
@@ -383,23 +376,13 @@ namespace WindowsFormsTdd
             this.שםמלא.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.שםמלא.Width = 100;
             // 
-            // addRandomBtn
-            // 
-            this.addRandomBtn.Location = new System.Drawing.Point(452, 613);
-            this.addRandomBtn.Margin = new System.Windows.Forms.Padding(2);
-            this.addRandomBtn.Name = "addRandomBtn";
-            this.addRandomBtn.Size = new System.Drawing.Size(246, 124);
-            this.addRandomBtn.TabIndex = 23;
-            this.addRandomBtn.UseVisualStyleBackColor = true;
-            this.addRandomBtn.Click += new System.EventHandler(this.addRandomBtn_Click);
-            // 
             // errorlable
             // 
             this.errorlable.AutoSize = true;
             this.errorlable.BackColor = System.Drawing.Color.Transparent;
             this.errorlable.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
             this.errorlable.ForeColor = System.Drawing.Color.Red;
-            this.errorlable.Location = new System.Drawing.Point(760, 739);
+            this.errorlable.Location = new System.Drawing.Point(738, 740);
             this.errorlable.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.errorlable.Name = "errorlable";
             this.errorlable.Size = new System.Drawing.Size(142, 16);
@@ -489,17 +472,6 @@ namespace WindowsFormsTdd
             this.PhoneErrorLable.Text = "מספר נייד אינו תקין";
             this.PhoneErrorLable.Visible = false;
             // 
-            // SortBtn
-            // 
-            this.SortBtn.Location = new System.Drawing.Point(201, 613);
-            this.SortBtn.Margin = new System.Windows.Forms.Padding(2);
-            this.SortBtn.Name = "SortBtn";
-            this.SortBtn.Size = new System.Drawing.Size(232, 124);
-            this.SortBtn.TabIndex = 31;
-            this.SortBtn.UseVisualStyleBackColor = true;
-            this.SortBtn.Visible = false;
-            this.SortBtn.Click += new System.EventHandler(this.SortBtn_Click);
-            // 
             // GradesErrorLabel
             // 
             this.GradesErrorLabel.AutoSize = true;
@@ -514,6 +486,40 @@ namespace WindowsFormsTdd
             this.GradesErrorLabel.Text = "ציונים אינם תקינים";
             this.GradesErrorLabel.Visible = false;
             // 
+            // AddStudentBtn1
+            // 
+            this.AddStudentBtn1.Image = ((System.Drawing.Image)(resources.GetObject("AddStudentBtn1.Image")));
+            this.AddStudentBtn1.Location = new System.Drawing.Point(715, 613);
+            this.AddStudentBtn1.Name = "AddStudentBtn1";
+            this.AddStudentBtn1.Size = new System.Drawing.Size(196, 124);
+            this.AddStudentBtn1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.AddStudentBtn1.TabIndex = 33;
+            this.AddStudentBtn1.TabStop = false;
+            this.AddStudentBtn1.Click += new System.EventHandler(this.AddStudentBtn1_Click);
+            // 
+            // addRandomBtn1
+            // 
+            this.addRandomBtn1.Image = ((System.Drawing.Image)(resources.GetObject("addRandomBtn1.Image")));
+            this.addRandomBtn1.Location = new System.Drawing.Point(478, 613);
+            this.addRandomBtn1.Name = "addRandomBtn1";
+            this.addRandomBtn1.Size = new System.Drawing.Size(221, 124);
+            this.addRandomBtn1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.addRandomBtn1.TabIndex = 34;
+            this.addRandomBtn1.TabStop = false;
+            this.addRandomBtn1.Click += new System.EventHandler(this.addRandomBtn1_Click);
+            // 
+            // SortBtn1
+            // 
+            this.SortBtn1.Image = ((System.Drawing.Image)(resources.GetObject("SortBtn1.Image")));
+            this.SortBtn1.Location = new System.Drawing.Point(237, 625);
+            this.SortBtn1.Name = "SortBtn1";
+            this.SortBtn1.Size = new System.Drawing.Size(196, 112);
+            this.SortBtn1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.SortBtn1.TabIndex = 35;
+            this.SortBtn1.TabStop = false;
+            this.SortBtn1.Visible = false;
+            this.SortBtn1.Click += new System.EventHandler(this.SortBtn1_Click);
+            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -521,8 +527,10 @@ namespace WindowsFormsTdd
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(1556, 915);
+            this.Controls.Add(this.SortBtn1);
+            this.Controls.Add(this.addRandomBtn1);
+            this.Controls.Add(this.AddStudentBtn1);
             this.Controls.Add(this.GradesErrorLabel);
-            this.Controls.Add(this.SortBtn);
             this.Controls.Add(this.PhoneErrorLable);
             this.Controls.Add(this.EmailErrorLable);
             this.Controls.Add(this.IDErrorLable);
@@ -530,7 +538,6 @@ namespace WindowsFormsTdd
             this.Controls.Add(this.NameErrorLable);
             this.Controls.Add(this.cleanbtn);
             this.Controls.Add(this.errorlable);
-            this.Controls.Add(this.addRandomBtn);
             this.Controls.Add(this.StudentView1);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.SoftwereTextBox);
@@ -553,19 +560,19 @@ namespace WindowsFormsTdd
             this.Controls.Add(this.LastNameTxtBox);
             this.Controls.Add(this.FirstNameTextBox);
             this.Controls.Add(this.StudentName);
-            this.Controls.Add(this.AddStudentBtn);
             this.ImeMode = System.Windows.Forms.ImeMode.Off;
             this.Name = "MainForm";
             this.Text = "Form1";
             this.Load += new System.EventHandler(this.Form1_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.AddStudentBtn1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.addRandomBtn1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.SortBtn1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
         }
 
         #endregion
-
-        private System.Windows.Forms.Button AddStudentBtn;
         private System.Windows.Forms.Label StudentName;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label IdLabel;
@@ -582,7 +589,6 @@ namespace WindowsFormsTdd
         private System.Windows.Forms.ColumnHeader תכנות;
         private System.Windows.Forms.ColumnHeader פיזיקה;
         private System.Windows.Forms.ColumnHeader לשון;
-        private System.Windows.Forms.Button addRandomBtn;
         public System.Windows.Forms.TextBox FirstNameTextBox;
         public System.Windows.Forms.TextBox LastNameTxtBox;
         public System.Windows.Forms.TextBox IdTextBox;
@@ -600,7 +606,6 @@ namespace WindowsFormsTdd
         private System.Windows.Forms.Label IDErrorLable;
         private System.Windows.Forms.Label EmailErrorLable;
         private System.Windows.Forms.Label PhoneErrorLable;
-        private System.Windows.Forms.Button SortBtn;
         private System.Windows.Forms.ColumnHeader אנגלית;
         private System.Windows.Forms.ColumnHeader מתמטיקה;
         private System.Windows.Forms.ColumnHeader טלפון;
@@ -608,6 +613,9 @@ namespace WindowsFormsTdd
         private System.Windows.Forms.ColumnHeader תעודתזהות;
         private System.Windows.Forms.ColumnHeader שםמלא;
         private System.Windows.Forms.Label GradesErrorLabel;
+        private System.Windows.Forms.PictureBox AddStudentBtn1;
+        private System.Windows.Forms.PictureBox addRandomBtn1;
+        private System.Windows.Forms.PictureBox SortBtn1;
     }
 }
 
