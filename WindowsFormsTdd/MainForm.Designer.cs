@@ -323,7 +323,7 @@ namespace WindowsFormsTdd
             this.StudentView1.Location = new System.Drawing.Point(65, 144);
             this.StudentView1.Margin = new System.Windows.Forms.Padding(2);
             this.StudentView1.Name = "StudentView1";
-            this.StudentView1.Size = new System.Drawing.Size(919, 399);
+            this.StudentView1.Size = new System.Drawing.Size(915, 399);
             this.StudentView1.TabIndex = 22;
             this.StudentView1.UseCompatibleStateImageBehavior = false;
             this.StudentView1.View = System.Windows.Forms.View.Details;
@@ -413,12 +413,12 @@ namespace WindowsFormsTdd
             // 
             this.NameErrorLable.AutoSize = true;
             this.NameErrorLable.BackColor = System.Drawing.Color.Transparent;
-            this.NameErrorLable.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
+            this.NameErrorLable.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
             this.NameErrorLable.ForeColor = System.Drawing.Color.Red;
             this.NameErrorLable.Location = new System.Drawing.Point(1264, 226);
             this.NameErrorLable.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.NameErrorLable.Name = "NameErrorLable";
-            this.NameErrorLable.Size = new System.Drawing.Size(109, 16);
+            this.NameErrorLable.Size = new System.Drawing.Size(125, 16);
             this.NameErrorLable.TabIndex = 26;
             this.NameErrorLable.Text = "אנא הכנס שם תקין";
             this.NameErrorLable.Visible = false;
@@ -427,12 +427,12 @@ namespace WindowsFormsTdd
             // 
             this.LastNameErrorLable.AutoSize = true;
             this.LastNameErrorLable.BackColor = System.Drawing.Color.Transparent;
-            this.LastNameErrorLable.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
+            this.LastNameErrorLable.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
             this.LastNameErrorLable.ForeColor = System.Drawing.Color.Red;
             this.LastNameErrorLable.Location = new System.Drawing.Point(1253, 266);
             this.LastNameErrorLable.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.LastNameErrorLable.Name = "LastNameErrorLable";
-            this.LastNameErrorLable.Size = new System.Drawing.Size(152, 16);
+            this.LastNameErrorLable.Size = new System.Drawing.Size(174, 16);
             this.LastNameErrorLable.TabIndex = 27;
             this.LastNameErrorLable.Text = "אנא הכנס שם משפחה תקין";
             this.LastNameErrorLable.Visible = false;
@@ -441,12 +441,12 @@ namespace WindowsFormsTdd
             // 
             this.IDErrorLable.AutoSize = true;
             this.IDErrorLable.BackColor = System.Drawing.Color.Transparent;
-            this.IDErrorLable.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
+            this.IDErrorLable.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
             this.IDErrorLable.ForeColor = System.Drawing.Color.Red;
             this.IDErrorLable.Location = new System.Drawing.Point(1249, 308);
             this.IDErrorLable.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.IDErrorLable.Name = "IDErrorLable";
-            this.IDErrorLable.Size = new System.Drawing.Size(143, 16);
+            this.IDErrorLable.Size = new System.Drawing.Size(164, 16);
             this.IDErrorLable.TabIndex = 28;
             this.IDErrorLable.Text = "תעודת זהות אינה תקינה";
             this.IDErrorLable.Visible = false;
@@ -469,12 +469,12 @@ namespace WindowsFormsTdd
             // 
             this.PhoneErrorLable.AutoSize = true;
             this.PhoneErrorLable.BackColor = System.Drawing.Color.Transparent;
-            this.PhoneErrorLable.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
+            this.PhoneErrorLable.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
             this.PhoneErrorLable.ForeColor = System.Drawing.Color.Red;
             this.PhoneErrorLable.Location = new System.Drawing.Point(1264, 391);
             this.PhoneErrorLable.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.PhoneErrorLable.Name = "PhoneErrorLable";
-            this.PhoneErrorLable.Size = new System.Drawing.Size(119, 16);
+            this.PhoneErrorLable.Size = new System.Drawing.Size(138, 16);
             this.PhoneErrorLable.TabIndex = 30;
             this.PhoneErrorLable.Text = "מספר נייד אינו תקין";
             this.PhoneErrorLable.Visible = false;
@@ -483,12 +483,12 @@ namespace WindowsFormsTdd
             // 
             this.GradesErrorLabel.AutoSize = true;
             this.GradesErrorLabel.BackColor = System.Drawing.Color.Transparent;
-            this.GradesErrorLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
+            this.GradesErrorLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
             this.GradesErrorLabel.ForeColor = System.Drawing.Color.Red;
             this.GradesErrorLabel.Location = new System.Drawing.Point(1039, 402);
             this.GradesErrorLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.GradesErrorLabel.Name = "GradesErrorLabel";
-            this.GradesErrorLabel.Size = new System.Drawing.Size(114, 16);
+            this.GradesErrorLabel.Size = new System.Drawing.Size(132, 16);
             this.GradesErrorLabel.TabIndex = 32;
             this.GradesErrorLabel.Text = "ציונים אינם תקינים";
             this.GradesErrorLabel.Visible = false;
@@ -532,12 +532,12 @@ namespace WindowsFormsTdd
             this.label7.AutoSize = true;
             this.label7.BackColor = System.Drawing.Color.Transparent;
             this.label7.Font = new System.Drawing.Font("MV Boli", 27.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(434, 51);
+            this.label7.Location = new System.Drawing.Point(418, 42);
             this.label7.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(672, 49);
+            this.label7.Size = new System.Drawing.Size(690, 49);
             this.label7.TabIndex = 36;
-            this.label7.Text = "TDD Project  - Student Genrator : ";
+            this.label7.Text = "TDD Project  - Student Generator : ";
             // 
             // label8
             // 

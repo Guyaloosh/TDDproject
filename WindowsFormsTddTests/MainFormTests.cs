@@ -149,9 +149,128 @@ namespace WindowsFormsTdd.Tests
         [TestMethod()]
         public void MergeSortTest()
         {
-            Assert.Fail();
+            void MergeSort_SortsArray()
+            {
+                // Arrange
+                int[] inputArray = { 9, 2, 7, 1, 5, 6, 8, 3, 4 };
+                int[] expectedArray = { 1, 2, 3, 4, 5, 6, 7, 8, 9 };
+                int[] NotExpectedArray = { 1, 3, 2, 5, 4, 8, 6, 7, 9 };
+                ;
+
+                // Act
+                MergeSort(inputArray);
+
+                // Assert
+                Assert.AreEqual(expectedArray, inputArray);
+                Assert.AreNotEqual(NotExpectedArray, expectedArray);
+                Assert.AreNotEqual(NotExpectedArray, inputArray);
+
+            }
+
+            void MergeSort(int[] array)
+            {
+                if (array.Length <= 1)
+                    return;
+
+                int mid = array.Length / 2;
+                int[] left = new int[mid];
+                int[] right = new int[array.Length - mid];
+
+                Array.Copy(array, left, mid);
+                Array.Copy(array, mid, right, 0, array.Length - mid);
+
+                MergeSort(left);
+                MergeSort(right);
+
+                Merge(left, right, array);
+            }
+
+            void Merge(int[] left, int[] right, int[] array)
+            {
+                int i = 0, j = 0, k = 0;
+
+                while (i < left.Length && j < right.Length)
+                {
+                    if (left[i] <= right[j])
+                    {
+                        array[k] = left[i];
+                        i++;
+                    }
+                    else
+                    {
+                        array[k] = right[j];
+                        j++;
+                    }
+                    k++;
+                }
+
+                while (i < left.Length)
+                {
+                    array[k] = left[i];
+                    i++;
+                    k++;
+                }
+
+                while (j < right.Length)
+                {
+                    array[k] = right[j];
+                    j++;
+                    k++;
+                }
+            }
         }
 
+        [TestMethod()]
+        public void BubbleSortTest()
+        {
+            void BubbleSort_SortsArray()
+            {
+                // Arrange
+                int[] inputArray = { 9, 2, 7, 1, 5, 6, 8, 3, 4 };
+                int[] expectedArray = { 1, 2, 3, 4, 5, 6, 7, 8, 9 };
+                int[] NotExpectedArray = { 1, 3, 4, 5, 2, 6, 7, 8, 9 };
+
+                // Act
+                BubbleSort(inputArray);
+
+                // Assert
+                Assert.AreEqual(expectedArray, inputArray);
+                Assert.AreNotEqual(NotExpectedArray, inputArray);
+            }
+
+            void BubbleSort(int[] array)
+            {
+                int n = array.Length;
+                bool swapped;
+
+                for (int i = 0; i < n - 1; i++)
+                {
+                    swapped = false;
+
+                    for (int j = 0; j < n - i - 1; j++)
+                    {
+                        if (array[j] > array[j + 1])
+                        {
+                            Swap(ref array[j], ref array[j + 1]);
+                            swapped = true;
+                        }
+                    }
+
+                    if (!swapped)
+                        break;
+                }
+            }
+
+            void Swap(ref int a, ref int b)
+            {
+                int temp = a;
+                a = b;
+                b = temp;
+            }
+        }
+        
     }
 
+
 }
+

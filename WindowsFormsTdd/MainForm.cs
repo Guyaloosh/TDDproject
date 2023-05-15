@@ -281,13 +281,14 @@ namespace WindowsFormsTdd
         {
 
             //Firstnames list
-            string[] arrFirstName = { "אוראל", "גיא","יונתן","גבי" , "גדעון","גד" , "גדליהו" , "גולן","גומא","גורן" ,
+               string[] arrFirstName = { "אוראל", "גיא","יונתן","גבי" , "גדעון","גד" , "גדליהו" , "גולן","גומא","גורן" ,
                 "גיורא","גילי","גלבוע" , "גמליאל","גל","גפן" , "גלעד","אמרי","אנדי" , "אסף","אפרים","אסי" , "אראל","אריה","ארתור",
                 "ארנון" , "אפרים","אסיף","תמר","דב", "דביר", "דגן", "דוד", "דודו", "דודי", "דולב", "דור"," דוראל", "דורון", "דורי",
                 "דותן", "דן", "דני"," דקל", "דראל", "דרור","הדר", "הללי", "הלליה", "הראל" ,"זאב", "זבולון", "זוהר", "זיו ", "חגי",
                 "חזי", "חיים", "חן", "חני", "חניאל", "חננאל", "חנניה", "חפר", "טהר", "טוביה", "טל", "טניה","רותם","תום","נחמיה",
                 "ישראל","איתי","ים" , "רוני","ירין", "תהל","נטע","בר","שיר" , "מיתר","זינה","רונה" , "מירן","שני","יאיר", "יגאל", "יגיל",
-                "ידידיה", "ידין", "יהב", "יהודה", "יהונתן", "יהושע", "יואב", "יובל","יוחאי", "יונתן" };
+                "ידידיה", "ידין", "יהב", "יהודה", "יהונתן", "יהושע", "יואב", "יובל","יוחאי", "יונתן" 
+                };
 
 
             //Lastnames list
@@ -298,7 +299,8 @@ namespace WindowsFormsTdd
                "שרעבי","לביא","ששון","ברוך","פלדמן","חמו","ממן","עובדיה","מימון","גולדברג","אסולין","אלון","וקנין","רובין","רבינוביץ",
                "אמסלם","שוורץ","עזרא","הרשקוביץ","ברקוביץ","סבג","קדוש","ישראל","יפרח","מילר","שמואלי","נעים","אברהמי","ברנשטיין","נוימן","פנחס","סבן",
                "עטיה","קוגן","הופמן","אילוז","קרן","בוזגלו","שקד","זינגר","צברי","יונה","גרוסמן","רובינשטיין","תורג'מן","בן סימון","אשר","שיטרית","חמו",
-               "טויטו","בראון","כחלון","פרי","ארביב","ברמן","שגב","שדה","בוסקילה","אלימלך","פינטו"};
+               "טויטו","בראון","כחלון","פרי","ארביב","ברמן","שגב","שדה","בוסקילה","אלימלך","פינטו"
+            };
 
             //emails list
             string[] email = { "@gmail.com", "@hotmail.com", "@ac.sce.il", "@ynet.com", "@walla.co.il", "@Isr.il", "@gov.ie.il" };
@@ -407,37 +409,37 @@ namespace WindowsFormsTdd
             SortBtn1.Visible = true;
         }
 
-/*
+
      public void BubbleSort(List<ListViewItem> items)
-    {
+     {
          bool swapped;
          int n = items.Count;
          do
          {
              swapped = false;
              for (int i = 1; i < n; i++)
-              {
+             {
                  if (int.Parse(items[i - 1].SubItems[0].Text) > int.Parse(items[i].SubItems[0].Text))
                  {
                      ListViewItem temp = items[i - 1];
                      items[i - 1] = items[i];
                      items[i] = temp;
                      swapped = true;
-                  }
-              }
+                 }
+             }
                n--;
-           } while (swapped);
-    }
+         } while (swapped);
+     }
 
 
-*/
+
 
     //-------------------------------------------------------------------------------------------------//
 
     // sort button using merge sort . 
-    public void SortBtn1_Click(object sender, EventArgs e)
-    {
-     // Create a list of the ListView items
+     public void SortBtn1_Click(object sender, EventArgs e)
+     {
+      // Create a list of the ListView items
         List<ListViewItem> items = new List<ListViewItem>();
         
         foreach (ListViewItem item in StudentView1.Items)
@@ -461,7 +463,7 @@ namespace WindowsFormsTdd
             StudentView1.Items.AddRange(items.ToArray());
             string message = string.Format("Sorting took {0} milliseconds.", end - start);
             MessageBox.Show(message);
-    }
+     }
 
 
         public void MergeSort(List<ListViewItem> items, int left, int right)
