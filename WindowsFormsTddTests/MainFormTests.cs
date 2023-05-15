@@ -208,6 +208,7 @@ namespace WindowsFormsTdd.Tests
                 int[] expectedArray = { 1, 2, 3, 4, 5, 6, 7, 8, 9 };
                 int[] notExpectedArray = { 1, 3, 5, 6, 4, 8, 2, 7, 9 };
                 int[] expectedArrayBack = { 9, 8, 7, 6, 5, 4, 3, 2, 1 };
+                int[] emptyArray = { };
 
                 // Act
                 MergeSort(inputArray);
@@ -216,7 +217,8 @@ namespace WindowsFormsTdd.Tests
                 CollectionAssert.AreEqual(expectedArray, inputArray);
                 CollectionAssert.AreNotEqual(expectedArrayBack, inputArray);
                 CollectionAssert.AreNotEqual(notExpectedArray, inputArray);
-                CollectionAssert.AreEqual(inputArray, expectedArrayBack);
+                //CollectionAssert.AreEqual(inputArray, expectedArrayBack); expected - failed test.
+                CollectionAssert.AreNotEqual(expectedArray, emptyArray);
 
 
             }
