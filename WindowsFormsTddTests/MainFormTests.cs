@@ -10,6 +10,8 @@ using static WindowsFormsTdd.MainForm;
 
 
 
+
+
 namespace WindowsFormsTdd.Tests
 {
     [TestClass()]
@@ -147,6 +149,56 @@ namespace WindowsFormsTdd.Tests
         }
 
         [TestMethod()]
+        public void BubbleSortTest()
+        {
+            void BubbleSort_SortsArray()
+            {
+                // Arrange
+                int[] inputArray = {9,2,7,1,5,6,8,3,4};
+                int[] expectedArray = {1,2,3,4,5,6,7,8,9};
+                int[] NotExpectedArray = {1,3,4,5,2,6,7,8,9};
+
+                // Act
+                BubbleSort(inputArray);
+
+                // Assert
+                CollectionAssert.AreEqual(expectedArray, inputArray);
+                CollectionAssert.AreNotEqual(NotExpectedArray, inputArray);
+            }
+
+            void BubbleSort(int[] array)
+            {
+                int n = array.Length;
+                bool swapped;
+
+                for (int i = 0; i < n - 1; i++)
+                {
+                    swapped = false;
+
+                    for (int j = 0; j < n - i - 1; j++)
+                    {
+                        if (array[j] > array[j + 1])
+                        {
+                            Swap(ref array[j], ref array[j + 1]);
+                            swapped = true;
+                        }
+                    }
+
+                    if (!swapped)
+                        break;
+                }
+            }
+
+            void Swap(ref int a, ref int b)
+            {
+                int temp = a;
+                a = b;
+                b = temp;
+            }
+            BubbleSort_SortsArray();
+        }
+
+        [TestMethod()]
         public void MergeSortTest()
         {
             void MergeSort_SortsArray()
@@ -154,17 +206,19 @@ namespace WindowsFormsTdd.Tests
                 // Arrange
                 int[] inputArray = { 9, 2, 7, 1, 5, 6, 8, 3, 4 };
                 int[] expectedArray = { 1, 2, 3, 4, 5, 6, 7, 8, 9 };
-                int[] NotExpectedArray = { 1, 3, 2, 5, 4, 8, 6, 7, 9 };
-                int[] expectedArrayBack = {9, 8,7,6,5,4,3,2,1 };
+                int[] notExpectedArray = { 1, 3, 5, 6, 4, 8, 2, 7, 9 };
+                int[] expectedArrayBack = { 9, 8, 7, 6, 5, 4, 3, 2, 1 };
 
                 // Act
                 MergeSort(inputArray);
-               
+
                 // Assert
-                Assert.AreEqual(expectedArrayBack, inputArray);
-                Assert.AreNotEqual(NotExpectedArray, expectedArray);
-                Assert.AreNotEqual(NotExpectedArray, inputArray);
-             
+                CollectionAssert.AreEqual(expectedArray, inputArray);
+                CollectionAssert.AreNotEqual(expectedArrayBack, inputArray);
+                CollectionAssert.AreNotEqual(notExpectedArray, inputArray);
+                CollectionAssert.AreEqual(inputArray, expectedArrayBack);
+
+
             }
 
             void MergeSort(int[] array)
@@ -218,60 +272,55 @@ namespace WindowsFormsTdd.Tests
                     k++;
                 }
             }
-      
+            MergeSort_SortsArray();
         }
 
         [TestMethod()]
-        public void BubbleSortTest()
+        public void CalcAvgTest()
         {
-            void BubbleSort_SortsArray()
+            void checkAvgCalc()
             {
-                // Arrange
-                int[] inputArray = { 9, 2, 7, 1, 5, 6, 8, 3, 4 };
-                int[] expectedArray = { 1, 2, 3, 4, 5, 6, 7, 8, 9 };
-                int[] NotExpectedArray = { 1, 3, 4, 5, 2, 6, 7, 8, 9 };
+                int avg1 = CalcAvg(90, 90, 90, 777, 90);
+                int avg2 = CalcAvg(70, 30, 80, 777, 777);
+                int avg3 = CalcAvg(10, 10, 10, 10, 10);
+                int avg4 = CalcAvg(5, 15, 10, 10, 10);
+               
+                Assert.AreEqual(avg1, 90);//expected - good test
+                //Assert.AreEqual(avg1, avg2); expected - failed test 
+                Assert.AreEqual(avg3, avg4);//expected - good test 
+                Assert.AreNotEqual(avg1, avg2);
 
-                // Act
-                BubbleSort(inputArray);
-
-                // Assert
-                Assert.AreEqual(expectedArray, inputArray);
-                Assert.AreNotEqual(NotExpectedArray, inputArray);
             }
 
-            void BubbleSort(int[] array)
+
+            int CalcAvg(int c1, int c2, int c3, int c4, int c5)
             {
-                int n = array.Length;
-                bool swapped;
+                int avg = 0;
+                int numofcourses = 5;
 
-                for (int i = 0; i < n - 1; i++)
-                {
-                    swapped = false;
+                if (c1 == 777) { numofcourses--; c1 = 0; }
+                if (c2 == 777) { numofcourses--; c2 = 0; }
+                if (c3 == 777) { numofcourses--; c3 = 0; }
+                if (c4 == 777) { numofcourses--; c4 = 0; }
+                if (c5 == 777) { numofcourses--; c5 = 0; }
 
-                    for (int j = 0; j < n - i - 1; j++)
-                    {
-                        if (array[j] > array[j + 1])
-                        {
-                            Swap(ref array[j], ref array[j + 1]);
-                            swapped = true;
-                        }
-                    }
+                avg = (c1 + c2 + c3 + c4 + c5) / numofcourses;
 
-                    if (!swapped)
-                        break;
-                }
+                return avg;
             }
 
-            void Swap(ref int a, ref int b)
-            {
-                int temp = a;
-                a = b;
-                b = temp;
-            }
+            checkAvgCalc();
         }
-        
     }
-
-
 }
+
+
+
+
+
+
+
+
+
+
 

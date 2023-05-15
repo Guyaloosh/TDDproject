@@ -234,7 +234,7 @@ namespace WindowsFormsTdd
         }
 
         //function that calcs avrage from course inputs.
-        int CalcAvg(int c1, int c2, int c3, int c4, int c5)
+        public int CalcAvg(int c1, int c2, int c3, int c4, int c5)
         {
             int avg = 0;
             int numofcourses = 5;
