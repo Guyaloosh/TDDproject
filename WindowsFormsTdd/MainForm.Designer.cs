@@ -77,6 +77,10 @@ namespace WindowsFormsTdd
             this.SortBtn1 = new System.Windows.Forms.PictureBox();
             this.label7 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
+            this.label9 = new System.Windows.Forms.Label();
+            this.label10 = new System.Windows.Forms.Label();
+            this.label11 = new System.Windows.Forms.Label();
+            this.label12 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.AddStudentBtn1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.addRandomBtn1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.SortBtn1)).BeginInit();
@@ -87,6 +91,7 @@ namespace WindowsFormsTdd
             this.StudentName.AutoSize = true;
             this.StudentName.BackColor = System.Drawing.Color.Transparent;
             this.StudentName.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
+            this.StudentName.ForeColor = System.Drawing.Color.White;
             this.StudentName.Location = new System.Drawing.Point(1409, 199);
             this.StudentName.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.StudentName.Name = "StudentName";
@@ -118,6 +123,7 @@ namespace WindowsFormsTdd
             this.label1.AutoSize = true;
             this.label1.BackColor = System.Drawing.Color.Transparent;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
+            this.label1.ForeColor = System.Drawing.Color.White;
             this.label1.Location = new System.Drawing.Point(1414, 244);
             this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
@@ -139,6 +145,7 @@ namespace WindowsFormsTdd
             this.IdLabel.AutoSize = true;
             this.IdLabel.BackColor = System.Drawing.Color.Transparent;
             this.IdLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
+            this.IdLabel.ForeColor = System.Drawing.Color.White;
             this.IdLabel.Location = new System.Drawing.Point(1414, 280);
             this.IdLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.IdLabel.Name = "IdLabel";
@@ -159,6 +166,7 @@ namespace WindowsFormsTdd
             this.EmailTextLabel.AutoSize = true;
             this.EmailTextLabel.BackColor = System.Drawing.Color.Transparent;
             this.EmailTextLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
+            this.EmailTextLabel.ForeColor = System.Drawing.Color.White;
             this.EmailTextLabel.Location = new System.Drawing.Point(1415, 325);
             this.EmailTextLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.EmailTextLabel.Name = "EmailTextLabel";
@@ -180,6 +188,7 @@ namespace WindowsFormsTdd
             this.PhoneLabel.AutoSize = true;
             this.PhoneLabel.BackColor = System.Drawing.Color.Transparent;
             this.PhoneLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
+            this.PhoneLabel.ForeColor = System.Drawing.Color.White;
             this.PhoneLabel.Location = new System.Drawing.Point(1415, 364);
             this.PhoneLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.PhoneLabel.Name = "PhoneLabel";
@@ -215,6 +224,7 @@ namespace WindowsFormsTdd
             this.label2.AutoSize = true;
             this.label2.BackColor = System.Drawing.Color.Transparent;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
+            this.label2.ForeColor = System.Drawing.Color.White;
             this.label2.Location = new System.Drawing.Point(1109, 199);
             this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label2.Name = "label2";
@@ -236,6 +246,7 @@ namespace WindowsFormsTdd
             this.label3.AutoSize = true;
             this.label3.BackColor = System.Drawing.Color.Transparent;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
+            this.label3.ForeColor = System.Drawing.Color.White;
             this.label3.Location = new System.Drawing.Point(1109, 244);
             this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label3.Name = "label3";
@@ -257,6 +268,7 @@ namespace WindowsFormsTdd
             this.label4.AutoSize = true;
             this.label4.BackColor = System.Drawing.Color.Transparent;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
+            this.label4.ForeColor = System.Drawing.Color.White;
             this.label4.Location = new System.Drawing.Point(1109, 284);
             this.label4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label4.Name = "label4";
@@ -278,6 +290,7 @@ namespace WindowsFormsTdd
             this.label5.AutoSize = true;
             this.label5.BackColor = System.Drawing.Color.Transparent;
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
+            this.label5.ForeColor = System.Drawing.Color.White;
             this.label5.Location = new System.Drawing.Point(1109, 324);
             this.label5.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label5.Name = "label5";
@@ -299,6 +312,7 @@ namespace WindowsFormsTdd
             this.label6.AutoSize = true;
             this.label6.BackColor = System.Drawing.Color.Transparent;
             this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
+            this.label6.ForeColor = System.Drawing.Color.White;
             this.label6.Location = new System.Drawing.Point(1109, 364);
             this.label6.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label6.Name = "label6";
@@ -387,7 +401,7 @@ namespace WindowsFormsTdd
             this.errorlable.BackColor = System.Drawing.Color.Transparent;
             this.errorlable.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
             this.errorlable.ForeColor = System.Drawing.Color.Red;
-            this.errorlable.Location = new System.Drawing.Point(744, 737);
+            this.errorlable.Location = new System.Drawing.Point(718, 737);
             this.errorlable.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.errorlable.Name = "errorlable";
             this.errorlable.Size = new System.Drawing.Size(186, 20);
@@ -398,12 +412,14 @@ namespace WindowsFormsTdd
             // 
             // cleanbtn
             // 
-            this.cleanbtn.BackColor = System.Drawing.Color.Transparent;
+            this.cleanbtn.BackColor = System.Drawing.Color.White;
+            this.cleanbtn.FlatStyle = System.Windows.Forms.FlatStyle.System;
             this.cleanbtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
-            this.cleanbtn.Location = new System.Drawing.Point(1180, 470);
+            this.cleanbtn.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.cleanbtn.Location = new System.Drawing.Point(1033, 482);
             this.cleanbtn.Margin = new System.Windows.Forms.Padding(2);
             this.cleanbtn.Name = "cleanbtn";
-            this.cleanbtn.Size = new System.Drawing.Size(100, 40);
+            this.cleanbtn.Size = new System.Drawing.Size(120, 61);
             this.cleanbtn.TabIndex = 25;
             this.cleanbtn.Text = "נקה דף";
             this.cleanbtn.UseVisualStyleBackColor = false;
@@ -495,10 +511,11 @@ namespace WindowsFormsTdd
             // 
             // AddStudentBtn1
             // 
+            this.AddStudentBtn1.BackColor = System.Drawing.Color.Transparent;
             this.AddStudentBtn1.Image = ((System.Drawing.Image)(resources.GetObject("AddStudentBtn1.Image")));
-            this.AddStudentBtn1.Location = new System.Drawing.Point(731, 610);
+            this.AddStudentBtn1.Location = new System.Drawing.Point(666, 572);
             this.AddStudentBtn1.Name = "AddStudentBtn1";
-            this.AddStudentBtn1.Size = new System.Drawing.Size(199, 124);
+            this.AddStudentBtn1.Size = new System.Drawing.Size(287, 147);
             this.AddStudentBtn1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.AddStudentBtn1.TabIndex = 33;
             this.AddStudentBtn1.TabStop = false;
@@ -506,10 +523,11 @@ namespace WindowsFormsTdd
             // 
             // addRandomBtn1
             // 
+            this.addRandomBtn1.BackColor = System.Drawing.Color.Transparent;
             this.addRandomBtn1.Image = ((System.Drawing.Image)(resources.GetObject("addRandomBtn1.Image")));
-            this.addRandomBtn1.Location = new System.Drawing.Point(484, 610);
+            this.addRandomBtn1.Location = new System.Drawing.Point(370, 560);
             this.addRandomBtn1.Name = "addRandomBtn1";
-            this.addRandomBtn1.Size = new System.Drawing.Size(221, 124);
+            this.addRandomBtn1.Size = new System.Drawing.Size(263, 174);
             this.addRandomBtn1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.addRandomBtn1.TabIndex = 34;
             this.addRandomBtn1.TabStop = false;
@@ -517,10 +535,11 @@ namespace WindowsFormsTdd
             // 
             // SortBtn1
             // 
+            this.SortBtn1.BackColor = System.Drawing.Color.Transparent;
             this.SortBtn1.Image = ((System.Drawing.Image)(resources.GetObject("SortBtn1.Image")));
-            this.SortBtn1.Location = new System.Drawing.Point(85, 610);
+            this.SortBtn1.Location = new System.Drawing.Point(87, 560);
             this.SortBtn1.Name = "SortBtn1";
-            this.SortBtn1.Size = new System.Drawing.Size(196, 112);
+            this.SortBtn1.Size = new System.Drawing.Size(255, 174);
             this.SortBtn1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.SortBtn1.TabIndex = 35;
             this.SortBtn1.TabStop = false;
@@ -532,6 +551,7 @@ namespace WindowsFormsTdd
             this.label7.AutoSize = true;
             this.label7.BackColor = System.Drawing.Color.Transparent;
             this.label7.Font = new System.Drawing.Font("MV Boli", 27.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.ForeColor = System.Drawing.Color.White;
             this.label7.Location = new System.Drawing.Point(418, 42);
             this.label7.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label7.Name = "label7";
@@ -552,13 +572,69 @@ namespace WindowsFormsTdd
             this.label8.TabIndex = 37;
             this.label8.Text = "פרטי הסטודנט";
             // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.BackColor = System.Drawing.Color.Transparent;
+            this.label9.Font = new System.Drawing.Font("MV Boli", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label9.ForeColor = System.Drawing.Color.White;
+            this.label9.Location = new System.Drawing.Point(1249, 597);
+            this.label9.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(211, 41);
+            this.label9.TabIndex = 38;
+            this.label9.Text = "Created by :";
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.BackColor = System.Drawing.Color.Transparent;
+            this.label10.Font = new System.Drawing.Font("MV Boli", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label10.ForeColor = System.Drawing.Color.White;
+            this.label10.Location = new System.Drawing.Point(1393, 654);
+            this.label10.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(113, 31);
+            this.label10.TabIndex = 39;
+            this.label10.Text = "Orel Hen";
+            // 
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.label11.BackColor = System.Drawing.Color.Transparent;
+            this.label11.Font = new System.Drawing.Font("MV Boli", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label11.ForeColor = System.Drawing.Color.White;
+            this.label11.Location = new System.Drawing.Point(1393, 700);
+            this.label11.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(140, 31);
+            this.label11.TabIndex = 40;
+            this.label11.Text = "Guy Aloosh";
+            // 
+            // label12
+            // 
+            this.label12.AutoSize = true;
+            this.label12.BackColor = System.Drawing.Color.Transparent;
+            this.label12.Font = new System.Drawing.Font("MV Boli", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label12.ForeColor = System.Drawing.Color.White;
+            this.label12.Location = new System.Drawing.Point(1393, 745);
+            this.label12.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(133, 31);
+            this.label12.TabIndex = 41;
+            this.label12.Text = "Guy Haliva";
+            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(1556, 915);
+            this.ClientSize = new System.Drawing.Size(1562, 827);
+            this.Controls.Add(this.label12);
+            this.Controls.Add(this.label11);
+            this.Controls.Add(this.label10);
+            this.Controls.Add(this.label9);
             this.Controls.Add(this.label8);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.SortBtn1);
@@ -657,6 +733,10 @@ namespace WindowsFormsTdd
         private System.Windows.Forms.PictureBox SortBtn1;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.Label label10;
+        private System.Windows.Forms.Label label11;
+        private System.Windows.Forms.Label label12;
     }
 }
 

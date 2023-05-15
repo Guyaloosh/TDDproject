@@ -155,16 +155,16 @@ namespace WindowsFormsTdd.Tests
                 int[] inputArray = { 9, 2, 7, 1, 5, 6, 8, 3, 4 };
                 int[] expectedArray = { 1, 2, 3, 4, 5, 6, 7, 8, 9 };
                 int[] NotExpectedArray = { 1, 3, 2, 5, 4, 8, 6, 7, 9 };
-                ;
+                int[] expectedArrayBack = {9, 8,7,6,5,4,3,2,1 };
 
                 // Act
                 MergeSort(inputArray);
-
+               
                 // Assert
-                Assert.AreEqual(expectedArray, inputArray);
+                Assert.AreEqual(expectedArrayBack, inputArray);
                 Assert.AreNotEqual(NotExpectedArray, expectedArray);
                 Assert.AreNotEqual(NotExpectedArray, inputArray);
-
+             
             }
 
             void MergeSort(int[] array)
@@ -218,6 +218,7 @@ namespace WindowsFormsTdd.Tests
                     k++;
                 }
             }
+      
         }
 
         [TestMethod()]
