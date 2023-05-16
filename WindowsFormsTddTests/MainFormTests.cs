@@ -154,9 +154,9 @@ namespace WindowsFormsTdd.Tests
             void BubbleSort_SortsArray()
             {
                 // Arrange
-                int[] inputArray = {9,2,7,1,5,6,8,3,4};
-                int[] expectedArray = {1,2,3,4,5,6,7,8,9};
-                int[] NotExpectedArray = {1,3,4,5,2,6,7,8,9};
+                int[] inputArray = { 9, 2, 7, 1, 5, 6, 8, 3, 4 };
+                int[] expectedArray = { 1, 2, 3, 4, 5, 6, 7, 8, 9 };
+                int[] NotExpectedArray = { 1, 3, 4, 5, 2, 6, 7, 8, 9 };
 
                 // Act
                 BubbleSort(inputArray);
@@ -286,7 +286,7 @@ namespace WindowsFormsTdd.Tests
                 int avg2 = CalcAvg(70, 30, 80, 777, 777);
                 int avg3 = CalcAvg(10, 10, 10, 10, 10);
                 int avg4 = CalcAvg(5, 15, 10, 10, 10);
-               
+
                 Assert.AreEqual(avg1, 90);//expected - good test
                 //Assert.AreEqual(avg1, avg2); expected - failed test 
                 Assert.AreEqual(avg3, avg4);//expected - good test 
@@ -312,6 +312,12 @@ namespace WindowsFormsTdd.Tests
             }
 
             checkAvgCalc();
+        }
+
+        [TestMethod()]
+        public void QuickSortTest()
+        {
+            Assert.Fail();
         }
     }
 }

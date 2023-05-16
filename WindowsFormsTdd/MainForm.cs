@@ -409,35 +409,85 @@ namespace WindowsFormsTdd
             SortBtn1.Visible = true;
         }
 
+        /*
+                public void BubbleSort(List<ListViewItem> items)
+                {
+                    bool swapped;
+                    int n = items.Count;
+                    do
+                    {
+                     swapped = false;
+                        for (int i = 1; i < n; i++)
+                        {
+                            if (int.Parse(items[i - 1].SubItems[0].Text) > int.Parse(items[i].SubItems[0].Text))
+                            {
+                                ListViewItem temp = items[i - 1];
+                                items[i - 1] = items[i];
+                                items[i] = temp;
+                                swapped = true;
+                            }
+                        }
+                       n--;
+                    } while (swapped);
+                }
 
-     public void BubbleSort(List<ListViewItem> items)
-     {
-         bool swapped;
-         int n = items.Count;
-         do
-         {
-             swapped = false;
-             for (int i = 1; i < n; i++)
-             {
-                 if (int.Parse(items[i - 1].SubItems[0].Text) > int.Parse(items[i].SubItems[0].Text))
-                 {
-                     ListViewItem temp = items[i - 1];
-                     items[i - 1] = items[i];
-                     items[i] = temp;
-                     swapped = true;
-                 }
-             }
-               n--;
-         } while (swapped);
-     }
+                public void QuickSort(List<ListViewItem> items, int left, int right)
+                {
+                    if (left < right)
+                    {
+                        int pivotIndex = Partition(items, left, right);
+                        QuickSort(items, left, pivotIndex - 1);
+                        QuickSort(items, pivotIndex + 1, right);
+                    }
+                }
+
+                public int Partition(List<ListViewItem> items, int left, int right)
+                {
+                    ListViewItem pivotItem = items[right];
+                    int partitionIndex = left;
+
+                    for (int i = left; i < right; i++)
+                    {
+                        double currentItemValue, pivotValue;
+                        if (double.TryParse(items[i].SubItems[0].Text, out currentItemValue) &&
+                            double.TryParse(pivotItem.SubItems[0].Text, out pivotValue))
+                        {
+                            if (currentItemValue > pivotValue) // Changing the comparison to >
+                            {
+                                Swap(items, i, partitionIndex);
+                                partitionIndex++;
+                            }
+                        }
+                        else
+                        {
+                            // compare the string representations
+                            if (items[i].SubItems[0].Text.CompareTo(pivotItem.SubItems[0].Text) > 0) // Change comparison to >
+                            {
+                                Swap(items, i, partitionIndex);
+                                partitionIndex++;
+                            }
+                        }
+                    }
+
+                    Swap(items, partitionIndex, right);
+
+                    return partitionIndex;
+                }
+
+                public void Swap(List<ListViewItem> items, int index1, int index2)
+                {
+                    ListViewItem temp = items[index1];
+                    items[index1] = items[index2];
+                    items[index2] = temp;
+                }
+        */
 
 
 
+        //-------------------------------------------------------------------------------------------------//
 
-    //-------------------------------------------------------------------------------------------------//
-
-    // sort button using merge sort . 
-     public void SortBtn1_Click(object sender, EventArgs e)
+        // sort button using merge sort . 
+        public void SortBtn1_Click(object sender, EventArgs e)
      {
       // Create a list of the ListView items
         List<ListViewItem> items = new List<ListViewItem>();
