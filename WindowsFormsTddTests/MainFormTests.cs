@@ -200,6 +200,7 @@ namespace WindowsFormsTdd.Tests
                 // Assert
                 CollectionAssert.AreEqual(expectedArray, inputArray);
                 CollectionAssert.AreNotEqual(NotExpectedArray, inputArray);
+                Assert.AreEqual(expectedArray.Length, inputArray.Length);
             }
             //Bubblesort func for testing
             void BubbleSort(int[] array)
@@ -326,6 +327,7 @@ namespace WindowsFormsTdd.Tests
                 CollectionAssert.AreNotEqual(notExpectedArray, inputArray);
                 //CollectionAssert.AreEqual(inputArray, expectedArrayBack); expected - failed test.
                 CollectionAssert.AreNotEqual(expectedArray, emptyArray);
+                Assert.AreEqual(expectedArray.Length, inputArray.Length);
 
 
             }
