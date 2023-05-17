@@ -317,10 +317,77 @@ namespace WindowsFormsTdd.Tests
         [TestMethod()]
         public void QuickSortTest()
         {
-            Assert.Fail();
+            void QuickSort_SortsArray()
+            {
+                // Arrange
+                int[] inputArray = { 9, 2, 7, 1, 5, 6, 8, 3, 4 };
+                int[] expectedArray = { 1, 2, 3, 4, 5, 6, 7, 8, 9 };
+                int[] NotexpectedArray = { 1, 2, 3, 4, 5, 6, 7, 9 };
+
+
+                // Act
+                QuickSort(inputArray);
+
+                // Assert
+                CollectionAssert.AreEqual(expectedArray, inputArray);
+                //CollectionAssert.AreNotEqual(expectedArray, inputArray);//filed
+                Assert.AreNotEqual(NotexpectedArray.Length, inputArray.Length); //Array length mismatch."
+
+                for (int i = 1; i < inputArray.Length; i++)
+                {
+                    Assert.IsTrue(inputArray[i] >= inputArray[i - 1]); // checking the array are sorted from 1-9 . 
+                }
+
+                Assert.IsFalse(inputArray.Contains(0));//checks the array have the number 0
+                Assert.IsFalse(inputArray.Contains(10)); //checks the array have the number 10
+            }
+
+            void QuickSort(int[] array)
+            {
+                Sort(array, 0, array.Length - 1);
+            }
+
+            void Sort(int[] array, int low, int high)
+            {
+                if (low < high)
+                {
+                    int pivotIndex = Partition(array, low, high);
+                    Sort(array, low, pivotIndex - 1);
+                    Sort(array, pivotIndex + 1, high);
+                }
+            }
+
+            int Partition(int[] array, int low, int high)
+            {
+                int pivot = array[high];
+                int i = low - 1;
+
+                for (int j = low; j < high; j++)
+                {
+                    if (array[j] < pivot)
+                    {
+                        i++;
+                        Swap(array, i, j);
+                    }
+                }
+
+                Swap(array, i + 1, high);
+                return i + 1;
+            }
+
+            void Swap(int[] array, int i, int j)
+            {
+                int temp = array[i];
+                array[i] = array[j];
+                array[j] = temp;
+            }
+            QuickSort_SortsArray();
         }
+
     }
+
 }
+
 
 
 

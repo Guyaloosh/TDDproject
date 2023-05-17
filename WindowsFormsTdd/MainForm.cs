@@ -409,7 +409,7 @@ namespace WindowsFormsTdd
             SortBtn1.Visible = true;
         }
 
-        /*
+       /*
                 public void BubbleSort(List<ListViewItem> items)
                 {
                     bool swapped;
@@ -480,8 +480,8 @@ namespace WindowsFormsTdd
                     items[index1] = items[index2];
                     items[index2] = temp;
                 }
+       
         */
-
 
 
         //-------------------------------------------------------------------------------------------------//
