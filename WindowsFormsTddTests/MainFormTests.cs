@@ -9,6 +9,12 @@ using System.Windows.Forms;
 using static WindowsFormsTdd.MainForm;
 
 
+/// <summary>
+/// @author 
+/// orel hen 316179423
+/// guy aloosh 316471465
+/// guy haliva 316478676
+/// </summary>
 
 
 
@@ -17,6 +23,7 @@ namespace WindowsFormsTdd.Tests
     [TestClass()]
     public class MainFormTests
     {
+        //other tests
         [TestMethod()]
         public void addRandomBtn_ClickTest()
         {
@@ -28,10 +35,7 @@ namespace WindowsFormsTdd.Tests
             }
 
             Assert.AreEqual(expected, count);
-
-            //Assert.Fail();
         }
-
         [TestMethod()]
         public void clearMainFormTest()
         {
@@ -64,7 +68,6 @@ namespace WindowsFormsTdd.Tests
             Assert.AreEqual(mainForm.MathTextBox.Text, "");
             Assert.AreEqual(mainForm.SoftwereTextBox.Text, "");
         }
-
         [TestMethod()]
         public void GenerateRandomStudentTest()
         {
@@ -103,7 +106,6 @@ namespace WindowsFormsTdd.Tests
 
 
         }
-
         [TestMethod()]
         public void ConvertToEnglishTest()
         {
@@ -148,9 +150,48 @@ namespace WindowsFormsTdd.Tests
             //Assert.Fail();
         }
 
+        //calcavg test
+        [TestMethod()]
+        public void CalcAvgTest()
+        {
+            //Test function
+            void checkAvgCalc()
+            {
+                int avg1 = CalcAvg(90, 90, 90, 777, 90);
+                int avg2 = CalcAvg(70, 30, 80, 777, 777);
+                int avg3 = CalcAvg(10, 10, 10, 10, 10);
+                int avg4 = CalcAvg(5, 15, 10, 10, 10);
+
+                Assert.AreEqual(avg1, 90);//expected - good test
+                //Assert.AreEqual(avg1, avg2); expected - failed test 
+                Assert.AreEqual(avg3, avg4);//expected - good test 
+                Assert.AreNotEqual(avg1, avg2);
+
+            }
+            //Calcavg func for testing
+            int CalcAvg(int c1, int c2, int c3, int c4, int c5)
+            {
+                int avg = 0;
+                int numofcourses = 5;
+
+                if (c1 == 777) { numofcourses--; c1 = 0; }
+                if (c2 == 777) { numofcourses--; c2 = 0; }
+                if (c3 == 777) { numofcourses--; c3 = 0; }
+                if (c4 == 777) { numofcourses--; c4 = 0; }
+                if (c5 == 777) { numofcourses--; c5 = 0; }
+
+                avg = (c1 + c2 + c3 + c4 + c5) / numofcourses;
+
+                return avg;
+            }
+            //Calling test function
+            checkAvgCalc();
+        }
+
+        //Sort testing
         [TestMethod()]
         public void BubbleSortTest()
-        {
+        {   //Test function
             void BubbleSort_SortsArray()
             {
                 // Arrange
@@ -165,7 +206,7 @@ namespace WindowsFormsTdd.Tests
                 CollectionAssert.AreEqual(expectedArray, inputArray);
                 CollectionAssert.AreNotEqual(NotExpectedArray, inputArray);
             }
-
+            //Bubblesort func for testing
             void BubbleSort(int[] array)
             {
                 int n = array.Length;
@@ -188,19 +229,90 @@ namespace WindowsFormsTdd.Tests
                         break;
                 }
             }
-
+            //swap func for testing
             void Swap(ref int a, ref int b)
             {
                 int temp = a;
                 a = b;
                 b = temp;
             }
+            //Calling test function
             BubbleSort_SortsArray();
         }
+        [TestMethod()]
+        public void QuickSortTest()
+        {
+            //Test function
+            void QuickSort_SortsArray()
+            {
+                // Arrange
+                int[] inputArray = { 9, 2, 7, 1, 5, 6, 8, 3, 4 };
+                int[] expectedArray = { 1, 2, 3, 4, 5, 6, 7, 8, 9 };
+                int[] NotexpectedArray = { 1, 2, 3, 4, 5, 6, 7, 9 };
 
+
+                // Act
+                QuickSort(inputArray);
+
+                // Assert
+                CollectionAssert.AreEqual(expectedArray, inputArray);
+                //CollectionAssert.AreNotEqual(expectedArray, inputArray);//filed
+                Assert.AreNotEqual(NotexpectedArray.Length, inputArray.Length); //Array length mismatch."
+
+                for (int i = 1; i < inputArray.Length; i++)
+                {
+                    Assert.IsTrue(inputArray[i] >= inputArray[i - 1]); // checking the array are sorted from 1-9 . 
+                }
+
+                Assert.IsFalse(inputArray.Contains(0));//checks the array have the number 0
+                Assert.IsFalse(inputArray.Contains(10)); //checks the array have the number 10
+            }
+            //QS func for testing
+            void QuickSort(int[] array)
+            {
+                Sort(array, 0, array.Length - 1);
+            }
+            //Sort func for testing
+            void Sort(int[] array, int low, int high)
+            {
+                if (low < high)
+                {
+                    int pivotIndex = Partition(array, low, high);
+                    Sort(array, low, pivotIndex - 1);
+                    Sort(array, pivotIndex + 1, high);
+                }
+            }
+            //partition calling swap func
+            int Partition(int[] array, int low, int high)
+            {
+                int pivot = array[high];
+                int i = low - 1;
+
+                for (int j = low; j < high; j++)
+                {
+                    if (array[j] < pivot)
+                    {
+                        i++;
+                        Swap(array, i, j);
+                    }
+                }
+
+                Swap(array, i + 1, high);
+                return i + 1;
+            }
+            //swap func for testing
+            void Swap(int[] array, int i, int j)
+            {
+                int temp = array[i];
+                array[i] = array[j];
+                array[j] = temp;
+            }
+            //Calling test function
+            QuickSort_SortsArray();
+        }
         [TestMethod()]
         public void MergeSortTest()
-        {
+        {   //Test function
             void MergeSort_SortsArray()
             {
                 // Arrange
@@ -222,7 +334,7 @@ namespace WindowsFormsTdd.Tests
 
 
             }
-
+            //mergeSort func for testing
             void MergeSort(int[] array)
             {
                 if (array.Length <= 1)
@@ -240,7 +352,7 @@ namespace WindowsFormsTdd.Tests
 
                 Merge(left, right, array);
             }
-
+            //merge func for testing
             void Merge(int[] left, int[] right, int[] array)
             {
                 int i = 0, j = 0, k = 0;
@@ -274,114 +386,8 @@ namespace WindowsFormsTdd.Tests
                     k++;
                 }
             }
+            //Calling test function
             MergeSort_SortsArray();
-        }
-
-        [TestMethod()]
-        public void CalcAvgTest()
-        {
-            void checkAvgCalc()
-            {
-                int avg1 = CalcAvg(90, 90, 90, 777, 90);
-                int avg2 = CalcAvg(70, 30, 80, 777, 777);
-                int avg3 = CalcAvg(10, 10, 10, 10, 10);
-                int avg4 = CalcAvg(5, 15, 10, 10, 10);
-
-                Assert.AreEqual(avg1, 90);//expected - good test
-                //Assert.AreEqual(avg1, avg2); expected - failed test 
-                Assert.AreEqual(avg3, avg4);//expected - good test 
-                Assert.AreNotEqual(avg1, avg2);
-
-            }
-
-
-            int CalcAvg(int c1, int c2, int c3, int c4, int c5)
-            {
-                int avg = 0;
-                int numofcourses = 5;
-
-                if (c1 == 777) { numofcourses--; c1 = 0; }
-                if (c2 == 777) { numofcourses--; c2 = 0; }
-                if (c3 == 777) { numofcourses--; c3 = 0; }
-                if (c4 == 777) { numofcourses--; c4 = 0; }
-                if (c5 == 777) { numofcourses--; c5 = 0; }
-
-                avg = (c1 + c2 + c3 + c4 + c5) / numofcourses;
-
-                return avg;
-            }
-
-            checkAvgCalc();
-        }
-
-        [TestMethod()]
-        public void QuickSortTest()
-        {
-            void QuickSort_SortsArray()
-            {
-                // Arrange
-                int[] inputArray = { 9, 2, 7, 1, 5, 6, 8, 3, 4 };
-                int[] expectedArray = { 1, 2, 3, 4, 5, 6, 7, 8, 9 };
-                int[] NotexpectedArray = { 1, 2, 3, 4, 5, 6, 7, 9 };
-
-
-                // Act
-                QuickSort(inputArray);
-
-                // Assert
-                CollectionAssert.AreEqual(expectedArray, inputArray);
-                //CollectionAssert.AreNotEqual(expectedArray, inputArray);//filed
-                Assert.AreNotEqual(NotexpectedArray.Length, inputArray.Length); //Array length mismatch."
-
-                for (int i = 1; i < inputArray.Length; i++)
-                {
-                    Assert.IsTrue(inputArray[i] >= inputArray[i - 1]); // checking the array are sorted from 1-9 . 
-                }
-
-                Assert.IsFalse(inputArray.Contains(0));//checks the array have the number 0
-                Assert.IsFalse(inputArray.Contains(10)); //checks the array have the number 10
-            }
-
-            void QuickSort(int[] array)
-            {
-                Sort(array, 0, array.Length - 1);
-            }
-
-            void Sort(int[] array, int low, int high)
-            {
-                if (low < high)
-                {
-                    int pivotIndex = Partition(array, low, high);
-                    Sort(array, low, pivotIndex - 1);
-                    Sort(array, pivotIndex + 1, high);
-                }
-            }
-
-            int Partition(int[] array, int low, int high)
-            {
-                int pivot = array[high];
-                int i = low - 1;
-
-                for (int j = low; j < high; j++)
-                {
-                    if (array[j] < pivot)
-                    {
-                        i++;
-                        Swap(array, i, j);
-                    }
-                }
-
-                Swap(array, i + 1, high);
-                return i + 1;
-            }
-
-            void Swap(int[] array, int i, int j)
-            {
-                int temp = array[i];
-                array[i] = array[j];
-                array[j] = temp;
-            }
-            QuickSort_SortsArray();
         }
 
     }

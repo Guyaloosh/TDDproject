@@ -11,24 +11,24 @@ using System.Windows.Forms;
 
 
 
-
-
+/// <summary>
+/// @author 
+/// orel hen 316179423
+/// guy aloosh 316471465
+/// guy haliva 316478676
+/// </summary>
 
 
 namespace WindowsFormsTdd
 {
-
-
     public partial class MainForm : Form
     {
         public MainForm()
         {
             InitializeComponent();
-
-
         }
-
-
+        
+        //clear main form function
         public void clearMainForm()
         {
             //clearing all main Form
@@ -50,24 +50,6 @@ namespace WindowsFormsTdd
             LastNameErrorLable.Visible = false;
             IDErrorLable.Visible = false;
             GradesErrorLabel.Visible = false;
-        }
-
-
-
-
-        private void Form1_Load(object sender, EventArgs e)
-        {
-
-        }
-
-        private void GradesLabels_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void listView1_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
         }
         //checking First and LastName inputs
         bool CheckName(string FN, string LN)
@@ -100,7 +82,6 @@ namespace WindowsFormsTdd
             LastNameErrorLable.Visible = false;
             return true;
         }
-
         //checking ID input
         bool CheckID(string ID)
         {
@@ -116,11 +97,10 @@ namespace WindowsFormsTdd
             IDErrorLable.Visible = false;
             return true;
         }
-
         //checking Email adress input
         bool Checkmail(string email)
         {
-            //check for errors - test
+            //confirmint email input values.
             if (string.IsNullOrWhiteSpace(email))
             {
                 EmailErrorLable.Visible = true;
@@ -158,8 +138,6 @@ namespace WindowsFormsTdd
             EmailErrorLable.Visible = false;
             return true;
         }
-
-
         //checking Phonenumber inputs 
         bool CheckPhone(string ph)
         {
@@ -177,17 +155,15 @@ namespace WindowsFormsTdd
             PhoneErrorLable.Visible = false;
             return true;
         }
-
         //Checking if INput is not only an intiger.
         bool confirmOnlyInt(String C)
         {
-
+            //other wrong cases
             foreach (char letter in C)
             {
                 if (char.IsLetter(letter) || char.IsSeparator(letter) || char.IsControl(letter) || char.IsSymbol(letter))
-                {
                     return true;
-                }
+                
             }
 
             if (C == "") { return true; }
@@ -212,11 +188,9 @@ namespace WindowsFormsTdd
             else
                 return false;
         }
-
         bool CheckCourses(String C1, String C2, String C3, String C4, String C5)
         {
-
-            //ERROR @
+            //confirm all course fields are int
             if (confirmOnlyInt(C1) || confirmOnlyInt(C2) || confirmOnlyInt(C3) || confirmOnlyInt(C4) || confirmOnlyInt(C5)) { GradesErrorLabel.Visible = true; return false; }
 
             //Converting courses to int
@@ -226,13 +200,12 @@ namespace WindowsFormsTdd
             int c4 = int.Parse(C4);
             int c5 = int.Parse(C5);
 
-            //check courses int value
+            //check each courses int value
             if (incorrectCval(c1) || incorrectCval(c2) || incorrectCval(c3) || incorrectCval(c4) || incorrectCval(c5)) { GradesErrorLabel.Visible = true; return false; }
 
             GradesErrorLabel.Visible = false;
             return true;
         }
-
         //function that calcs avrage from course inputs.
         public int CalcAvg(int c1, int c2, int c3, int c4, int c5)
         {
@@ -247,10 +220,7 @@ namespace WindowsFormsTdd
             
             return avg;
         }
-
-
-
-
+        //function generatinng student name from hebrew to english
         public string ConvertToEnglish(string Name)
         {
 
@@ -274,8 +244,6 @@ namespace WindowsFormsTdd
 
             return char.ToUpper(ToEnglish[0]) + ToEnglish.Substring(1);
         }
-
-
         //generate random student function
         public string[] GenerateRandomStudent(Random rnd)
         {
@@ -306,13 +274,14 @@ namespace WindowsFormsTdd
             string[] email = { "@gmail.com", "@hotmail.com", "@ac.sce.il", "@ynet.com", "@walla.co.il", "@Isr.il", "@gov.ie.il" };
 
 
-
+            //random student information
             string rndName = arrFirstName[rnd.Next(0, arrFirstName.Length - 1)];
             string rndLastName = arrLastName[rnd.Next(0, arrLastName.Length - 1)];
             string rndEmail = ConvertToEnglish(rndName) + rnd.Next(000, 100).ToString() + email[rnd.Next(0, email.Length - 1)];
             int rndID = rnd.Next(111111111, 999999999);
             int rndphoneNum = 50000000 + rnd.Next(0000000, 9999999);
 
+            //5 random course grades.
             int rndc1 = rnd.Next(0, 110); if (rndc1 > 100) rndc1 = 777;
             int rndc2 = rnd.Next(0, 110); if (rndc2 > 100) rndc2 = 777;
             int rndc3 = rnd.Next(0, 110); if (rndc3 > 100) rndc3 = 777;
@@ -323,62 +292,36 @@ namespace WindowsFormsTdd
 
 
             //generate a listview Data string-  avrage / phonenumber / email / ID / full name
-
             string[] RandomData = { Avrage, rndc5.ToString(), rndc4.ToString(), rndc3.ToString(), rndc2.ToString(), rndc1.ToString(), "0" + rndphoneNum.ToString(), rndEmail, rndID.ToString(), rndName + " " + rndLastName };
-
             return RandomData;
         }
-
-
-
-
-        private void FirstNameTextBox_TextChanged(object sender, EventArgs e)
-        {
-
-
-        }
-
-        private void label7_Click(object sender, EventArgs e)
-        {
-
-        }
-
+        //cleanform btn ON-CLICK
         private void cleanbtn_Click(object sender, EventArgs e)
         {
             clearMainForm();
         }
-
-
-
-
-        private void PhoneErrorLable_Click(object sender, EventArgs e)
-        {
-
-        }
-
-
-
-
+        //Add student btn on-click
         private void AddStudentBtn1_Click(object sender, EventArgs e)
         {
-
+            //name fields
             string Name = FirstNameTextBox.Text;
             string LastName = LastNameTxtBox.Text;
             bool nameok = CheckName(Name, LastName);
-
+            //id fields
             string ID = IdTextBox.Text;
             bool idok = CheckID(ID);
-
+            //email field
             string Email = EmailTextBox.Text;
             bool Emailok = Checkmail(Email);
 
-
+            //phone fields
             string phoneNum = PhoneNumTextBox.Text;
             bool phoneok = CheckPhone(phoneNum);
 
+            //course fields
             bool courseok = CheckCourses(PhysicsTextBox.Text, MathTextBox.Text, SoftwereTextBox.Text, EnglishTextBox.Text, HebrewTextBox.Text);
 
-
+            //after confirming all fields, add student enable
             if (nameok && idok && Emailok && phoneok && courseok)
             {
                 String Avrage = CalcAvg(int.Parse(PhysicsTextBox.Text), int.Parse(MathTextBox.Text), int.Parse(SoftwereTextBox.Text), int.Parse(EnglishTextBox.Text), int.Parse(HebrewTextBox.Text)).ToString();
@@ -394,12 +337,12 @@ namespace WindowsFormsTdd
                 errorlable.Visible = true;
             }
         }
-
         //generate 1000 random student btn
         private void addRandomBtn1_Click(object sender, EventArgs e)
         {
             clearMainForm();
             Random rnd = new Random();
+            //calling generaterandomstudent 10000 times.
             for (int i = 0; i < 10000; i++)
             {
                 string[] ListviewData = GenerateRandomStudent(rnd);
@@ -408,85 +351,84 @@ namespace WindowsFormsTdd
             }
             SortBtn1.Visible = true;
         }
+        //-------------------------------------------------------------------------------------------------//
+        //first sorts uses
+        /*
+                 public void BubbleSort(List<ListViewItem> items)
+                 {
+                     bool swapped;
+                     int n = items.Count;
+                     do
+                     {
+                      swapped = false;
+                         for (int i = 1; i < n; i++)
+                         {
+                             if (int.Parse(items[i - 1].SubItems[0].Text) > int.Parse(items[i].SubItems[0].Text))
+                             {
+                                 ListViewItem temp = items[i - 1];
+                                 items[i - 1] = items[i];
+                                 items[i] = temp;
+                                 swapped = true;
+                             }
+                         }
+                        n--;
+                     } while (swapped);
+                 }
 
-       /*
-                public void BubbleSort(List<ListViewItem> items)
-                {
-                    bool swapped;
-                    int n = items.Count;
-                    do
-                    {
-                     swapped = false;
-                        for (int i = 1; i < n; i++)
-                        {
-                            if (int.Parse(items[i - 1].SubItems[0].Text) > int.Parse(items[i].SubItems[0].Text))
-                            {
-                                ListViewItem temp = items[i - 1];
-                                items[i - 1] = items[i];
-                                items[i] = temp;
-                                swapped = true;
-                            }
-                        }
-                       n--;
-                    } while (swapped);
-                }
+                 public void QuickSort(List<ListViewItem> items, int left, int right)
+                 {
+                     if (left < right)
+                     {
+                         int pivotIndex = Partition(items, left, right);
+                         QuickSort(items, left, pivotIndex - 1);
+                         QuickSort(items, pivotIndex + 1, right);
+                     }
+                 }
 
-                public void QuickSort(List<ListViewItem> items, int left, int right)
-                {
-                    if (left < right)
-                    {
-                        int pivotIndex = Partition(items, left, right);
-                        QuickSort(items, left, pivotIndex - 1);
-                        QuickSort(items, pivotIndex + 1, right);
-                    }
-                }
+                 public int Partition(List<ListViewItem> items, int left, int right)
+                 {
+                     ListViewItem pivotItem = items[right];
+                     int partitionIndex = left;
 
-                public int Partition(List<ListViewItem> items, int left, int right)
-                {
-                    ListViewItem pivotItem = items[right];
-                    int partitionIndex = left;
+                     for (int i = left; i < right; i++)
+                     {
+                         double currentItemValue, pivotValue;
+                         if (double.TryParse(items[i].SubItems[0].Text, out currentItemValue) &&
+                             double.TryParse(pivotItem.SubItems[0].Text, out pivotValue))
+                         {
+                             if (currentItemValue > pivotValue) // Changing the comparison to >
+                             {
+                                 Swap(items, i, partitionIndex);
+                                 partitionIndex++;
+                             }
+                         }
+                         else
+                         {
+                             // compare the string representations
+                             if (items[i].SubItems[0].Text.CompareTo(pivotItem.SubItems[0].Text) > 0) // Change comparison to >
+                             {
+                                 Swap(items, i, partitionIndex);
+                                 partitionIndex++;
+                             }
+                         }
+                     }
 
-                    for (int i = left; i < right; i++)
-                    {
-                        double currentItemValue, pivotValue;
-                        if (double.TryParse(items[i].SubItems[0].Text, out currentItemValue) &&
-                            double.TryParse(pivotItem.SubItems[0].Text, out pivotValue))
-                        {
-                            if (currentItemValue > pivotValue) // Changing the comparison to >
-                            {
-                                Swap(items, i, partitionIndex);
-                                partitionIndex++;
-                            }
-                        }
-                        else
-                        {
-                            // compare the string representations
-                            if (items[i].SubItems[0].Text.CompareTo(pivotItem.SubItems[0].Text) > 0) // Change comparison to >
-                            {
-                                Swap(items, i, partitionIndex);
-                                partitionIndex++;
-                            }
-                        }
-                    }
+                     Swap(items, partitionIndex, right);
 
-                    Swap(items, partitionIndex, right);
+                     return partitionIndex;
+                 }
 
-                    return partitionIndex;
-                }
+                 public void Swap(List<ListViewItem> items, int index1, int index2)
+                 {
+                     ListViewItem temp = items[index1];
+                     items[index1] = items[index2];
+                     items[index2] = temp;
+                 }
 
-                public void Swap(List<ListViewItem> items, int index1, int index2)
-                {
-                    ListViewItem temp = items[index1];
-                    items[index1] = items[index2];
-                    items[index2] = temp;
-                }
-       
-        */
-
-
+         */
         //-------------------------------------------------------------------------------------------------//
 
-        // sort button using merge sort . 
+        // sort button using merge sort - on click
         public void SortBtn1_Click(object sender, EventArgs e)
      {
       // Create a list of the ListView items
@@ -506,7 +448,6 @@ namespace WindowsFormsTdd
             MergeSort(items, 0, items.Count - 1);
             int end = DateTime.Now.Millisecond;
   
-
             // Clear the ListView items and add the sorted items back in
 
             StudentView1.Items.Clear();
@@ -514,8 +455,7 @@ namespace WindowsFormsTdd
             string message = string.Format("Sorting took {0} milliseconds.", end - start);
             MessageBox.Show(message);
      }
-
-
+        //main MergeSort func - reciving Listview
         public void MergeSort(List<ListViewItem> items, int left, int right)
         {
             if (left < right)
@@ -526,7 +466,7 @@ namespace WindowsFormsTdd
                 Merge(items, left, middle, right);
             }
         }
-
+        //Merge func
         public void Merge(List<ListViewItem> items, int left, int middle, int right)
         {
             int leftIndex = left;
@@ -579,5 +519,16 @@ namespace WindowsFormsTdd
                 items[left + i] = merged[i];
             }
         }
+
+        //-------------------------------------------------------------------------------------------------//
+        //ignore********
+        private void FirstNameTextBox_TextChanged(object sender, EventArgs e) { }
+        private void label7_Click(object sender, EventArgs e) { }
+        private void PhoneErrorLable_Click(object sender, EventArgs e) { }
+        private void Form1_Load(object sender, EventArgs e) { }
+        private void GradesLabels_Click(object sender, EventArgs e) { }
+        private void listView1_SelectedIndexChanged(object sender, EventArgs e) { }
+        //***********
+
     }
 }
